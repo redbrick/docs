@@ -74,7 +74,7 @@ Why?
 - thelounge **(X)**
 - znapsend
 
-### Docs
+## Docs
 
 - Update [fucking.readthedocs.io](fucking.readthedocs.io) to new home, [docs.redbrick.dcu.ie](docs.redbrick.dcu.ie)
 
@@ -99,4 +99,5 @@ In order of priority.
     - Remove redundant services (marked X)
 - Firewall cleanup
     - Assign IP's
+- Stable Monitoring setup for all servers and services
 
