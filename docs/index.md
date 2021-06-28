@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Home
+## Redbrick Technical Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+The idea of Redbrick documention is to keep an up to date information about the technical infrastructure of Redbrick. This is mostly intended for admins, future admins, webmasters, and everybody else who is grumpy and has no life.
 
-## Commands
+The search box actually works... Yeah. Me too.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Quick Links
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Daily Operations
+    - [New Admin Cheatsheet](/cheatsheet/)

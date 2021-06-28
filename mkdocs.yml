@@ -26,6 +26,7 @@ theme:
           toggle:
               icon: material/weather-night
               name: Switch to light mode
+
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -39,3 +40,18 @@ markdown_extensions:
   - toc:
       permalink: true
   - attr_list
+  - codehilite:
+      guess_lang: false
+
+nav:
+  - 'index.md'
+  - 'cheatsheet.md'
+  - 'services.md'
+  - 'hardware.md'
+  - 'network.md'
+  - 'web.md'
+  - 'monitoring.md'
+  - 'procedures.md'
+  - 'postmortems.md'
+  - 'scripts.md'
+  - 'roadmap.md'
