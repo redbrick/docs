@@ -1,2 +1,41 @@
-site_name: My Docs
-site_url: https://example.com/
+site_name: Redbrick Docs
+site_description: Redbrick Technical Documentation
+site_url: https://docs.redbrick.dcu.ie/
+
+repo_name: Redbrick/docs
+repo_url: https://github.com/redbrick/docs
+
+theme:
+    logo: assets/logo.png
+    favicon: assets/favicon.png
+    name: material
+    features:
+        - navigation.tabs
+    palette:
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: black
+          accent: black
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: black
+          accent: black
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Redbrick/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/redbrickdcu?lang=en
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/redbrickdcusnetworkingsociety
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - attr_list
