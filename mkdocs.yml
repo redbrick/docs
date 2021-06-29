@@ -11,6 +11,10 @@ theme:
     name: material
     features:
         - navigation.tabs
+        - navigation.instant
+        - navigation.sections
+        - navigation.expand
+        - navigation.top
     palette:
         - media: "(prefers-color-scheme: light)"
           scheme: default
