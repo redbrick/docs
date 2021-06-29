@@ -9,13 +9,13 @@ record all such information for current and future administrators.
 ### Admin Account Priviliges
 
 - By default, all admin accounts will remain the same as the rest of the
-committee. 
+  committee.
 - Each admin will recieve a local account on each machine that will be
-in the root group. This allows you to log on if ldap goes down. 
+  in the root group. This allows you to log on if ldap goes down.
 - Accounts should
-not be placed into any other 'system' or priviliged accounts (e.g. pgsql, mail,
-news, etc.) but by all accounts (hah, bad pun!) can be placed into useful groups
-(e.g. cvs, webgroup, helpdesk etc.)
+  not be placed into any other 'system' or priviliged accounts (e.g. pgsql, mail,
+  news, etc.) but by all accounts (hah, bad pun!) can be placed into useful groups
+  (e.g. cvs, webgroup, helpdesk etc.)
 
 ### Root account
 
@@ -113,21 +113,21 @@ Please read all the documentation before you do anything, but remember that the
 docs aren't complete and are sometimes out of date. Please update them as you go
 :D
 
-___
+---
 
 ## Post-powercut Todo List
 
 A list of things that should be done/checked immediately after a power cut:
 
 - Check KVM, hit ctrl+D on minerva to make sure it boots.
--    Check KVM, hit F1 on sprout to make sure it boots
--    Check KVM, sometimes you need to press F1 on carbon for it to boot
--    Stop Exim on the mail server (Morpheus) until minerva (NFS) is online.
--    If LDAP is down, you'll need to use the ALOM to do the next step.
--    Check that ldapclient started (svcs -xv). If it didn't, run svcadm clear ldap/client to make it start. This usually happens because murphy comes back before morpheus does, and the LDAP client won't start due to lack of an LDAP server.
--    Apache is stupid and tries to start before networking is finished starting. To fix it, disable/re-enable it a few times. This usually makes it turn on.
+- Check KVM, hit F1 on sprout to make sure it boots
+- Check KVM, sometimes you need to press F1 on carbon for it to boot
+- Stop Exim on the mail server (Morpheus) until minerva (NFS) is online.
+- If LDAP is down, you'll need to use the ALOM to do the next step.
+- Check that ldapclient started (svcs -xv). If it didn't, run svcadm clear ldap/client to make it start. This usually happens because murphy comes back before morpheus does, and the LDAP client won't start due to lack of an LDAP server.
+- Apache is stupid and tries to start before networking is finished starting. To fix it, disable/re-enable it a few times. This usually makes it turn on.
 
-___
+---
 
 ## NixOS
 
@@ -182,7 +182,7 @@ change with new cryprographic standards.
 Once this is done, contact one of the currently set up users to pull and reload the given machines
 and you'll have access right away using the accompanying key.
 
-___
+---
 
 ## IRC Ops
 
@@ -268,4 +268,4 @@ The IRC services run by Trinity for all the netsocs. The two services are
 
 for more details.
 
-___
+---
