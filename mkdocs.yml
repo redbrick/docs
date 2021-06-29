@@ -6,30 +6,36 @@ repo_name: Redbrick/docs
 repo_url: https://github.com/redbrick/docs
 
 theme:
-    logo: assets/logo.png
-    favicon: assets/favicon.png
-    name: material
-    features:
-        - navigation.tabs
-        - navigation.instant
-        - navigation.sections
-        - navigation.expand
-        - navigation.top
-    palette:
-        - media: "(prefers-color-scheme: light)"
-          scheme: default
-          primary: black
-          accent: red
-          toggle:
-              icon: material/weather-sunny
-              name: Switch to dark mode
-        - media: "(prefers-color-scheme: dark)"
-          scheme: slate
-          primary: black
-          accent: red
-          toggle:
-              icon: material/weather-night
-              name: Switch to light mode
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+plugins:
+  - search
 
 extra:
   social:
@@ -46,16 +52,25 @@ markdown_extensions:
   - attr_list
   - codehilite:
       guess_lang: false
+  - pymdownx.critic
 
 nav:
-  - 'index.md'
-  - 'cheatsheet.md'
-  - 'services.md'
-  - 'hardware.md'
-  - 'network.md'
-  - 'web.md'
-  - 'monitoring.md'
-  - 'procedures.md'
-  - 'postmortems.md'
-  - 'scripts.md'
-  - 'roadmap.md'
+  - Home: index.md
+  - cheatsheet.md
+  - Services:
+      - services/index.md
+      - Bind9: services/bind.md
+      - CodiMD: services/codimd.md
+      - Gitea: services/gitea.md
+      - Icecast: services/icecast.md
+      - IRC: services/irc.md
+      - NFS: services/nfs.md
+      - ZnapZend: services/znapzend.md
+  - hardware.md
+  - network.md
+  - web.md
+  - monitoring.md
+  - procedures.md
+  - postmortems.md
+  - scripts.md
+  - roadmap.md
