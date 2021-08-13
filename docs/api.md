@@ -2,9 +2,11 @@
 
 ## Redbrick Administrator Web API
 
-The Redbrick web API is serves as an easy interface to carry out administrator tasks (mainly LDAP related), and for use in automation. 
+The Redbrick web API serves as an easy interface to carry out administrator tasks (mainly LDAP related), and for use in automation. 
 
 This saves time instead of accessing machines, and formulating and executing manual LDAP queries or scripts.
+
+The server code for the API is hosted on Zeus in a docker container called 'api-redbrick', written in Python with [FastAPI](https://fastapi.tiangolo.com/).
 
 ### Reference
 
