@@ -51,26 +51,22 @@ markdown_extensions:
       permalink: true
   - attr_list
   - codehilite:
-      guess_lang: false
+      guess_lang: true
   - pymdownx.critic
+  - pymdownx.highlight
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
-  - cheatsheet.md
   - Services:
-      - services/index.md
-      - Bind9: services/bind.md
-      - CodiMD: services/codimd.md
-      - Gitea: services/gitea.md
-      - Icecast: services/icecast.md
-      - IRC: services/irc.md
-      - NFS: services/nfs.md
-      - ZnapZend: services/znapzend.md
-  - hardware.md
-  - network.md
-  - web.md
-  - monitoring.md
-  - procedures.md
-  - postmortems.md
-  - scripts.md
+    - services/index.md
+    - Bind9: services/bind.md
+    - CodiMD: services/codimd.md
+    - Gitea: services/gitea.md
+    - Icecast: services/icecast.md
+    - IRC: services/irc.md
+    - NFS: services/nfs.md
+    - ZnapZend: services/znapzend.md
+  - cheatsheet.md
+  - api.md
   - roadmap.md
