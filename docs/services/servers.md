@@ -6,7 +6,7 @@ Redbrick provides two main servers (Azazel and Pygmalion) for it's members to us
 
 The main login server used in Redbrick is Azazel. You may also log in to Pygmalion if you wish at `pyg.redbrick.dcu.ie` 
 
-You can log in using ssh with your Redbrick username and password like so:
+You can log in using ssh in your terminal/command prompt application of choice with your Redbrick username and password like so:
 
 ```bash
 ssh YOUR_USERNAME@redbrick.dcu.ie
