@@ -60,6 +60,7 @@ nav:
   - Home: index.md
   - Services:
     - services/index.md
+    - Servers: services/servers.md
     - Bind9: services/bind.md
     - CodiMD: services/codimd.md
     - Gitea: services/gitea.md
