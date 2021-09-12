@@ -73,19 +73,18 @@ For example inside the `ldap-register.sh` script used by the `/register` endpoin
 
 - This is prevalent in our implementation of the API that creates and modifies users' `webtree` directory.
 
-As a result, the API has a hard dependancy on manually granting the user permissions to their webtree directory - when the `webtree` dir is created it is owned by root.
+*How do we fix this?*
 
-**Why not just do this inside** `/scripts/ldap-register.sh`?
+Instead of relying on using users/group names for the chown command, it is advisable to instead use their unique id's. 
 
-- The creation of the `webtree` directory for the user requires `chown` to be run, to give the user permissions for their respective directory (i.e `/storage/webtree/U/USER_NAME`)
+```bash
+# For example, the following commands are equivalent.
+chown USERNAME:member /storage/webtree/U/USERNAME
 
-- In the command `chown USER_NAME:member /storage/webtree/U/USER_NAME`, the `USER_NAME:member` arg is dependant on the LDAP user and group (member) being available. 
+chown 13371337:103 /storage/webtree/U/USERNAME
+# Where 13371337 is userid and 103 is the id for the 'member' group.
+```
 
-- This is not possible inside the docker container.
-
-For this reason, the webtree permissions portion of `/register` is outsourced to being done manually (usually at the same time as when an account is created).
-
-A possible current solution is to run this permissions updating on a job at some interval, and setting permissions for anyone with 'NEWBIE: TRUE' in their ldap data.
-
+Note that USERNAME can be used to refer to the user's web directory here since it is the name of the directory and doesn't refer to the user object.
 
 &emsp;
