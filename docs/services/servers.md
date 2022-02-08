@@ -15,7 +15,7 @@ You've set up 2FA on your account with an SSH key, right? [_If not, you really h
 You can log in using SSH in your command prompt or terminal application of choice with your Redbrick username and password like so:
 
 ```bash
-ssh YOUR_USERNAME@redbrick.dcu.ie -i /home/bob/.ssh/id_ed25519
+ssh YOUR_USERNAME@redbrick.dcu.ie -i SSH_KEY_LOCATION_PATH
 
 # When prompted for the password, please input your Redbrick account password.
 # NOTE: The "-i" flag specifies the location of your private ssh key.
