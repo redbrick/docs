@@ -9,6 +9,7 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon.png
   name: material
+  custom_dir: docs/overrides
   features:
     - navigation.sections
     - navigation.tabs

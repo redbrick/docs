@@ -30,5 +30,4 @@ So, you want to become an admin. Brave of you. Here's some stuff you should prob
 - [Policies](/procedures/#redbrick-system-administrator-policies)
 - [Abuse at Redbrick](https://fucking.readthedocs.io/en/latest/procedures/abuse), and the committee's stance on it
 
-
 &emsp;
