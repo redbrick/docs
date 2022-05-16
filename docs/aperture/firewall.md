@@ -7,9 +7,13 @@
 This UDM Pro is set up using the personal setup type, using the elected-admins@redbrick.dcu.ie account (stored in pwsafe
 2FA is stored on the same device as the Github 2FA code.
 
+### Automatic Updates
+
 The UDM Pro is not set up for automatic updates for reliability reasons.
 
-The speeds the ISP (in Redbrick's case ISS) has promised us is a 2 GB/s link to DCU's core, however, we only use 1 GB/s
+### Network Speeds
+
+The speeds our ISP (ISS) has promised us is a 2 GB/s link to DCU's core, however, we only use 1 GB/s
 right now. The UDM Pro will notify if the speed dips below the 1GB/s threshold.
 
 ### Users
