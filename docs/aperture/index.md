@@ -26,7 +26,7 @@ The IP address range for the `aperture` subnet is 10.10.0.x, with 10.10.x.x bein
 
 `mordor`'s IP address is 10.10.0.1, `rivendell`'s is 10.10.0.2, and `isengard`'s is 10.10.0.3.
 
-`glados`'s IP address is 10.10.0.3, `wheatley`'s is 10.10.0.4, and `chell`'s is 10.10.0.5.
+`glados`'s IP address is 10.10.0.4, `wheatey`'s is 10.10.0.5, and `chell`'s is 10.10.0.6.
 
 !!! note
     Blue cables are used for production network.
