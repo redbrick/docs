@@ -18,7 +18,7 @@ The three servers are named `glados`, `wheatley` and `chell`.
 
 ## Networks
 
-The firewall is called `mordor`, and the two 24-port switches are called `rivendell` and `isengard`.
+The firewall is called [`mordor`](firewall.md), and the two 24-port switches are called [`rivendell` and `isengard`](switches.md).
 
 ## Networking
 
