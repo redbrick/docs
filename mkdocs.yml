@@ -76,4 +76,7 @@ nav:
   - roadmap.md
   - Aperture:
       - aperture/index.md
+      - Firewall - Mordor: aperture/firewall.md
+      - Switches - Rivendell & Isengard: aperture/switches.md 
       - Images: aperture/images.md
+        
