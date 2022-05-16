@@ -77,6 +77,7 @@ nav:
   - Aperture:
       - aperture/index.md
       - Firewall - Mordor: aperture/firewall.md
-      - Switches - Rivendell & Isengard: aperture/switches.md 
+      - Switches - Rivendell & Isengard: aperture/switches.md
+      - Servers - Glados, Wheatley and Chell: aperture/servers.md
       - Images: aperture/images.md
         
