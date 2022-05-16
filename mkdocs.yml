@@ -56,6 +56,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.highlight
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
 
 nav:
   - Home: index.md
@@ -72,3 +74,6 @@ nav:
   - cheatsheet.md
   - api.md
   - roadmap.md
+  - Aperture:
+      - aperture/index.md
+      - Images: aperture/images.md
