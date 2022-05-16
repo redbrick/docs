@@ -16,8 +16,8 @@ These 2 PowerEdge servers are twins and thus share documentation.a
 - RAM: 32GB (Daedalus), 16GB (Icarus)
 - Storage: Dell Perc 6/i Integrated RAID controller
 - Disks:
-  - 2 x 73GB SAS disks in RAID 1 (hardware)
-  - 3 x 600GB SAS disks in passthrough (3x RAID 0)
+    - 2 x 73GB SAS disks in RAID 1 (hardware)
+    - 3 x 600GB SAS disks in passthrough (3x RAID 0)
 - Drives: Internal SATA DVD±RW
 - Network: 2x Onboard Ethernet, 802.3ad bonding
 - iDRAC NIC: Shared on port 1
