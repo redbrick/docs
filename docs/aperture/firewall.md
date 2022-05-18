@@ -21,6 +21,9 @@ right now. The UDM Pro will notify if the speed dips below the 1GB/s threshold.
 Every elected admin should hold an account on the UDM Pro to configure its rules. Rootholders **should not** have access
 to the firewall unless they are explicity granted access.
 
+The owner account of the unifi equipment is `rbadmins` (email: elected-admins@redbrick.dcu.ie) with the password stored
+in pwsafe under `unifi`.
+
 There is a "super admin" account that can be used for **local access only**, details are stored in pwsafe under
 `udmpro-super-admin`.
 

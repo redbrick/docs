@@ -1,7 +1,7 @@
 # Aperture
 
-Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins` and `cawnj`. It
-consists of:
+Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins`, `cawnj`, `ymacomp`
+and `arkues`. It consists of:
 
 - 3x Dell R6515
 
@@ -41,3 +41,10 @@ The IP address range for the `aperture` subnet is 10.10.0.x, with 10.10.x.x bein
     Yellow cables are used for KVM network.
 
 ## [Images (click me)](images.md)
+
+## Switching from the old network to the new
+
+We have two address ranges that come in on a single redundant link, so we're exchanging that redundant link for two
+separate links, each taking responsibility for an address range (136.26.15.0/24 and 136.206.16.0/24). So we're surrendering
+redundancy to gain uptime/connectivity during the switchover only. Once the new servers are production ready, we can
+recombine the link to regain the redundancy.
