@@ -1,6 +1,6 @@
 # Mordor
 
-<!-- Access through 192.168.1.1 -->
+<!-- Access through 10.10.0.1 -->
 
 ## Setup
 
@@ -13,8 +13,7 @@ The UDM Pro is not set up for automatic updates for reliability reasons.
 
 ### Network Speeds
 
-The speeds our ISP (ISS) has promised us is a 2 GB/s link to DCU's core, however, we only use 1 GB/s
-right now. The UDM Pro will notify if the speed dips below the 1GB/s threshold.
+We have a 10 GB/s link to DCU's core.
 
 ### Users
 

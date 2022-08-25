@@ -13,3 +13,7 @@
 ![labelled cables for mordor and rivendell](https://cdn.discordapp.com/attachments/630489712548773969/975433400938811392/20220515_172353.jpg)
 ![labelled cables for isengard](https://cdn.discordapp.com/attachments/630489712548773969/975439786821185566/20220515_174849.jpg)
 ![tidy cables for glados, wheatley and chell](https://cdn.discordapp.com/attachments/630489712548773969/975439787513229332/20220515_174806.jpg)
+
+## Install of Debian
+
+![dancing](https://media.discordapp.net/attachments/846341782966632468/1004129108529254613/20220802_215014.mp4)
