@@ -20,19 +20,13 @@ theme:
     - search.share
     - search.suggest
   palette:
-    - media: '(prefers-color-scheme: light)'
-      scheme: default
-      primary: black
-      accent: red
+    - scheme: default
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: Switch to dark mode
-    - media: '(prefers-color-scheme: dark)'
-      scheme: slate
-      primary: black
-      accent: red
+    - scheme: slate
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-3
         name: Switch to light mode
 
 plugins:
@@ -62,15 +56,15 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Services:
-    - services/index.md
-    - Servers: services/servers.md
-    - Bind9: services/bind.md
-    - CodiMD: services/codimd.md
-    - Gitea: services/gitea.md
-    - Icecast: services/icecast.md
-    - IRC: services/irc.md
-    - NFS: services/nfs.md
-    - ZnapZend: services/znapzend.md
+      - services/index.md
+      - Servers: services/servers.md
+      - Bind9: services/bind.md
+      - CodiMD: services/codimd.md
+      - Gitea: services/gitea.md
+      - Icecast: services/icecast.md
+      - IRC: services/irc.md
+      - NFS: services/nfs.md
+      - ZnapZend: services/znapzend.md
   - cheatsheet.md
   - api.md
   - roadmap.md
@@ -79,5 +73,5 @@ nav:
       - Firewall - Mordor: aperture/firewall.md
       - Switches - Rivendell & Isengard: aperture/switches.md
       - Servers - Glados, Wheatley and Chell: aperture/servers.md
+      - Admin VPN: aperture/vpn.md
       - Images: aperture/images.md
-        
