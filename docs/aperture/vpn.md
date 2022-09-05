@@ -11,6 +11,9 @@ We need to set up a CA (certificate authority) and PKI (public key infrastructur
 
 We use [EasyRSA](https://github.com/OpenVPN/easy-rsa) on both the VPN server and the CA server.
 
+!!!important
+    When configuring and setting up the infrastructure, use the `root` account.
+
 ### Download EasyRSA
 
 > CA & VPN Server (glados, wheatley)
@@ -59,6 +62,8 @@ rm vars
 ./easyrsa build-ca nopass
 ```
 
+At the prompt, enter the CA server name, in this case, `wheatley`.
+
 ### Creating the Server Cert and Key
 
 > VPN Server (glados)
@@ -66,6 +71,8 @@ rm vars
 ```bash
 cd ~/EasyRSA-3.1.0
 ```
+
+No need to configure the `vars` file like before, as we're not creating a CA. We can just initialise the PKI.
 
 ```bash
 ./easyrsa init-pki
@@ -75,8 +82,10 @@ cd ~/EasyRSA-3.1.0
 ./easyrsa gen-req [server_name] nopass
 ```
 
+You will be asked to provide a common name, which is the server name. In this case, `glados`.
+
 ```bash
-sudo cp pki/private/[server_name].key /etc/openvpn/
+cp pki/private/[server_name].key /etc/openvpn/
 ```
 
 ```bash
@@ -88,12 +97,14 @@ scp pki/reqs/[server_name].req wheatley:/tmp
 > CA Server (wheatley)
 
 ```bash
-./easyrsa import-req /tmp[server_name].req [server_name]
+./easyrsa import-req /tmp/[server_name].req [server_name]
 ```
 
 ```bash
 ./easyrsa sign-req server [server_name]
 ```
+
+At the prompt, ensure you type `yes` to sign the request, assuming all information is correct.
 
 ```bash
 scp pki/issued/[server_name].crt glados:/tmp
@@ -103,12 +114,18 @@ scp pki/issued/[server_name].crt glados:/tmp
 scp pki/ca.crt glados:/tmp
 ```
 
+Before moving back to the VPN server, ensure you delete the signed request from the CA server.
+
+```bash
+rm /tmp/[server_name].req
+```
+
 ### Install the Server Cert
 
 > VPN Server (glados)
 
 ```bash
-sudo cp /tmp/{[server_name].crt,ca.crt} /etc/openvpn/
+mv /tmp/{[server_name].crt,ca.crt} /etc/openvpn/
 ```
 
 ```bash
@@ -120,15 +137,15 @@ cd EasyRSA-3.1.0
 ```
 
 ```bash
-sudo openvpn --genkey --secret ta.key
+openvpn --genkey secret ta.key
 ```
 
 ```bash
-sudo cp ta.key /etc/openvpn/
-sudo cp pki/dh.pem /etc/openvpn/
+cp ta.key /etc/openvpn/
+cp pki/dh.pem /etc/openvpn/
 ```
 
-### Setting up Generation of Client Certificates
+### Setting up Client Certificate Generation Infrastructure
 
 > VPN Server (glados)
 
@@ -183,10 +200,18 @@ cd ~/EasyRSA-3.1.0
 scp pki/issued/[client_name].crt glados:/tmp
 ```
 
-### Store the Client Certificate on the VPN Server
+Don't forget to clean up the signed request on the CA server.
 
 ```bash
-cp /tmp/[client_name].crt ~/vpn-client-configs/keys/
+rm /tmp/[client_name].req
+```
+
+### Store the Client Certificate on the VPN Server
+
+> VPN Server (glados)
+
+```bash
+mv /tmp/[client_name].crt ~/vpn-client-configs/keys/
 ```
 
 ```bash
@@ -194,22 +219,18 @@ cd ~/EasyRSA-3.1.0
 ```
 
 ```bash
-sudo cp ta.key ~/vpn-client-configs/keys/
-sudo cp /etc/openvpn/ca.crt ~/vpn-client-configs/keys/
+cp ta.key ~/vpn-client-configs/keys/
+cp /etc/openvpn/ca.crt ~/vpn-client-configs/keys/
 ```
 
 ## OpenVPN Server Config
 
 ```bash
-sudo cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz /etc/openvpn/
+cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf /etc/openvpn/
 ```
 
 ```bash
-sudo gzip -d /etc/openvpn/server.conf.gz
-```
-
-```bash
-sudo vim /etc/openvpn/server.conf
+vim /etc/openvpn/server.conf
 ```
 
 ```bash
@@ -229,7 +250,7 @@ key [server_name].key  # This file is secret
 ## Server Networking Configuration
 
 ```bash
-sudo vim /etc/sysctl.conf
+vim /etc/sysctl.conf
 ```
 
 ```bash
@@ -240,12 +261,12 @@ net.ipv4.ip_forward=1
 ```
 
 ```bash
-$ sudo sysctl -p
+$ sysctl -p
 net.ipv4.ip_forward = 1
 ```
 
 ```bash
-sudo vim /etc/ufw/before.rules
+vim /etc/ufw/before.rules
 ```
 
 ```bash
@@ -266,7 +287,7 @@ COMMIT
 ```
 
 ```bash
-sudo vim /etc/default/ufw
+vim /etc/default/ufw
 ```
 
 ```bash
@@ -279,8 +300,12 @@ DEFAULT_FORWARD_POLICY="ACCEPT"
 ## Starting and Enabling OpenVPN
 
 ```bash
-sudo systemctl start openvpn@[server_name]
+systemctl start openvpn@server
 ```
+
+!!!Note
+    Despite using the server name everywhere else, this uses the "@server" option to start the vpn server, rather than
+    start the client.
 
 ```bash
 $ ip addr show tun0
@@ -290,14 +315,14 @@ $ ip addr show tun0
 ```
 
 ```bash
-sudo systemctl enable openvpn@[server_name]
+systemctl enable openvpn@server
 ```
 
 ## OpenVPN Client Config
 
 ### Creating the Client Config Infrastructure
 
-> VOP Server (glados)
+> VPN Server (glados)
 
 ```bash
 mkdir -p ~/vpn-client-configs/files
@@ -340,9 +365,9 @@ $ cat ~/vpn-client-configs/make_config.sh
 
 # First argument: Client identifier
 
-KEY_DIR=/home/mojito/client-configs/keys
-OUTPUT_DIR=/home/mojito/client-configs/files
-BASE_CONFIG=/home/mojito/client-configs/base.conf
+KEY_DIR=/root/vpn-client-configs/keys
+OUTPUT_DIR=/root/vpn-client-configs/files
+BASE_CONFIG=/root/vpn-client-configs/base.conf
 
 cat ${BASE_CONFIG} \
     <(echo -e '<ca>') \
@@ -366,11 +391,7 @@ chmod 700 ~/vpn-client-configs/make_config.sh
 > VPN Server (glados)
 
 ```bash
-cd ~/vpn-client-configs/
-```
-
-```bash
-./make_config.sh [client_name]
+./vpn-client-configs/make_config.sh [client_name]
 ```
 
 The client config file will be located at `~/vpn-client-configs/files/[client_name].ovpn` and this file can be copied
@@ -383,19 +404,19 @@ to the client machine.
 Generate a new client request with name `[client_name]`, specifying `nopass` to avoid a password prompt.
 
 ```bash
-./EasyRSA-3.1.0/easyrsa gen-req [client_name] nopass
+/root/EasyRSA-3.1.0/easyrsa gen-req [client_name] nopass
 ```
 
 Copy the client key to the client config directory for later use.
 
 ```bash
-cp ~/EasyRSA-3.1.0/pki/private/[client_name].key ~/vpn-client-configs/keys/
+cp /root/EasyRSA-3.1.0/pki/private/[client_name].key /root/vpn-client-configs/keys/
 ```
 
 Copy the client request to the CA server to be signed.
 
 ```bash
-scp ~/EasyRSA-3.1.0/pki/reqs/[client_name].req wheatley:/tmp
+scp /root/EasyRSA-3.1.0/pki/reqs/[client_name].req wheatley:/tmp
 ```
 
 > CA Server (whetley)
@@ -403,19 +424,19 @@ scp ~/EasyRSA-3.1.0/pki/reqs/[client_name].req wheatley:/tmp
 Import the request from the VPN server.
 
 ```bash
-./EasyRSA-3.1.0/easyrsa import-req /tmp/[client_name].req [client_name]
+/root/EasyRSA-3.1.0/easyrsa import-req /tmp/[client_name].req [client_name]
 ```
 
 Sign the request, making sure to specify the correct client name.
 
 ```bash
-./EasyRSA-3.1.0/easyrsa sign-req client [client_name]
+/root/EasyRSA-3.1.0/easyrsa sign-req client [client_name]
 ```
 
 Copy the signed certificate to the VPN server.
 
 ```bash
-scp EasyRSA-3.1.0/pki/issued/[client_name].crt glados:/tmp
+scp /root/EasyRSA-3.1.0/pki/issued/[client_name].crt glados:/tmp
 ```
 
 > VPN Server (glados)
@@ -423,23 +444,23 @@ scp EasyRSA-3.1.0/pki/issued/[client_name].crt glados:/tmp
 Copy the signed certificate to the client config directory.
 
 ```bash
-cp /tmp/[client_name].crt ~/vpn-client-configs/keys
+cp /tmp/[client_name].crt /root/vpn-client-configs/keys
 ```
 
 Also copy the `ca.crt` and `ta.key` files to the client config directory.
 
 ```bash
-sudo cp ~/EasyRSA-3.1.0/ta.key ~/vpn-client-configs/keys
-sudo cp /etc/openvpn/ca.crt ~/vpn-client-configs/keys
+cp /root/EasyRSA-3.1.0/ta.key /root/vpn-client-configs/keys
+cp /etc/openvpn/ca.crt /root/vpn-client-configs/keys
 ```
 
 Finally run the `make_config.sh` script to generate the client config file.
 
 ```bash
-./vpn-client-configs/make_config.sh [client_name]
+/root/vpn-client-configs/make_config.sh [client_name]
 ```
 
-The `[client_name].ovpn` file is then found at `~/vpn-client-configs/files/[client_name].ovpn` and can be copied to your
+The `[client_name].ovpn` file is then found at `/root/vpn-client-configs/files/[client_name].ovpn` and can be copied to your
 client machine.
 
 ## Revoking a Client Certificate
@@ -447,23 +468,31 @@ client machine.
 > CA Server (whetley)
 
 ```bash
-./EasyRSA-3.1.0/easyrsa revoke [client_name]
+/root/EasyRSA-3.1.0/easyrsa revoke [client_name]
 ```
 
 ```bash
-./EasyRSA-3.1.0/easyrsa gen-crl
+/root/EasyRSA-3.1.0/easyrsa gen-crl
 ```
 
 ```bash
-scp EasyRSA-3.1.0/pki/crl.pem glados:/tmp
+scp /root/EasyRSA-3.1.0/pki/crl.pem glados:/tmp
 ```
 
 > VPN Server (glados)
 
 ```bash
-sudo cp /tmp/crl.pem /etc/openvpn
+mv /tmp/crl.pem /etc/openvpn
 ```
 
+Make sure the openvpn server config has the following line:
+
 ```bash
-sudo systemctl restart openvpn@[server_name]
+crl-verify crl.pem
+```
+
+to ensure the CRL is used.
+
+```bash
+systemctl restart openvpn@server
 ```
