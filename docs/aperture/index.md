@@ -20,20 +20,28 @@ The three servers are named `glados`, `wheatley` and `chell`.
 
 The firewall is called [`mordor`](firewall.md), and the two 24-port switches are called [`rivendell` and `isengard`](switches.md).
 
+For more information on the network, including routing information from the Internet to Redbrick, see the
+[network](network.md) page.
+
 ## Networking
 
-The IP address range for the `aperture` subnet is 10.10.0.x, with 10.10.x.x being used for user VMs.
+The IP address range for the `aperture` subnet is 10.10.0.0/24, with 10.10.0.0/16 being used for user VMs.
 
-`mordor`'s IP address is 10.10.0.1, `rivendell`'s is 10.10.0.2, and `isengard`'s is 10.10.0.3.
-
-`glados`'s IP address is 10.10.0.4, `wheatley`'s is 10.10.0.5, and `chell`'s is 10.10.0.6.
+| Hostname | IP Address | Purpose |
+| -------- | ---------- | ------- |
+| `mordor` | 10.10.0.1 | Firewall |
+| `rivendell` | 10.10.0.2 | Switch |
+| `isengard` | 10.10.0.3 | Switch |
+| `glados` | 10.10.0.4 | Server |
+| `wheatley` | 10.10.0.5 | Server |
+| `chell` | 10.10.0.6 | Server |
 
 !!! note
     Blue cables are used for production network.
 
 ## KVM
 
-`nexus` is the name of the KVM switch.
+`nexus` is the name of the KVM switch. It's internal IP address is 10.10.0.10.
 
 `glados` is connected on port 1, `wheatley` on port 2, and `chell` on port 3.
 
