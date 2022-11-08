@@ -1,26 +1,16 @@
 # Home
 
-## Redbrick Technical Documentation
+## Redbrick Docs
 
-The idea of Redbrick documention is to keep an up to date information about the technical infrastructure of Redbrick.
+Welcome to Redbrick's documention is to keep an up to date information about the technical infrastructure of Redbrick.
 This is mostly intended for admins, future admins, webmasters, and everybody else who is grumpy and has no life.
 
 **PS:** The search box *actually* works... please use it for getting around - it's awesome.
 
 ## Quick Links
 
-- Daily Operations
-    - [Services](/services/#index)
-    - [New Admin Cheatsheet](/cheatsheet/)
-    - [Redbrick API](/api/)
-    - [Useful Scripts](/scripts/)
-    - [Procedures](/procedures/)
-    - [Monitoring](/monitoring/)
-    - [Hardware](/hardware/)
-    - [Network](/network/)
-    - [Web](/web/)
-    - [Postmortems](/postmortems/)
-    - [NixOS](/procedures/#nixos), by jaysus, there's a lot
+- [Redbrick Website](https://redbrick.dcu.ie)
+- [SSH help](https://docs.redbrick.dcu.ie/services/servers/#logging-in)
 
 ## New Admins
 

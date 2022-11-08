@@ -1,10 +1,10 @@
-# Mordor
+# Firewall
 
 <!-- Access through 10.10.0.1 -->
 
 ## Setup
 
-This UDM Pro is set up using the personal setup type, using the elected-admins@redbrick.dcu.ie account (stored in pwsafe
+The firewall is set up using the personal setup type, using the elected-admins@redbrick.dcu.ie account (stored in pwsafe
 2FA is stored on the same device as the Github 2FA code.
 
 ### Automatic Updates
@@ -17,8 +17,8 @@ We have a 10 GB/s link to DCU's core.
 
 ### Users
 
-Every elected admin should hold an account on the UDM Pro to configure its rules. Rootholders **should not** have access
-to the firewall unless they are explicity granted access.
+The current elected admins should all have access to the rbadmin account on the firewall. Rootholders **should not** have
+access to the firewall unless they are explicity granted access.
 
 The owner account of the unifi equipment is `rbadmins` (email: elected-admins@redbrick.dcu.ie) with the password stored
 in pwsafe under `unifi`.
@@ -42,9 +42,19 @@ updating.
 
 SSH is enabled to allow for rollbacks in case of a bad update (I warned you!).
 
-Remote access is disabled as it should not be needed, if it is enabled in future, please update these docs with your reasons.
+Remote access is disabled as it should not be needed, the admin vpn should provide enough access for you.
+If it is enabled in future, please update these docs with your reasons.
 
 ### Backups
 
-Backups are configured to run every week  at 1am on a Sunday. 20 backups are stored at a time, therefore storing 20 weeks
+Backups are configured to run every week at 1am on a Sunday. 20 backups are stored at a time, therefore storing 20 weeks
 of configuration. This should be plenty of time to recover from a bad configuration change.
+
+## External Addresses
+
+`Mordor` is natted when it accesses the Internet. This is because the link address between it and DCU is on a private address.
+This natting is used *only* for the UDM pro device itself, not for the 136.206.16.0/24 network, and is to allow the UDM
+box itself to access the Internet.
+
+The 136.206.16.0/24 network is routed down to the UDM pro box, within the DCU network. Essentially there is a route in
+DCU's network that says "if you want to access 136.206.16.0/24 go to mordor".

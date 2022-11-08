@@ -1,0 +1,8 @@
+nav:
+
+- index.md
+- ansible.md
+- firewall.md
+- icecast.md
+- vpn.md
+- images.md
