@@ -4,7 +4,7 @@ Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `dist
 and `arkues`. It consists of:
 
 - 3x Dell R6515
-
+  
     | CPU | RAM | Storage |
     | ---- | ---- | ------- |
     | AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
@@ -20,21 +20,18 @@ The three servers are named `glados`, `wheatley` and `chell`.
 
 The firewall is called [`mordor`](firewall.md), and the two 24-port switches are called [`rivendell` and `isengard`](switches.md).
 
-For more information on the network, including routing information from the Internet to Redbrick, see the
-[network](network.md) page.
-
 ## Networking
 
 The IP address range for the `aperture` subnet is 10.10.0.0/24, with 10.10.0.0/16 being used for user VMs.
 
-| Hostname | IP Address | Purpose |
-| -------- | ---------- | ------- |
-| `mordor` | 10.10.0.1 | Firewall |
-| `rivendell` | 10.10.0.2 | Switch |
-| `isengard` | 10.10.0.3 | Switch |
-| `glados` | 10.10.0.4 | Server |
-| `wheatley` | 10.10.0.5 | Server |
-| `chell` | 10.10.0.6 | Server |
+| Hostname | Internal Address | External Address | Purpose |
+| -------- | ---------- | -------- | ------- |
+| `mordor` | 10.10.0.1 | N/A | Firewall |
+| `rivendell` | 10.10.0.2 | N/A | Switch |
+| `isengard` | 10.10.0.3 | N/A | Switch |
+| `glados` | 10.10.0.4 | 136.206.16.4 | Server |
+| `wheatley` | 10.10.0.5 | 136.206.16.5 | Server |
+| `chell` | 10.10.0.6 | 136.206.16.6 | Server |
 
 !!! note
     Blue cables are used for production network.
@@ -47,6 +44,13 @@ The IP address range for the `aperture` subnet is 10.10.0.0/24, with 10.10.0.0/1
 
 !!! note
     Yellow cables are used for KVM network.
+
+## IDRAC
+
+The new servers are all equipped with IDRACs. These still need to be configured.
+
+!!! node
+    Red cables are used for IDRAC network.
 
 ## [Images (click me)](images.md)
 
