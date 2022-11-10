@@ -26,8 +26,18 @@ This is a cheat sheet for DCUfm to help them stream to icecast.
 
 ### Connecting to the VPN
 
-You'll need to connect to the Redbrick VPN to stream to icecast. You can do this by clicking the shortcut on the desktop.
-You'll see a window pop up with a lot of text. This is the VPN connecting. Once it's done, the window will close.
+You'll need to connect to the Redbrick VPN to stream to icecast. You can do this by double clicking the shortcut on the desktop.
+You'll then need to go to bottom right corner of the screen and right click this icon:
+![Disconnected OpenVPN icon](https://i.dbyte.xyz/2022-11-I9.png)
+
+A popup will appear, click connect. This will connect you to the VPN. It may take a second, but a window will pop up with
+a lot of text. The VPN will connect and then it'll close.
+![Connect to OpenVPN](https://i.dbyte.xyz/2022-11-AV.png)
+
+You should end up with an icon like this:
+![Connected OpenVPN icon](https://i.dbyte.xyz/2022-11-16.png)
+
+You're now connected to the VPN.
 
 ### Connecting to Icecast
 
@@ -40,6 +50,10 @@ for the login details.
 
 ### Saving your stream
 
-Your stream will be saved automatically onto the computer with Butt on it. It will be saved in the `recordings` folder
-on the desktop with the date and time of the recording, and the format `.mp3`. Take this file with you if you want to keep
-it for later, it will not be kept on the stream computer for long!
+Your stream will be saved automatically onto the desktop into a folder called `Recordings 2022`, with the date and time
+of the recording, and the format `.mp3`. Take this file with you if you want to keep it for later, it will not be kept
+on the desktop for long!
+
+### Further Information
+
+If you have any questions, please ask a [redbrick sysadmin](../../contact).
