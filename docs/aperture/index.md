@@ -1,62 +1,21 @@
 # Aperture
 
-Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins`, `cawnj`, `ymacomp`
-and `arkues`. It consists of:
+What is aperture? It's nothing to do with cameras. See [about](about.md) for more information on the hardware.
 
-- 3x Dell R6515
-  
-    | CPU | RAM | Storage |
-    | ---- | ---- | ------- |
-    | AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
+## New Admins
 
-- 2x Ubiquiti USW Pro
-- 1x Ubiquiti UDM Pro
+If you're a new admin, this is a cheat sheet for you. In order to get broadly up to speed and understand the content of
+these pages, I suggest you read the following:
 
-## Servers
+- [About](about.md)
+- [Nomad docs](https://www.nomadproject.io/docs/), specifically the [job specification](https://developer.hashicorp.com/nomad/docs/job-specification)
+and [managing nomad jobs](https://developer.hashicorp.com/nomad/tutorials/manage-jobs) pages.
+- [Consul docs]](https://www.consul.io/docs), specifically how it can be used with Nomad.
+- [Ansible docs](https://docs.ansible.com/ansible/latest/index.html), specifically the [playbook](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
 
-The three servers are named `glados`, `wheatley` and `chell`.
+## FAQ
 
-## Networks
+So, you've hit a problem. Here's some quicklinks to some common problems:
 
-The firewall is called [`mordor`](firewall.md), and the two 24-port switches are called [`rivendell` and `isengard`](switches.md).
-
-## Networking
-
-The IP address range for the `aperture` subnet is 10.10.0.0/24, with 10.10.0.0/16 being used for user VMs.
-
-| Hostname | Internal Address | External Address | Purpose |
-| -------- | ---------- | -------- | ------- |
-| `mordor` | 10.10.0.1 | N/A | Firewall |
-| `rivendell` | 10.10.0.2 | N/A | Switch |
-| `isengard` | 10.10.0.3 | N/A | Switch |
-| `glados` | 10.10.0.4 | 136.206.16.4 | Server |
-| `wheatley` | 10.10.0.5 | 136.206.16.5 | Server |
-| `chell` | 10.10.0.6 | 136.206.16.6 | Server |
-
-!!! note
-    Blue cables are used for production network.
-
-## KVM
-
-`nexus` is the name of the KVM switch. It's internal IP address is 10.10.0.10.
-
-`glados` is connected on port 1, `wheatley` on port 2, and `chell` on port 3.
-
-!!! note
-    Yellow cables are used for KVM network.
-
-## IDRAC
-
-The new servers are all equipped with IDRACs. These still need to be configured.
-
-!!! node
-    Red cables are used for IDRAC network.
-
-## [Images (click me)](images.md)
-
-## Switching from the old network to the new
-
-We have two address ranges that come in on a single redundant link, so we're exchanging that redundant link for two
-separate links, each taking responsibility for an address range (136.26.15.0/24 and 136.206.16.0/24). So we're surrendering
-redundancy to gain uptime/connectivity during the switchover only. Once the new servers are production ready, we can
-recombine the link to regain the redundancy.
+- [I can't connect to Aperture](vpn.md)
+- [Ansible is running into an error](ansible.md#common-errors)

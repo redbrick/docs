@@ -32,6 +32,8 @@ chell
 ansible_user= <your username>
 ```
 
+> Contact @distro for a fully populated file.
+
 ### Test it out
 
 ```bash
@@ -83,3 +85,18 @@ Redbrick's ansible configuration is stored in the [ansible](https://github.com/r
 some more documentation there on each playbook.
 
 Ansible's documentation is available [here](https://docs.ansible.com/ansible/latest/index.html).
+
+## Common Errors
+
+### Hashicorp Apt Key
+
+Sometimes, when running a playbook, you'll get an error like this:
+
+```bash
+TASK [apt : apt update packages to their latest version and autoclean] ***************************************************************************************************
+fatal: [wheatley]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [chell]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+fatal: [glados]: FAILED! => {"changed": false, "msg": "Failed to update apt cache: unknown reason"}
+```
+
+This is because the Hashicorp apt key has expired. To fix this, uncomment the `hashicorp-apt` task in the playbook.
