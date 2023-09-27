@@ -79,6 +79,8 @@ source venv/bin/activate
 python3 main.py config.toml
 ```
 
+Brickbot runs in `tmux a -t 0` and can be restarted by pressing ctrl+c and running the above python command
+
 ## Minecraft Servers
 
 The Redbrick Minecraft server's are dockerized applications running on *Zeus* on a server-per-container basis, using the tools on this GitHub Repo: https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
