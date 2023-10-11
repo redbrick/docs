@@ -1,6 +1,7 @@
 # Aperture
 
-What is aperture? It's nothing to do with cameras. See [about](about.md) for more information on the hardware.
+### What is aperture?
+It's nothing to do with cameras. See [about](about.md) for more information on the hardware.
 
 ## New Admins
 
@@ -10,7 +11,7 @@ these pages, I suggest you read the following:
 - [About](about.md)
 - [Nomad docs](https://www.nomadproject.io/docs/), specifically the [job specification](https://developer.hashicorp.com/nomad/docs/job-specification)
 and [managing nomad jobs](https://developer.hashicorp.com/nomad/tutorials/manage-jobs) pages.
-- [Consul docs]](https://www.consul.io/docs), specifically how it can be used with Nomad.
+- [Consul docs](https://www.consul.io/docs), specifically how it can be used with Nomad.
 - [Ansible docs](https://docs.ansible.com/ansible/latest/index.html), specifically the [playbook](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
 
 ## FAQ
