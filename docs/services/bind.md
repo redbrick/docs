@@ -1,6 +1,6 @@
 # Bind9 - `distro`, `ylmcc`
 
-Bind9 is our DNS provider. Currently it runs on Paphos, but is being moved to Fred during the restructuring.
+Bind9 is our DNS provider. Currently it runs on [paphos](../hosts/paphos.md), but is being moved to Fred during the restructuring.
 
 ## Configuration
 
