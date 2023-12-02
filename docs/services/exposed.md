@@ -1,6 +1,7 @@
 # Services Exposed to the Internet - `wizzdom`
 
 Firstly, it's important to mention that Redbrick is currently split in 2 parts:
+
 - Redbrick 2.0 *a.k.a. "old redbrick"* (on `136.206.15.0/24`)
 - Aperture *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
 
@@ -23,9 +24,10 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 	- **OS**: NixOS 22.05
 	- **Services**:
 		- `apache httpd`:
-			- websites from the webtree (including user webspaces):
+			- websites from the webtree (including, but not limited to):
 				- all user's websites `<user>.redbrick.dcu.ie`
-				- 
+				- [redbrick.dcu.ie](https://redbrick.dcu.ie)
+                - other websites are mentioned in the [nix-configs repo](https://github.com/redbrick/nix-configs/blob/master/services/httpd/vhosts.nix)
 			- legacy websites (pretty much anything that isn't dockerized)
 		- email (`postfix` and `dovecot`)
 		- mailing [lists](https://lists.redbrick.dcu.ie) (`mailman`)
@@ -34,10 +36,10 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 	- **OS**: Ubuntu 18.04 LTS
 	- **Note**: this is a docker host, everything on here is in a container
 	- **Services**:
-		- [Wetty](servers.md#Logging%20in%20to%20Wetty) [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
-		- [Admin API](api.md) [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
-		- Secretary's email generator [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
-		- [CodiMD](codimd.md) [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
+		- [Wetty](servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
+		- [Admin API](api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
+		- Secretary's email generator  at: [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
+		- [CodiMD](codimd.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
 		- all of this is routed through [traefik](traefik.md) as a reverse proxy
 - [paphos](../hosts/paphos.md) - `136.206.15.53`
 	- **OS**: Ubuntu 14.04 LTS
