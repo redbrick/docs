@@ -1,10 +1,10 @@
 # Servers
 
-Redbrick provides two main servers (Azazel and Pygmalion) for it's members to use for various use cases, for example running applications or user programs.
+Redbrick provides two main servers ([Azazel](../hosts/azazel.md) and [Pygmalion](../hosts/pygmalion.md)) for it's members to use for various use cases, for example running applications or user programs.
 
 ## Entrypoints
 
-The main login server used in Redbrick is Azazel. You may also log in to Pygmalion if you wish at `pyg.redbrick.dcu.ie` 
+The main login server used in Redbrick is [Azazel](../hosts/azazel.md). You may also log in to [Pygmalion](../hosts/pygmalion.md) if you wish at `pyg.redbrick.dcu.ie` 
 
 **2 Factor Authentication is required to log in to Redbrick servers.** This is done via an SSH key and your Redbrick username/password combination. For more information on how to create an SSH key, and configure your account for 2FA, please read below.
 
