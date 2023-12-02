@@ -2,7 +2,7 @@
 
 ## Redbrick Docs
 
-Welcome to Redbrick's documention. This is to keep up to date information about the technical infrastructure of Redbrick.
+Welcome to Redbrick's documentation. This is to keep up to date information about the technical infrastructure of Redbrick.
 This is mostly intended for admins, future admins, webmasters, and everybody else who is grumpy and has no life.
 
 ## Quick Links
