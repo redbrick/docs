@@ -2,17 +2,17 @@
 
 ## LDAP
 -- Query a user
-```
+```sh
 ldapsearch -x uid="USERNAME_HERE"
 ```
 
 -- Query user as root for more detailed info
-```
+```sh
 ldapsearch -D "cn=root,ou=services,o=redbrick" -y /etc/ldap.secret uid=user
 ```
 
 -- Find all users emails created by `USERNAME`
-```
+```sh
 ldapsearch -x createdby="user" uid | awk '/uid:/ {print $2"@redbrick.dcu.ie"}'
 ```
 
@@ -72,7 +72,7 @@ nix-shell -p [space seperated package names]
 ```
 
 -- Run brickbot2 (running on Metharme)
-```
+```bash
 cd brickbot2
 nix-shell
 source venv/bin/activate
