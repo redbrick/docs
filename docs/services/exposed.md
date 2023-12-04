@@ -16,11 +16,11 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 	- **Services**:
 		- secondary ssh login box for users (see [Logging in](servers.md#Logging%20in))
 		- jump-box for admins
-- [**motherlode**](../hosts/motherlode) - `136.206.15.250`
+- [**motherlode**](../hosts/nix/motherlode.md) - `136.206.15.250`
 	- **OS**: NixOS 22.05
 	- **Services**:
 		- VM for [dcuclubsandsocs.ie](https://dcuclubsandsocs.ie)
-- [**hardcase**](../hosts/hardcase.md) - `136.206.15.3`
+- [**hardcase**](../hosts/nix/hardcase.md) - `136.206.15.3`
 	- **OS**: NixOS 22.05
 	- **Services**:
 		- `apache httpd`:
@@ -49,9 +49,9 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 ## [Aperture](../aperture/index.md)
 In aperture, things are done a little differently than on the other network. Instead of having  a single host per service, aperture is configured to allow services to be allocated dynamically across all 3 servers using [nomad](../aperture/nomad.md), [consul](../aperture/consul.md) and [traefik](traefik.md).
 
-- [glados](../hosts/glados.md) - `136.206.16.4`
-- [wheatley](../hosts/wheatley.md) - `136.206.16.5`
-- [chell](../hosts/chell.md) - `136.206.16.6`
+- [glados](../hosts/aperture/glados.md) - `136.206.16.4`
+- [wheatley](../hosts/aperture/wheatley.md) - `136.206.16.5`
+- [chell](../hosts/aperture/chell.md) - `136.206.16.6`
 - all 3 boxes are identical
 - **OS**: Debian 11
 - **Services**:
