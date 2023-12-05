@@ -57,7 +57,7 @@ In aperture, things are done a little differently than on the other network. Ins
 - **Services**:
 	- simple `nginx` containers with the mascot of each server in aperture:
 		- [glados](https://glados.redbrick.dcu.ie)
-		- [wheatley](wheatley.redbrick.dcu.ie)
+		- [wheatley](https://wheatley.redbrick.dcu.ie)
 		- [chell](https://chell.redbrick.dcu.ie)
 	- the [amikon.me](https://amikon.me) website for DCU AMS in an `nginx` container
 	- [timetable.redbrick.dcu.ie](https://timetable.redbrick.dcu.ie) a timetable that actually works, 10x better than the [official DCU timetable](https://mytimetable.dcu.ie)
@@ -65,4 +65,4 @@ In aperture, things are done a little differently than on the other network. Ins
 	- all web traffic is routed through [traefik](traefik.md)
 	- all new services will be deployed here
 	- Most services here are deployed as docker containers but there's no reason you couldn't use any of the other [nomad drivers](https://developer.hashicorp.com/nomad/docs/drivers)
-	- For more information see redbrick's [Nomad repo](https://https://github.com/redbrick/nomad)
+	- For more information see redbrick's [Nomad repo](https://github.com/redbrick/nomad)
