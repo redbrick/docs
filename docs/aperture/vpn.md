@@ -33,5 +33,5 @@ You will be prompted to revoke a client, enter the name of the client you want t
 
 ## Connecting to the VPN
 
-To connect to the VPN, you will need to download the client configuration file from Glados and then import it into your
+To connect to the VPN, you will need to download the client configuration file from [glados](../hosts/aperture/glados.md) and then import it into your
 OpenVPN client.
