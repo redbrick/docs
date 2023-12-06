@@ -1,4 +1,4 @@
-# Aperture
+# About Aperture
 
 Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins`, `cawnj`, `ymacomp`
 and `arkues`.
@@ -6,9 +6,9 @@ and `arkues`.
 It consists of:
 
 - 3x Dell R6515
-  
-    | CPU | RAM | Storage |
-    | ---- | ---- | ------- |
+
+    | CPU                                       | RAM                               | Storage                          |
+    | ----                                      | ----                              | -------                          |
     | AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
 
 - 2x Ubiquiti USW Pro
@@ -16,7 +16,7 @@ It consists of:
 
 ## Servers
 
-The three servers are named [`glados`](../hosts/glados.md) , [`wheatley`](../hosts/wheatley.md) and [`chell`](../hosts/chell.md).
+The three servers are named [`glados`](../hosts/aperture/glados.md) , [`wheatley`](../hosts/aperture/wheatley.md) and [`chell`](../hosts/aperture/chell.md).
 
 ## Networks
 
@@ -26,14 +26,14 @@ The firewall is called [`mordor`](firewall.md), and the two 24-port switches are
 
 The IP address range for the [`aperture`](index.md) subnet is `10.10.0.0/24`, with `10.10.0.0/16` being used for user VMs.
 
-| Hostname | Internal Address | External Address | Purpose |
-| -------- | ---------- | -------- | ------- |
-| `mordor` | 10.10.0.1 | N/A | Firewall |
-| `rivendell` | 10.10.0.2 | N/A | Switch |
-| `isengard` | 10.10.0.3 | N/A | Switch |
-| `glados` | 10.10.0.4 | 136.206.16.4 | Server |
-| `wheatley` | 10.10.0.5 | 136.206.16.5 | Server |
-| `chell` | 10.10.0.6 | 136.206.16.6 | Server |
+| Hostname    | Internal Address | External Address | Purpose  |
+| --------    | ----------       | --------         | -------  |
+| `mordor`    | 10.10.0.1        | N/A              | Firewall |
+| `rivendell` | 10.10.0.2        | N/A              | Switch   |
+| `isengard`  | 10.10.0.3        | N/A              | Switch   |
+| `glados`    | 10.10.0.4        | 136.206.16.4     | Server   |
+| `wheatley`  | 10.10.0.5        | 136.206.16.5     | Server   |
+| `chell`     | 10.10.0.6        | 136.206.16.6     | Server   |
 
 !!! note
     **Blue** cables are used for **production network**.
