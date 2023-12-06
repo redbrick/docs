@@ -1,6 +1,6 @@
 # Icarus
 
-Daedalus and Icarus ~~are~~ were twins and thus share documentation.
+Daedalus and Icarus ~~are~~ were twins ~~and thus share documentation.~~
 However, Daedalus is now ***Dead***alus and Icarus lives on *for now* albeit a little sick.
 
 ## Details
@@ -15,8 +15,6 @@ However, Daedalus is now ***Dead***alus and Icarus lives on *for now* albeit a l
 - **Drives**: Internal SATA DVD±RW
 - **Network**: 2x Onboard Ethernet, 802.3ad bonding
 - iDRAC NIC: Shared on port 1
-- Daedalus' IP is 0.50, Icarus' is 0.150
-- Their iDRAC IPs are 1.50 and 1.150 respectively
 
 ## Services
 - LDAP

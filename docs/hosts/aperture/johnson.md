@@ -11,9 +11,7 @@ Formerly `albus` (in a different life)
 - **Drives**: Internal SATA DVD±RW
 - **Network**: 4x Onboard Ethernet, 802.3ad bonding
 - **iDRAC NIC**: Shared on port 1
-- Albus's IP is `0.56`
-- Its iDRAC IP is `1.56`
 ## Where to find
 - `10.10.0.7`
-- `136.206.16.7`
+- 2nd NIC is currently unused, would be a good idea to make a bond for more throughput and redundancy on the same ip
 ## Services
