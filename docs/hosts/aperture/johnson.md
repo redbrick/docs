@@ -1,0 +1,19 @@
+# Johnson
+
+## Details
+Formerly `albus` (in a different life)
+- **Type**: Dell PowerEdge R515
+- **OS**: NixOS
+- **CPU**: 2 x Opteron 4334 6 core @ 3.2GHz
+- **RAM**: 32GB
+- **Storage**: LSI MegaRAID SAS 2108 RAID controller
+- **Disks**: 2 x 300gb SAS for boot, 8x 1tb SATA ZFS
+- **Drives**: Internal SATA DVD±RW
+- **Network**: 4x Onboard Ethernet, 802.3ad bonding
+- **iDRAC NIC**: Shared on port 1
+- Albus's IP is `0.56`
+- Its iDRAC IP is `1.56`
+## Where to find
+- `10.10.0.7`
+- `136.206.16.7`
+## Services
