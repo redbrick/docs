@@ -1,0 +1,22 @@
+# Icarus
+
+Daedalus and Icarus ~~are~~ were twins ~~and thus share documentation.~~
+However, Daedalus is now ***Dead***alus and Icarus lives on *for now* albeit a little sick.
+
+## Details
+- **Type**: Dell PowerEdge 2950
+- **OS**: NixOS
+- **CPU**: 2x Intel Xeon L5335 @ 2.00GHz
+- **RAM**: 32GB (Daedalus), 16GB (Icarus)
+- **Storage**: Dell Perc 6/i Integrated RAID controller
+- **Disks**:
+    - 2 x 73GB SAS disks in RAID 1 (hardware)
+    - 3 x 600GB SAS disks in passthrough (3x RAID 0)
+- **Drives**: Internal SATA DVD±RW
+- **Network**: 2x Onboard Ethernet, 802.3ad bonding
+- iDRAC NIC: Shared on port 1
+
+## Services
+- LDAP
+- NFS, (a.k.a `/storage`) from Icarus
+- GlusterFS, eventually, or some other distributed storage to replace NFS
