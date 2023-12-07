@@ -18,5 +18,5 @@ However, Daedalus is now ***Dead***alus and Icarus lives on *for now* albeit a l
 
 ## Services
 - LDAP
-- NFS, (a.k.a `/storage`) from Icarus
+- [NFS](../../services/nfs.md), (a.k.a `/storage`)
 - GlusterFS, eventually, or some other distributed storage to replace NFS

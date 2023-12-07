@@ -1,6 +1,6 @@
 # Hosts
 
-## Login Boxes
+## [Login](../services/servers.md#Logging%20in) Boxes
 - [**azazel**](azazel.md)
 - [**pygmalion**](pygmalion.md)
 

@@ -42,7 +42,7 @@ The IP address range for the [`aperture`](index.md) subnet is `10.10.0.0/24`, wi
 
 `nexus` is the name of the KVM switch. It's internal IP address is `10.10.0.10`.
 
-[`glados`](../hosts/glados.md) is connected on port 1, [`wheatley`](../hosts/wheatley.md) on port 2, and [`chell`](../hosts/chell.md) on port 3.
+[`glados`](../hosts/aperture/glados.md) is connected on port 1, [`wheatley`](../hosts/aperture/wheatley.md) on port 2, and [`chell`](../hosts/aperture/chell.md) on port 3.
 
 !!! note
     **Yellow** cables are used for **KVM network**.
