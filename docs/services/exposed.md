@@ -3,7 +3,7 @@
 Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 
 - Redbrick 2.0 *a.k.a. "old redbrick"* (on `136.206.15.0/24`)
-- Aperture *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
+- [Aperture](../aperture/index.md) *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
 
 ## Old Redbrick
 - [**azazel**](../hosts/azazel.md) - `136.206.15.24`

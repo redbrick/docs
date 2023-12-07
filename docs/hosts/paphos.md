@@ -11,6 +11,7 @@
 ## Where to find:
 - External: 
 	- `136.206.15.53`
+	- `136.206.15.26`
 	- `ns1.redbrick.dcu.ie`
 - Internal: 
 	- *hmm, good question*

@@ -65,14 +65,13 @@ Couple of things to look out for:
 
 ## Admin Account Responsibilities
 
-As an adminisitrator, your new local account has extra priviliges (namely being
-in the root group). For this reason, you should not run _any_ untrusted or
+As an administrator, your new local account has extra privileges *(namely being in the root group)*.
+
+For this reason, you should not run _any_ untrusted or
 unknown programs or scripts.
 
 If you must, and source code is available you
-should check it before running it. Compile your own versions of other user's
-programs you use regularly. It is far too easy for other users to trojan your
-account in this manner and get root.
+should check it before running it. Compile your own versions of other user's programs you use regularly. It is far too easy for other users to trojan your account in this manner and get root.
 
 Do not use passwordless ssh keys on any of your accounts. When using an
 untrusted workstation (i.e. just about any PC in DCU!) always check for

@@ -8,7 +8,7 @@ Redbrick uses [Gitea](https://gitea.io/en-US/) as an open source git host.
 
 ## Deployment
 
-Gitea and its database are deployed to Hardcase which runs NixOS
+Gitea and its database are deployed to [Hardcase](../hosts/nix/hardcase.md) which runs [NixOS](../procedures/nixos.md)
 
 - The actual repositories are stored in `/zroot/git` and most other data is stored in `/var/lib/gitea`
 - The `SECRET_KEY` and `INTERNAL_TOKEN_URI` are stored in `/var/secrets`. They are not automatically created and must be

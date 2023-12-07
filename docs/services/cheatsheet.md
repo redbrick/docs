@@ -31,7 +31,7 @@ ___
 
 ### Onboarding new admins
 
-- Create `root` ssh key for NixOS Machines
+- Create `root` ssh key for [NixOS](../procedures/nixos.md) Machines
 Following creation of the key, add to the whitelist in *[nix configs](https://github.com/redbrick/nix-configs/blob/master/services/ssh.nix)*.
 
 ```bash
@@ -56,7 +56,7 @@ getpw <name_of_pass> # Grab password by name key | getpw pygmalion
 
 ___
 
-## SSH to root on a NixOS machine
+## SSH to root on a [NixOS](../procedures/nixos.md) machine
 - From the account you generated your ssh key on (in nix configs) type:
 ```bash
 ssh root@hardcase.internal
@@ -83,7 +83,7 @@ Brickbot runs in `tmux a -t 0` and can be restarted by pressing ctrl+c and runni
 
 ## Minecraft Servers
 
-The Redbrick Minecraft server's are dockerized applications running on *Zeus* on a server-per-container basis, using the tools on this GitHub Repo: https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
+The Redbrick Minecraft server's are dockerized applications running on [`zeus`](../hosts/zeus.md) on a server-per-container basis, using the tools on this GitHub Repo: https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
 
 Repo is very well documented so have a look at the README but here's the basics:
 

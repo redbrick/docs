@@ -7,11 +7,8 @@ Bind9 is our DNS provider. Currently it runs on [paphos](../hosts/paphos.md), bu
 The config files for bind are located in `/etc/bind/master/`. The most important file in this directory is the
 `db.Redbrick.dcu.ie` file.
 
-{==
-
-You must never update this file without following the steps below first!
-
-==}
+!!! note
+> You must never update this file without following the steps below first!
 
 ## Updating DNS
 

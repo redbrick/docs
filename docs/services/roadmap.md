@@ -79,7 +79,7 @@ Why?
 
 ## Docs
 
-- Update [fucking.readthedocs.io](fucking.readthedocs.io) to new home, [docs.redbrick.dcu.ie](docs.redbrick.dcu.ie)
+- Update [fucking.readthedocs.io](https://fucking.readthedocs.io) to new home, [docs.redbrick.dcu.ie](https://docs.redbrick.dcu.ie)
 
 ## TODO
 

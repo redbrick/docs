@@ -75,7 +75,7 @@ For example inside the `ldap-register.sh` script used by the `/register` endpoin
 
 *How do we fix this?*
 
-Instead of relying on using users/group names for the chown command, it is advisable to instead use their unique id's. 
+Instead of relying on using users/group names for the `chown` command, it is advisable to instead use their unique id's. 
 
 ```bash
 # For example, the following commands are equivalent.

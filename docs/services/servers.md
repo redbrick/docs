@@ -27,20 +27,20 @@ If you are an unbothered king/queen that simply does not mind using a web interf
 
 ##### Logging in to other servers
 
-Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on Azazel as it is on Pygmalion, meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
+Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on [Azazel](../hosts/azazel.md) as it is on [Pygmalion](../hosts/pygmalion.md), meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
 
 
 ## Setting up an SSH Key
 
 Generating an SSH key pair creates two long strings of characters: a public and a private key. You can place the public key on any server, and then connect to the server using an SSH client that has access to the private key.
 
-When these keys match up, and your account password is also correct, you are granted authorization to log in.
+When these keys match up, and your account password is also correct, you are granted authorisation to log in.
 
 ### 1. Creating the Key Pair
 
 On your local computer, in the command line of your choice, enter the following command:
 ```bash
-$ ssh-keygen -t ed25519
+ssh-keygen -t ed25519
 ```
 Expected Output
 ```
@@ -73,11 +73,11 @@ This key is saved under .ssh under your User directory. (i.e `C:\Users\Bob\.ssh\
 
 In this step we store our **public** key on the server we intend to log in to. This key will be used against our secret private key to authenticate our login. 
 
-For the purposes of this tutorial we will be using Pygmalion (`pyg.redbrick.dcu.ie`) as our server.
+For the purposes of this tutorial we will be using [Pygmalion](../hosts/pygmalion.md) (`pyg.redbrick.dcu.ie`) as our server.
 
 #### Logging in to Wetty
 
-In order to access the server to actually place our keys in it, we need to log in via Wetty - a shell interface for Pygmalion on the web.
+In order to access the server to actually place our keys in it, we need to log in via Wetty - a shell interface for [Pygmalion](../hosts/pygmalion.md) on the web.
 
 - Head to <a href="https://wetty.redbrick.dcu.ie/" target="_blank">wetty.redbrick.dcu.ie</a>.
 
@@ -87,18 +87,18 @@ In order to access the server to actually place our keys in it, we need to log i
     ```
     Enter your Redbrick username and press <kbd>ENTER</kbd>. When prompted, enter your Redbrick password. [*Forgot either of these?*](#forgot-your-password)
 
-#### Adding the key into the authorized_keys file
+#### Adding the key into the `authorized_keys` file
 
 - Add the key
 
     Grab the contents of your public key. You may use the `cat filepath` command for this:
     ```bash
-    $ cat /home/bob/.ssh/id_ed25519.pub
+    cat /home/bob/.ssh/id_ed25519.pub
     ```
 
     On Wetty, enter the following command in the shell, with `YOUR_KEY` replaced with your **public** ssh key.
     
-    ```
+    ```bash
     echo "YOUR_KEY" >> ~/.ssh/authorized_keys
     ```
     This command will append your public key to the end of the `authorized_keys` file.
@@ -117,6 +117,4 @@ Congratulations! If you've made it this far, [you're ready to login](#logging-in
 
 ## Forgot your password?
 
-Contact an admin on our [Discord Server](https://discord.gg/3D8kTX9auY) or at [elected-admins@redbrick.dcu.ie](mailto:elected-admins@redbrick.dcu.ie)
-
-<hr></hr>
+[Contact an admin](../contact.md) on our [Discord Server](https://discord.gg/3D8kTX9auY) or at [elected-admins@redbrick.dcu.ie](mailto:elected-admins@redbrick.dcu.ie)

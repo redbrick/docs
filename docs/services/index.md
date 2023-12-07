@@ -3,6 +3,14 @@
 Here you will find a list of all the services Redbrick runs, along with some configs and some important information
 surrounding them.
 
+- [api](api.md)
+- [bind](bind.md)
+- [codimd](codimd.md)
+- [gitea](gitea.md)
+- [irc](irc.md)
+- [nfs](nfs.md)
+- [traefik](traefik.md)
+- [znapzend](znapzend.md)
 ## Adding More Services
 
 In order to add a new service, you will need to edit the [docs](https://github.com/redbrick/docs) repository.

@@ -5,7 +5,7 @@ NFS is used to serve the notorious `/storage` directory on Icarus to all of Redb
 
 ## Deployment
 
-- NFS is deployed with Nix on Icarus
+- NFS is deployed with Nix on [Icarus](../hosts/nix/icarus.md)
 - It is backed onto the PowerVault MD1200 with all its disk passed through single-drive RAID 0s toallow for setup of ZFS:
     - 1 mirror of 2x 500GB drives
     - 1 mirror of 2x 750GB drives
@@ -21,7 +21,7 @@ On each machine where `/storage` is where NFS is mounted, but `/home` and `/webt
 
 There are 2 scripts used to control quotas, detailed below.
 
-NFS is backed up to Albus via [ZnapZend](/services/znapsend.md).
+NFS is backed up to Albus via [ZnapZend](znapzend.md).
 
 ## `zfsquota` and `zfsquotaquery`
 
@@ -35,7 +35,7 @@ driven - it runs on a timer every 3 hours and syncs all LDAP quotas with ZFS. It
 described below. Users with no quota in LDAP will have no quota in `/storage`, and users who have their quota removed will
 persist on ZFS.
 
-Changing user names has no impact on this since it is synced with uidNumber.
+Changing user names has no impact on this since it is synced with `uidNumber`.
 
 ### zfsquotaquery
 
