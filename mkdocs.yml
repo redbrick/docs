@@ -30,6 +30,7 @@ theme:
 
 plugins:
   - awesome-pages
+  - callouts
   - search
   - git-revision-date-localized:
       type: timeago
@@ -37,8 +38,10 @@ plugins:
 markdown_extensions:
   - attr_list
   - abbr
+  - nl2br
   - admonition
   - pymdownx.snippets
+  - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.superfences
 
