@@ -113,4 +113,4 @@ mount -o remount,ro /storage
 
 ### Rolling Back or Restoring a Backup
 
-See [znapzend](/services/znapzend/)
+See [znapzend](znapzend.md)

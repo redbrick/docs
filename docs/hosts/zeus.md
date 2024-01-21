@@ -9,11 +9,12 @@
 
 ## Where to find
 - TODO
+- `136.206.15.31`
 
 ## Services
-- [Wetty](servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
-- [Admin API](api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
+- [Wetty](../services/servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
+- [Admin API](../services/api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
 - brickbot2
 - Secretary's email generator  at: [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
-- [CodiMD](codimd.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
-- all of this is routed through [traefik](traefik.md) as a reverse proxy
+- [CodiMD](../services/codimd.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
+- all of this is routed through [traefik](../services/traefik.md) as a reverse proxy

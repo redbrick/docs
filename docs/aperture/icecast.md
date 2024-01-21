@@ -50,7 +50,7 @@ You'll need to connect to icecast to stream to it. BUTT is the software we use t
 on the desktop. Once its open, (and you're connected to the VPN), press the small "play" button in the top left corner. This
 will start your stream to the server.
 
-The username and password should already be configured in the software. If not, ask a [redbrick sysadmin](../../contact)
+The username and password should already be configured in the software. If not, ask a [redbrick sysadmin](../contact.md)
 for the login details.
 
 !!! warning
@@ -66,4 +66,4 @@ if you want to keep it for later, it will not be kept on the desktop for long!
 
 ### Further Information
 
-If you have any questions, please ask a [redbrick sysadmin](../../contact).
+If you have any questions, please ask a [redbrick sysadmin](../contact.md).
