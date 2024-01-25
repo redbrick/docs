@@ -33,8 +33,8 @@ root SSH key is working.
 If the NFS server is online and functional, you do not need to involve Albus to roll back changes, as all the snapshots
 are kept on Icarus too.
 
-  1. Find the snapshot you want to restore with zfs list -t snapshot.
-  2. Run zfs rollback $snapshotname.
+  1. Find the snapshot you want to restore with `zfs list -t snapshot`.
+  2. Run `zfs rollback $snapshotname`.
 
 That's it! These instructions obviously work for backups other than NFS too, should any ever exist.
 

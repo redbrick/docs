@@ -21,11 +21,11 @@ ssh YOUR_USERNAME@redbrick.dcu.ie -i SSH_KEY_LOCATION_PATH
 # NOTE: The "-i" flag specifies the location of your private ssh key.
 ```
 
-##### Alternatives
+### Alternatives
 
 If you are an unbothered king/queen that simply does not mind using a web interface, let me introduce you to [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie/). You do not need an SSH key here.
 
-##### Logging in to other servers
+### Logging in to other servers
 
 Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on [Azazel](../hosts/azazel.md) as it is on [Pygmalion](../hosts/pygmalion.md), meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
 
@@ -62,7 +62,8 @@ Enter passphrase (empty for no passphrase):
 ```
 Here you may protect this key file with a passphrase. This is optional and recommended for security.
 
-    *If you do not wish to add a passphrase to save you all that typing, simply press <kbd>ENTER</kbd> for the password and confirmation password prompts.*
+> [!NOTE] Note
+> *If you do not wish to add a passphrase to save you all that typing, simply press <kbd>ENTER</kbd> for the password and confirmation password prompts.*
 
 *The newly generated public key should now be saved* in `/home/bob/.ssh/id_ed25519.pub`. The private key is the same file is at `/home/bob/.ssh/id_ed25519`. *(i.e under the `.ssh` folder in your user home directory.)*
 
