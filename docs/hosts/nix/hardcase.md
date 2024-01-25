@@ -10,8 +10,13 @@
 - **Drives**: Internal SATA DVD±RW
 - **Network**: 2x Onboard Ethernet, 802.3ad bonding
 - **iDRAC NIC**: Shared on port 1
-- Hardcase's IP is `0.158`
-- Its iDRAC IP is `1.158`
+- iDRAC IP is `1.158`
+
+## Where to find
+- **Internal**:
+	- `192.168.0.158`
+- **External**:
+	- `136.206.15.3`
 
 ## Services
 - postgreSQL

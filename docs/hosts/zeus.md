@@ -8,8 +8,10 @@
 - **Network**: 2x NetXtreme II BCM5716 Gigabit Ethernet
 
 ## Where to find
-- TODO
-- `136.206.15.31`
+- **Internal**:
+	- `192.168.0.131`
+- **External**:
+	- `136.206.15.31`
 
 ## Services
 - [Wetty](../services/servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)

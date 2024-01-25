@@ -16,6 +16,10 @@ However, Daedalus is now ***Dead***alus and Icarus lives on *for now* albeit a l
 - **Network**: 2x Onboard Ethernet, 802.3ad bonding
 - iDRAC NIC: Shared on port 1
 
+## Where to find
+- **Internal**:
+	- `192.168.0.150`
+
 ## Services
 - LDAP
 - [NFS](../../services/nfs.md), (a.k.a `/storage`)

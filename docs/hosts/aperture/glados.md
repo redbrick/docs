@@ -10,6 +10,9 @@
 Part of [aperture](../../aperture/index.md)
 
 ## Where to find
-- `10.10.0.4`
-- `glados.redbrick.dcu.ie`
-- `glados.aperture.redbrick.dcu.ie`
+- **Internal**:
+	- `10.10.0.4`
+- **External**:
+	- `136.206.16.4`
+	- `glados.redbrick.dcu.ie`
+	- `glados.aperture.redbrick.dcu.ie`

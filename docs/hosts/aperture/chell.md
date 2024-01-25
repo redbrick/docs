@@ -10,6 +10,9 @@
 Part of [aperture](../../aperture/index.md)
 
 ## Where to find
-- `10.10.0.6`
-- `chell.redbrick.dcu.ie`
-- `chell.aperture.redbrick.dcu.ie`
+- **Internal**:
+	- `10.10.0.6`
+- **External**:
+	- `136.206.16.6`
+	- `chell.redbrick.dcu.ie`
+	- `chell.aperture.redbrick.dcu.ie`
