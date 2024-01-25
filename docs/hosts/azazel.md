@@ -12,7 +12,10 @@
 - **Network**: 2x Onboard Ethernet
 
 ## Where to find
-- TODO
+- **Internal**:
+	- `10.5.0.1`
+- **External**:
+	- `136.206.15.24`
 
 ## Services
 - primary ssh login box for users (see [Logging in](../services/servers.md#Logging%20in))

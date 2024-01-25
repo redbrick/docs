@@ -9,7 +9,7 @@
 
 ## Where to Find
 - **Internal**:
-	- TODO
+	- `192.168.0.25`
 - **External**:
 	- `136.206.15.25`
 	- `pygmalion.redbrick.dcu.ie`
