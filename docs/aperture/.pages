@@ -4,6 +4,7 @@ nav:
 - about.md
 - ansible.md
 - nomad.md
+- bastion-vm.md
 - firewall.md
 - icecast.md
 - vpn.md
