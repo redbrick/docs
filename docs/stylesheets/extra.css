@@ -1,0 +1,7 @@
+@import url("https://raw.githubusercontent.com/redbrick/design-system/main/assets/fonts/myriad-pro/loader.css");
+@import url("https://raw.githubusercontent.com/redbrick/design-system/main/assets/fonts/fira-code/loader.css");
+
+:root {
+  --md-text-font: "Myriad Pro", sans-serif;
+  --md-code-font: "Fira Code", monospace;
+}

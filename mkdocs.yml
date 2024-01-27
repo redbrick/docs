@@ -47,3 +47,6 @@ markdown_extensions:
 
 extra:
   github_org: https://github.com/redbrick
+
+extra_css:
+  - stylesheets/extra.css
