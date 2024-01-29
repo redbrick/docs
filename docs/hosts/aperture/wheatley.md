@@ -16,3 +16,6 @@ Part of [aperture](../../aperture/index.md)
 	- `136.206.16.5`
 	- `wheatley.redbrick.dcu.ie`
 	- `wheatley.aperture.redbrick.dcu.ie`
+
+
+![](../../assets/wheatley.png)

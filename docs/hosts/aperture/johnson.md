@@ -21,3 +21,6 @@ Part of [aperture](../../aperture/index.md)
 - 2nd NIC is currently unused, would be a good idea to make a bond for more throughput and redundancy on the same ip
 ## Services
 - `NFS` for [aperture](../../aperture/index.md)
+
+
+![](../../assets/johnson.png)
