@@ -1,4 +1,4 @@
-# Chell
+# Wheatley
 
 ## Details
 - **Type**: Dell R6515
@@ -11,11 +11,11 @@ Part of [aperture](../../aperture/index.md)
 
 ## Where to find
 - **Internal**:
-	- `10.10.0.6`
+	- `10.10.0.5`
 - **External**:
-	- `136.206.16.6`
-	- `chell.redbrick.dcu.ie`
-	- `chell.aperture.redbrick.dcu.ie`
+	- `136.206.16.5`
+	- `wheatley.redbrick.dcu.ie`
+	- `wheatley.aperture.redbrick.dcu.ie`
 
 
-![](../../assets/chell.png)
+![](../../res/wheatley.png)

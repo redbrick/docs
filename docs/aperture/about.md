@@ -5,7 +5,7 @@ Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `dist
 
 It consists of:
 
-- 3x Dell R6515 - [`glados`](/hosts/aperture/glados), [`wheatley`](/hosts/aperture/wheatley), [`chell`](/hosts/aperture/chell)
+- 3x Dell R6515 - [`glados`](../hardware/aperture/glados.md), [`wheatley`](../hardware/aperture/wheatley.md), [`chell`](../hardware/aperture/chell.md)
 
  |                    CPU                    |                RAM                |             Storage              |
  |:-----------------------------------------:|:---------------------------------:|:--------------------------------:|
@@ -16,7 +16,7 @@ It consists of:
 
 ## Servers
 
-The three servers are named [`glados`](../hosts/aperture/glados.md) , [`wheatley`](../hosts/aperture/wheatley.md) and [`chell`](../hosts/aperture/chell.md).
+The three servers are named [`glados`](../hardware/aperture/glados.md) , [`wheatley`](../hardware/aperture/wheatley.md) and [`chell`](../hardware/aperture/chell.md).
 
 ## Networks
 
@@ -42,7 +42,7 @@ The IP address range for the [`aperture`](index.md) subnet is `10.10.0.0/24`, wi
 
 `nexus` is the name of the KVM switch. It's internal IP address is `10.10.0.10`.
 
-[`glados`](../hosts/aperture/glados.md) is connected on port 1, [`wheatley`](../hosts/aperture/wheatley.md) on port 2, and [`chell`](../hosts/aperture/chell.md) on port 3.
+[`glados`](../hardware/aperture/glados.md) is connected on port 1, [`wheatley`](../hardware/aperture/wheatley.md) on port 2, and [`chell`](../hardware/aperture/chell.md) on port 3.
 
 > [!WARNING] Note!
 > **Yellow** cables are used for **KVM network**.

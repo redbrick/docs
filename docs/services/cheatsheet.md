@@ -83,7 +83,7 @@ Brickbot runs in `tmux a -t 0` and can be restarted by pressing ctrl+c and runni
 
 ## Minecraft Servers
 
-The Redbrick Minecraft server's are dockerized applications running on [`zeus`](../hosts/zeus.md) on a server-per-container basis, using the tools on this GitHub Repo: https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
+The Redbrick Minecraft server's are dockerized applications running on [`zeus`](../hardware/zeus.md) on a server-per-container basis, using the tools on this GitHub Repo: https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
 
 Repo is very well documented so have a look at the README but here's the basics:
 

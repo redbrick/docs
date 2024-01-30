@@ -1,4 +1,4 @@
-# Hosts
+# Hardware
 
 ## [Login](../services/servers.md#Logging%20in) Boxes
 - [**azazel**](azazel.md)

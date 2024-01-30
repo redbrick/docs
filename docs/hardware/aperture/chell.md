@@ -1,4 +1,4 @@
-# Glados
+# Chell
 
 ## Details
 - **Type**: Dell R6515
@@ -11,11 +11,11 @@ Part of [aperture](../../aperture/index.md)
 
 ## Where to find
 - **Internal**:
-	- `10.10.0.4`
+	- `10.10.0.6`
 - **External**:
-	- `136.206.16.4`
-	- `glados.redbrick.dcu.ie`
-	- `glados.aperture.redbrick.dcu.ie`
+	- `136.206.16.6`
+	- `chell.redbrick.dcu.ie`
+	- `chell.aperture.redbrick.dcu.ie`
 
 
-![](../../assets/glados.png)
+![](../../res/chell.png)
