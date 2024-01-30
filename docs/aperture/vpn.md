@@ -1,13 +1,12 @@
 # Admin VPN
 
-The admin VPN is set up to allow admins to access the network from outside of DCU, giving them an IP address on the
-internal network for troubleshooting, testing and integrating.
+The admin VPN is set up to allow admins to access the network from outside of DCU, giving them an IP address on the internal network for troubleshooting, testing and integrating.
 
 If you just want to create a new client configuration, go here: [adding a new client](#adding-a-new-client)
 
 ## Setup
 
-Installed OpenVPN using [this script](https://github.com/Nyr/openvpn-install) on Glados.
+Installed OpenVPN using [this script](https://github.com/Nyr/openvpn-install) on [`glados`](../hosts/aperture/glados.md).
 
 ## Adding a new client
 
@@ -33,5 +32,4 @@ You will be prompted to revoke a client, enter the name of the client you want t
 
 ## Connecting to the VPN
 
-To connect to the VPN, you will need to download the client configuration file from [glados](../hosts/aperture/glados.md) and then import it into your
-OpenVPN client.
+To connect to the VPN, you will need to download the client configuration file from [glados](../hosts/aperture/glados.md) and then import it into your OpenVPN client.

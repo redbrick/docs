@@ -1,6 +1,6 @@
 # Aperture
 
-### What is aperture?
+## What is aperture?
 It's nothing to do with cameras. See [about](about.md) for more information on the hardware.
 
 ## New Admins

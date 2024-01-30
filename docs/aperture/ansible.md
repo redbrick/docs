@@ -1,7 +1,6 @@
 # Ansible
 
-Redbrick uses ansible to manage its infrastructure. This document describes the procedures and some tips to get the most
-out of it.
+Redbrick uses ansible to manage its infrastructure. This document describes the procedures and some tips to get the most out of it.
 
 ## Getting started
 
@@ -15,8 +14,7 @@ pip install ansible
 
 ### Add an SSH key
 
-Ansible uses ssh to connect to the remote hosts. You'll need to set up your ssh key so that you can connect to the hosts
-without constant prompts for passwords.
+Ansible uses ssh to connect to the remote hosts. You'll need to set up your ssh key so that you can connect to the hosts without constant prompts for passwords.
 
 ### Create a hosts file
 
@@ -44,8 +42,7 @@ This should connect to all the hosts in the `aperture` group, and run the `ping`
 
 ## Playbooks
 
-Ansible playbooks are a set of instructions for ansible to run. They're written in YAML, and are usually stored in a file
-called `playbook.yml`.
+Ansible playbooks are a set of instructions for ansible to run. They're written in YAML, and are usually stored in a file called `playbook.yml`.
 
 ### Writing a playbook
 
@@ -70,8 +67,7 @@ Ansible playbooks are written in YAML. The basic structure is:
         state: present
 ```
 
-This playbook will connect to all the hosts in the `aperture` group, and run the `apt` module with the `name` and `state`
-options.
+This playbook will connect to all the hosts in the `aperture` group, and run the `apt` module with the `name` and `state` options.
 
 ### Running a playbook
 
@@ -81,8 +77,7 @@ ansible-playbook playbook.yml -i hosts
 
 ## More Information
 
-Redbrick's ansible configuration is stored in the [ansible](https://github.com/redbrick/ansible) repository. There's
-some more documentation there on each playbook.
+Redbrick's ansible configuration is stored in the [ansible](https://github.com/redbrick/nomad/tree/master/ansible) folder in the `redbrick/nomad` repository. There's some more documentation there on each playbook.
 
 Ansible's documentation is available [here](https://docs.ansible.com/ansible/latest/index.html).
 

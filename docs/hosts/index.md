@@ -7,7 +7,10 @@
 ## [NixOS](../procedures/nixos.md) Boxes
 - [**hardcase**](nix/hardcase.md)
 - [**motherlode**](nix/motherlode.md)
-- [icarus](nix/icarus.md)
+- [**icarus**](nix/icarus.md)
+
+- [**paphos**](paphos.md)
+- [**zeus**](zeus.md)
 
 ## [Aperture](../aperture/index.md)
 - [**glados**](aperture/glados.md)
