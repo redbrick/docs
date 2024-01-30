@@ -23,4 +23,4 @@ Part of [aperture](../../aperture/index.md)
 - `NFS` for [aperture](../../aperture/index.md)
 
 
-![](../../assets/johnson.png)
+![](../../res/johnson.png)

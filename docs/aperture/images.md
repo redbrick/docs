@@ -2,17 +2,17 @@
 
 ## Servers
 
-![distro hanging cables](../assets/distro-hanging-cables.jpg)
-![new installed servers](../assets/new-installed-servers.jpg)
-![inside of server](../assets/inside-of-server.jpg)
+![distro hanging cables](../res/distro-hanging-cables.jpg)
+![new installed servers](../res/new-installed-servers.jpg)
+![inside of server](../res/inside-of-server.jpg)
 
 ## Networking
 
-![isengard](../assets/isengard.jpg)
-![mordor and rivendell](../assets/mordor-and-rivendell.jpg)
-![labelled cables for mordor and rivendell](../assets/labelled-cables-for-mordor-and-rivendell.jpg)
-![labelled cables for isengard](../assets/labelled-cables-for-isengard.jpg)
-![tidy cables for glados, wheatley and chell](../assets/cables-glados-wheatley-chell.jpg)
+![isengard](../res/isengard.jpg)
+![mordor and rivendell](../res/mordor-and-rivendell.jpg)
+![labelled cables for mordor and rivendell](../res/labelled-cables-for-mordor-and-rivendell.jpg)
+![labelled cables for isengard](../res/labelled-cables-for-isengard.jpg)
+![tidy cables for glados, wheatley and chell](../res/cables-glados-wheatley-chell.jpg)
 
 ## Some Dancing for Good Measure
 

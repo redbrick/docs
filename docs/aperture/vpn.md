@@ -6,7 +6,7 @@ If you just want to create a new client configuration, go here: [adding a new cl
 
 ## Setup
 
-Installed OpenVPN using [this script](https://github.com/Nyr/openvpn-install) on [`glados`](../hosts/aperture/glados.md).
+Installed OpenVPN using [this script](https://github.com/Nyr/openvpn-install) on [`glados`](../hardware/aperture/glados.md).
 
 ## Adding a new client
 
@@ -32,4 +32,4 @@ You will be prompted to revoke a client, enter the name of the client you want t
 
 ## Connecting to the VPN
 
-To connect to the VPN, you will need to download the client configuration file from [glados](../hosts/aperture/glados.md) and then import it into your OpenVPN client.
+To connect to the VPN, you will need to download the client configuration file from [glados](../hardware/aperture/glados.md) and then import it into your OpenVPN client.

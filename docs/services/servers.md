@@ -1,10 +1,10 @@
 # Servers
 
-Redbrick provides two main servers ([Azazel](../hosts/azazel.md) and [Pygmalion](../hosts/pygmalion.md)) for it's members to use for various use cases, for example running applications or user programs.
+Redbrick provides two main servers ([Azazel](../hardware/azazel.md) and [Pygmalion](../hardware/pygmalion.md)) for it's members to use for various use cases, for example running applications or user programs.
 
 ## Entrypoints
 
-The main login server used in Redbrick is [Azazel](../hosts/azazel.md). You may also log in to [Pygmalion](../hosts/pygmalion.md) if you wish at `pyg.redbrick.dcu.ie` 
+The main login server used in Redbrick is [Azazel](../hardware/azazel.md). You may also log in to [Pygmalion](../hardware/pygmalion.md) if you wish at `pyg.redbrick.dcu.ie` 
 
 **2 Factor Authentication is required to log in to Redbrick servers.** This is done via an SSH key and your Redbrick username/password combination. For more information on how to create an SSH key, and configure your account for 2FA, please read below.
 
@@ -27,7 +27,7 @@ If you are an unbothered king/queen that simply does not mind using a web interf
 
 ### Logging in to other servers
 
-Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on [Azazel](../hosts/azazel.md) as it is on [Pygmalion](../hosts/pygmalion.md), meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
+Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on [Azazel](../hardware/azazel.md) as it is on [Pygmalion](../hardware/pygmalion.md), meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
 
 
 ## Setting up an SSH Key
@@ -74,11 +74,11 @@ This key is saved under .ssh under your User directory. (i.e `C:\Users\Bob\.ssh\
 
 In this step we store our **public** key on the server we intend to log in to. This key will be used against our secret private key to authenticate our login. 
 
-For the purposes of this tutorial we will be using [Pygmalion](../hosts/pygmalion.md) (`pyg.redbrick.dcu.ie`) as our server.
+For the purposes of this tutorial we will be using [Pygmalion](../hardware/pygmalion.md) (`pyg.redbrick.dcu.ie`) as our server.
 
 #### Logging in to Wetty
 
-In order to access the server to actually place our keys in it, we need to log in via Wetty - a shell interface for [Pygmalion](../hosts/pygmalion.md) on the web.
+In order to access the server to actually place our keys in it, we need to log in via Wetty - a shell interface for [Pygmalion](../hardware/pygmalion.md) on the web.
 
 - Head to <a href="https://wetty.redbrick.dcu.ie/" target="_blank">wetty.redbrick.dcu.ie</a>.
 

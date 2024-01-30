@@ -5,7 +5,7 @@ NFS is used to serve the notorious `/storage` directory on Icarus to all of Redb
 
 ## Deployment
 
-- NFS is deployed with Nix on [Icarus](../hosts/nix/icarus.md)
+- NFS is deployed with Nix on [Icarus](../hardware/nix/icarus.md)
 - It is backed onto the PowerVault MD1200 with all its disk passed through single-drive RAID 0s toallow for setup of ZFS:
     - 1 mirror of 2x 500GB drives
     - 1 mirror of 2x 750GB drives

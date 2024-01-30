@@ -6,21 +6,21 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 - [Aperture](../aperture/index.md) *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
 
 ## Old Redbrick
-- [**azazel**](../hosts/azazel.md) - `136.206.15.24`
+- [**azazel**](../hardware/azazel.md) - `136.206.15.24`
 	- **OS**: Debian 10
 	- **Services**:
 		- primary ssh login box for users (see [Logging in](servers.md#Logging%20in))
 		- jump-box for admins
-- [**pygmalion**](../hosts/pygmalion.md) - `136.206.15.25`
+- [**pygmalion**](../hardware/pygmalion.md) - `136.206.15.25`
 	- **OS**: Ubuntu 18.04 LTS
 	- **Services**:
 		- secondary ssh login box for users (see [Logging in](servers.md#Logging%20in))
 		- jump-box for admins
-- [**motherlode**](../hosts/nix/motherlode.md) - `136.206.15.250`
+- [**motherlode**](../hardware/nix/motherlode.md) - `136.206.15.250`
 	- **OS**: NixOS 22.05
 	- **Services**:
 		- VM for [dcuclubsandsocs.ie](https://dcuclubsandsocs.ie)
-- [**hardcase**](../hosts/nix/hardcase.md) - `136.206.15.3`
+- [**hardcase**](../hardware/nix/hardcase.md) - `136.206.15.3`
 	- **OS**: NixOS 22.05
 	- **Services**:
 		- `apache httpd`:
@@ -32,7 +32,7 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 		- email (`postfix` and `dovecot`)
 		- mailing [lists](https://lists.redbrick.dcu.ie) (`mailman`)
 		- `*.redbrick.dcu.ie` also points here
-- [**zeus**](../hosts/zeus.md) - `136.206.15.31`
+- [**zeus**](../hardware/zeus.md) - `136.206.15.31`
 	- **OS**: Ubuntu 18.04 LTS
 	- **Note**: this is a docker host, everything on here is in a container
 	- **Services**:
@@ -41,7 +41,7 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 		- Secretary's email generator  at: [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
 		- [CodiMD](codimd.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
 		- all of this is routed through [traefik](traefik.md) as a reverse proxy
-- [paphos](../hosts/paphos.md) - `136.206.15.53`
+- [paphos](../hardware/paphos.md) - `136.206.15.53`
 	- **OS**: Ubuntu 14.04 LTS
 	- **Services**:
 		- DNS ([bind](bind.md))
@@ -49,9 +49,9 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 ## [Aperture](../aperture/index.md)
 In aperture, things are done a little differently than on the other network. Instead of having  a single host per service, aperture is configured to allow services to be allocated dynamically across all 3 servers using [nomad](../aperture/nomad.md), [consul](../aperture/consul.md) and [traefik](traefik.md).
 
-- [glados](../hosts/aperture/glados.md) - `136.206.16.4`
-- [wheatley](../hosts/aperture/wheatley.md) - `136.206.16.5`
-- [chell](../hosts/aperture/chell.md) - `136.206.16.6`
+- [glados](../hardware/aperture/glados.md) - `136.206.16.4`
+- [wheatley](../hardware/aperture/wheatley.md) - `136.206.16.5`
+- [chell](../hardware/aperture/chell.md) - `136.206.16.6`
 - all 3 boxes are identical
 - **OS**: Debian 11
 - **Services**:

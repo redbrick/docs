@@ -1,4 +1,4 @@
-# Wheatley
+# Glados
 
 ## Details
 - **Type**: Dell R6515
@@ -11,11 +11,11 @@ Part of [aperture](../../aperture/index.md)
 
 ## Where to find
 - **Internal**:
-	- `10.10.0.5`
+	- `10.10.0.4`
 - **External**:
-	- `136.206.16.5`
-	- `wheatley.redbrick.dcu.ie`
-	- `wheatley.aperture.redbrick.dcu.ie`
+	- `136.206.16.4`
+	- `glados.redbrick.dcu.ie`
+	- `glados.aperture.redbrick.dcu.ie`
 
 
-![](../../assets/wheatley.png)
+![](../../res/glados.png)

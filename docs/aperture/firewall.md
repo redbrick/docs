@@ -18,11 +18,11 @@ We have a 10 GB/s link to DCU's core.
 
 ### Users
 
-The current elected admins should all have access to the rbadmin account on the firewall. Rootholders **should not** have access to the firewall unless they are explicity granted access.
+The current elected admins should all have access to the rbadmin account on the firewall. Rootholders **should not** have access to the firewall unless they are explicitly granted access.
 
-The owner account of the unifi equipment is `rbadmins` (email: elected-admins@redbrick.dcu.ie) with the password stored in pwsafe under `unifi`.
+The owner account of the unifi equipment is `rbadmins` (email: elected-admins@redbrick.dcu.ie) with the password stored in `pwsafe` under `unifi`.
 
-There is a "super admin" account that can be used for **local access only**, details are stored in pwsafe under `udmpro-super-admin`.
+There is a "super admin" account that can be used for **local access only**, details are stored in `pwsafe` under `udmpro-super-admin`.
 
 ### Updates
 
