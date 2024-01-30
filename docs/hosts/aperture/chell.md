@@ -16,3 +16,6 @@ Part of [aperture](../../aperture/index.md)
 	- `136.206.16.6`
 	- `chell.redbrick.dcu.ie`
 	- `chell.aperture.redbrick.dcu.ie`
+
+
+![](../../assets/chell.png)

@@ -16,3 +16,6 @@ Part of [aperture](../../aperture/index.md)
 	- `136.206.16.4`
 	- `glados.redbrick.dcu.ie`
 	- `glados.aperture.redbrick.dcu.ie`
+
+
+![](../../assets/glados.png)
