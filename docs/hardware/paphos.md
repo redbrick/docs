@@ -1,6 +1,7 @@
 # Paphos
 
 ## Details
+
 - **Type**: Dell PowerEdge R710
 - **OS**: Ubuntu 14.04.5 LTS
 - **CPU**: 2 x Intel Xeon CPU E5620 @ 2.40Ghz
@@ -9,6 +10,7 @@
 - **Network**: NetXtreme II BCM5709 Gigabit Ethernet
 
 ## Where to Find
+
 - **Internal**:
 	- `192.168.0.26`
 	- `192.168.0.4`
@@ -26,4 +28,5 @@
 	- `ns1.redbrick.dcu.ie`
 
 ## Services
+
 - DNS ([bind](../services/bind.md))

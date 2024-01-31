@@ -8,7 +8,7 @@ If you just want to create a new client configuration, go here: [adding a new cl
 
 Installed OpenVPN using [this script](https://github.com/Nyr/openvpn-install) on [`glados`](../hardware/aperture/glados.md).
 
-## Adding a new client
+## Adding a New Client
 
 To add a new client, run the following command (as root) on Glados:
 
@@ -20,7 +20,7 @@ You will be prompted to add a new client, enter a name for the client and then t
 
 It will be saved in `/root/[client name].ovpn`.
 
-## Revoking a client
+## Revoking a Client
 
 To revoke a client, run the following command (as root) on Glados:
 

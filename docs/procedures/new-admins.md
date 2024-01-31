@@ -1,4 +1,4 @@
-# New elected admins
+# New Elected Admins
 
 The chronological process of becoming an admin usually looks very similar each year. There are some important things you should know.
 

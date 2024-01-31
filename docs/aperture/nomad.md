@@ -1,14 +1,16 @@
 # Nomad on Aperture - `distro`, `wizzdom`
+
 > Adapted from the [redbrick/nomad repo's README](https://github.com/redbrick/nomad/README.md)
 
 ## What is Nomad?
+
 Good question!
 
 > Nomad is a simple and flexible scheduler and orchestrator to deploy and manage
 > containers and non-containerized applications
 > \- [Nomad Docs](https://developer.hashicorp.com/nomad)
 
-## Deploying a Nomad job
+## Deploying a Nomad Job
 
 All Nomad job related configurations are stored in the `nomad` directory.
 
@@ -38,8 +40,7 @@ nomad job plan path/to/file.hcl | grep path/to/file.hcl | bash
 
 This will plan and run the job file without the need for you to copy and paste the check index id. Only use this once you are comfortable with how Nomad places allocations.
 
-
-## Restart a Nomad job
+## Restart a Nomad Job
 
 ```bash
 nomad job stop -purge name-of-running-job

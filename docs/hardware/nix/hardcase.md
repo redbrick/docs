@@ -1,6 +1,7 @@
 # Hardcase
 
-## Details:
+## Details
+
 - **Type**: Dell PowerEdge R410
 - **OS**: NixOS
 - **CPU**: 2 x Intel Xeon X5570 @ 2.93GHz
@@ -12,13 +13,15 @@
 - **iDRAC NIC**: Shared on port 1
 - iDRAC IP is `1.158`
 
-## Where to find
+## Where to Find
+
 - **Internal**:
 	- `192.168.0.158`
 - **External**:
 	- `136.206.15.3`
 
 ## Services
+
 - postgreSQL
 - ~~git~~
 - apache

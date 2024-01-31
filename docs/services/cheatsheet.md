@@ -1,35 +1,41 @@
 # Cheatsheet
 
 ## LDAP
--- Query a user
+
+- Query a user
+
 ```sh
 ldapsearch -x uid="USERNAME_HERE"
 ```
 
--- Query user as root for more detailed info
+- Query user as root for more detailed info
+
 ```sh
 ldapsearch -D "cn=root,ou=services,o=redbrick" -y /etc/ldap.secret uid=user
 ```
 
--- Find all users emails created by `USERNAME`
+- Find all users emails created by `USERNAME`
+
 ```sh
 ldapsearch -x createdby="user" uid | awk '/uid:/ {print $2"@redbrick.dcu.ie"}'
 ```
 
--- Check if something is backed up on NFS (`/storage/path/to/file`)
+- Check if something is backed up on NFS (`/storage/path/to/file`)
 
 All useful LDAP scripts (*edit user quota, reset user password, renew user accounts, etc*) are located in the home directory of `root` on Azazel.
 
 *Log in as `root` on a server with local accounts:*
+
 ```bash
 ssh localaccount@redbrick.dcu.ie
 sudo -i # (same password as localaccount account)
 ```
+
 ___
 
 ## Authentication/Passwords
 
-### Onboarding new admins
+### Onboarding New Admins
 
 - Create `root` ssh key for [NixOS](../procedures/nixos.md) Machines
 Following creation of the key, add to the whitelist in *[nix configs](https://github.com/redbrick/nix-configs/blob/master/services/ssh.nix)*.
@@ -41,11 +47,13 @@ ssh-copy-id -i ~/.ssh/id_ed25519 user@redbrick.dcu.ie # Copy to local account's 
 ssh -i ~/.ssh/mykey user@redbrick.dcu.ie # Verify that this key was copied
 ```
 
-### Access passwordsafe (pwsafe)
+### Access Passwordsafe (pwsafe)
 
 Location of master password vault.
 
-*Note:* `getpw` will prompt you for the Master root password.
+> [!NOTE] Note:
+> `getpw` will prompt you for the Master root password.
+
 ```bash
 ssh localroot@halfpint
 sudo -i # to log in as root with local user password
@@ -53,11 +61,12 @@ pwsafe # to list passwords
 getpw <name_of_pass> # Grab password by name key | getpw pygmalion
 ```
 
-
 ___
 
-## SSH to root on a [NixOS](../procedures/nixos.md) machine
+## SSH to Root on a [NixOS](../procedures/nixos.md) Machine
+
 - From the account you generated your ssh key on (in nix configs) type:
+
 ```bash
 ssh root@hardcase.internal
 ```
@@ -66,12 +75,14 @@ ___
 
 ## NixOS
 
--- Install a temporary program
+- Install a temporary program
+
 ```bash
 nix-shell -p [space seperated package names]
 ```
 
--- Run brickbot2 (running on Metharme)
+- Run brickbot2 (running on Metharme)
+
 ```bash
 cd brickbot2
 nix-shell
@@ -89,14 +100,11 @@ Repo is very well documented so have a look at the README but here's the basics:
 
 **NOTE:** *Local Root accounts must be added to the docker group before they can run the docker commands.* `usermod -a -G docker ACCOUNT_NAME`
 
-
 You can `docker ps | grep minec` to find the docker containers running the servers.
 
 The docker compose files are located in `/etc/docker-compose/services`, Unmodded Vanilla compose for example is in `/etc/docker-compose/services/minecraft_unmodded/`
 
 To see the configuration for the container you can do `docker inspect CONTAINER_NAME_OR_ID`
-
-
 
 - Interacting with the Server Console
     - https://github.com/itzg/docker-minecraft-server#interacting-with-the-server

@@ -1,6 +1,7 @@
 # Johnson
 
 ## Details
+
 Formerly `albus` (in a different life)
 
 - **Type**: Dell PowerEdge R515
@@ -15,12 +16,14 @@ Formerly `albus` (in a different life)
 
 Part of [aperture](../../aperture/index.md)
 
-## Where to find
+## Where to Find
+
 - **Internal**:
 	- `10.10.0.7`
 - 2nd NIC is currently unused, would be a good idea to make a bond for more throughput and redundancy on the same ip
-## Services
-- `NFS` for [aperture](../../aperture/index.md)
 
+## Services
+
+- `NFS` for [aperture](../../aperture/index.md)
 
 ![](../../res/johnson.png)

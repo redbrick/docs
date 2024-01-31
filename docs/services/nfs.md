@@ -1,7 +1,6 @@
 # NFS / Network File Storage
 
-NFS is used to serve the notorious `/storage` directory on Icarus to all of Redbrick's machines, which in turn serves
-`/home`, `/webtree` and some other critical folders.
+NFS is used to serve the notorious `/storage` directory on Icarus to all of Redbrick's machines, which in turn serves `/home`, `/webtree` and some other critical folders.
 
 ## Deployment
 
@@ -23,25 +22,19 @@ There are 2 scripts used to control quotas, detailed below.
 
 NFS is backed up to Albus via [ZnapZend](znapzend.md).
 
-## `zfsquota` and `zfsquotaquery`
+## `zfsquota` And `zfsquotaquery`
 
-These are two bash scripts that run as systemd services on Icarus to manage quotas. This is achieved through getting and
-setting the `userquota` and `userused` properties of the ZFS dataset.
+These are two bash scripts that run as systemd services on Icarus to manage quotas. This is achieved through getting and setting the `userquota` and `userused` properties of the ZFS dataset.
 
-### zfsquota
+### Zfsquota
 
-ZFSQuota will read the `quota` field from LDAP and sync this with the userquota value on the dataset. It is not event
-driven - it runs on a timer every 3 hours and syncs all LDAP quotas with ZFS. It can be kicked off manually, which is
-described below. Users with no quota in LDAP will have no quota in `/storage`, and users who have their quota removed will
-persist on ZFS.
+ZFSQuota will read the `quota` field from LDAP and sync this with the userquota value on the dataset. It is not event driven - it runs on a timer every 3 hours and syncs all LDAP quotas with ZFS. It can be kicked off manually, which is described below. Users with no quota in LDAP will have no quota in `/storage`, and users who have their quota removed will persist on ZFS.
 
 Changing user names has no impact on this since it is synced with `uidNumber`.
 
-### zfsquotaquery
+### Zfsquotaquery
 
-ZFSQuotaQuery returns the quota and used space of a particular user. This is used to then inform `rbquota` which provides
-the data for the MOTD used space report. Both of these scripts are defined and deployed in the Nix config repo. It runs on
-port 1995/tcp.
+ZFSQuotaQuery returns the quota and used space of a particular user. This is used to then inform `rbquota` which provides the data for the MOTD used space report. Both of these scripts are defined and deployed in the Nix config repo. It runs on port 1995/tcp.
 
 ## Operation
 
@@ -74,8 +67,8 @@ systemctl status zfsquotaquery
 ## Troubleshooting
 
 In the event where clients are unable to read from NFS, your priority should be restoring the NFS server, rather than
-unmounting NFS from clients. This is because NFS is mounted in `hard` mode everywhere, meaning that it will block on IO
-until a request can be fulfilled.
+
+unmounting NFS from clients. This is because NFS is mounted in `hard` mode everywhere, meaning that it will block on IO until a request can be fulfilled.
 
 ### Check The Server
 

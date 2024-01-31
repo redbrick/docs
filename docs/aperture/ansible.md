@@ -2,9 +2,9 @@
 
 Redbrick uses ansible to manage its infrastructure. This document describes the procedures and some tips to get the most out of it.
 
-## Getting started
+## Getting Started
 
-### Installing ansible
+### Installing Ansible
 
 Ansible is a python package, so you'll need to install python first. On Debian/Ubuntu, you can do this with:
 
@@ -12,11 +12,11 @@ Ansible is a python package, so you'll need to install python first. On Debian/U
 pip install ansible
 ```
 
-### Add an SSH key
+### Add an SSH Key
 
 Ansible uses ssh to connect to the remote hosts. You'll need to set up your ssh key so that you can connect to the hosts without constant prompts for passwords.
 
-### Create a hosts file
+### Create a Hosts File
 
 This is used a phonebook of sorts for ansible. It tells ansible which hosts to connect to, and what user to use.
 
@@ -44,7 +44,7 @@ This should connect to all the hosts in the `aperture` group, and run the `ping`
 
 Ansible playbooks are a set of instructions for ansible to run. They're written in YAML, and are usually stored in a file called `playbook.yml`.
 
-### Writing a playbook
+### Writing a Playbook
 
 Ansible playbooks are written in YAML. The basic structure is:
 
@@ -69,7 +69,7 @@ Ansible playbooks are written in YAML. The basic structure is:
 
 This playbook will connect to all the hosts in the `aperture` group, and run the `apt` module with the `name` and `state` options.
 
-### Running a playbook
+### Running a Playbook
 
 ```bash
 ansible-playbook playbook.yml -i hosts

@@ -6,6 +6,7 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 - [Aperture](../aperture/index.md) *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
 
 ## Old Redbrick
+
 - [**azazel**](../hardware/azazel.md) - `136.206.15.24`
 	- **OS**: Debian 10
 	- **Services**:
@@ -47,6 +48,7 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 		- DNS ([bind](bind.md))
 
 ## [Aperture](../aperture/index.md)
+
 In aperture, things are done a little differently than on the other network. Instead of having  a single host per service, aperture is configured to allow services to be allocated dynamically across all 3 servers using [nomad](../aperture/nomad.md), [consul](../aperture/consul.md) and [traefik](traefik.md).
 
 - [glados](../hardware/aperture/glados.md) - `136.206.16.4`

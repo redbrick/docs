@@ -1,4 +1,3 @@
-
 # About Aperture
 
 Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins`, `cawnj`, `ymacomp` and `arkues`.

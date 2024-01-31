@@ -1,12 +1,12 @@
 # Aperture
 
-## What is aperture?
+## What is Aperture?
+
 It's nothing to do with cameras. See [about](about.md) for more information on the hardware.
 
 ## New Admins
 
-If you're a new admin, this is a cheat sheet for you. In order to get broadly up to speed and understand the content of
-these pages, I suggest you read the following:
+If you're a new admin, this is a cheat sheet for you. In order to get broadly up to speed and understand the content of these pages, I suggest you read the following:
 
 - [About](about.md)
 - [Nomad docs](https://www.nomadproject.io/docs/), specifically the [job specification](https://developer.hashicorp.com/nomad/docs/job-specification) and [managing nomad jobs](https://developer.hashicorp.com/nomad/tutorials/manage-jobs) pages.

@@ -48,11 +48,12 @@ _In order of priority._
 ### -> Designated Nix Machine
 
 **Motherlode.**
+
 Why?
 
 - Clubs and Socs and other services like Mail are quite honestly easiest done using Nix configs (even though it can be disgusting). It is a viable choice to solve a hard problem.
 
-#### Services Using Nix to be moved to Motherlode
+#### Services Using Nix to Be Moved to Motherlode
 
 - Mailman
 - Certs

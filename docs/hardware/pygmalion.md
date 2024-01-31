@@ -1,6 +1,7 @@
 # Pygmalion
 
 ## Details
+
 - **Type**: Intel(R) Xeon (R)
 - **OS**: Ubuntu 18.04
 - **CPU**: 2x Intel (R) Xeon (R) E5620 2.46GHz
@@ -8,6 +9,7 @@
 - **Network**: 4x Broadcom Corporation NetXtreme II BCM5709 Gigabit Ethernet
 
 ## Where to Find
+
 - **Internal**:
 	- `192.168.0.25`
 - **External**:
@@ -16,5 +18,6 @@
 	- `pyg.redbrick.dcu.ie`
 
 ## Services
+
 - secondary ssh login box for users (see [Logging in](../services/servers.md#Logging%20in))
 - jump-box for admins

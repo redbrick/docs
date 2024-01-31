@@ -25,10 +25,9 @@ ssh YOUR_USERNAME@redbrick.dcu.ie -i SSH_KEY_LOCATION_PATH
 
 If you are an unbothered king/queen that simply does not mind using a web interface, let me introduce you to [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie/). You do not need an SSH key here.
 
-### Logging in to other servers
+### Logging in to other Servers
 
 Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on [Azazel](../hardware/azazel.md) as it is on [Pygmalion](../hardware/pygmalion.md), meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
-
 
 ## Setting up an SSH Key
 
@@ -39,27 +38,35 @@ When these keys match up, and your account password is also correct, you are gra
 ### 1. Creating the Key Pair
 
 On your local computer, in the command line of your choice, enter the following command:
+
 ```bash
 ssh-keygen -t ed25519
 ```
+
 Expected Output
+
 ```
 Generating public/private ed25519 key pair.
 ```
 
-### 2. Providing some extra details
+### 2. Providing Some Extra Details
+
 You will now be prompted with some information and input prompts:
 
 - The first prompt will ask where to save the keys.
+
 ```
 Enter file in which to save the key (e.g /home/bob/.ssh/id_ed25519):
 ```
+
 You can simply press <kbd>ENTER</kbd> here to save them at the default location (.ssh directory in your home directory). *Alternatively you can specify a custom location if you wish.*
 
 - The second prompt will ask for a new passphrase to protect the key.
+
 ```
 Enter passphrase (empty for no passphrase):
 ```
+
 Here you may protect this key file with a passphrase. This is optional and recommended for security.
 
 > [!NOTE] Note
@@ -68,9 +75,10 @@ Here you may protect this key file with a passphrase. This is optional and recom
 *The newly generated public key should now be saved* in `/home/bob/.ssh/id_ed25519.pub`. The private key is the same file is at `/home/bob/.ssh/id_ed25519`. *(i.e under the `.ssh` folder in your user home directory.)*
 
 ##### NOTE FOR WINDOWS (you heathen)
+
 This key is saved under .ssh under your User directory. (i.e `C:\Users\Bob\.ssh\id_ed25519`)
 
-### 3. Copying the public key to the server
+### 3. Copying the Public Key to the Server
 
 In this step we store our **public** key on the server we intend to log in to. This key will be used against our secret private key to authenticate our login. 
 
@@ -82,40 +90,45 @@ In order to access the server to actually place our keys in it, we need to log i
 
 - Head to <a href="https://wetty.redbrick.dcu.ie/" target="_blank">wetty.redbrick.dcu.ie</a>.
 
-    You should see this prompt:
-    ```
-    pygmalion.redbrick.dcu.ie login:
-    ```
-    Enter your Redbrick username and press <kbd>ENTER</kbd>. When prompted, enter your Redbrick password. [*Forgot either of these?*](#forgot-your-password)
+You should see this prompt:
 
-#### Adding the key into the `authorized_keys` file
+```
+pygmalion.redbrick.dcu.ie login:
+```
+
+Enter your Redbrick username and press <kbd>ENTER</kbd>. When prompted, enter your Redbrick password. [*Forgot either of these?*](#forgot-your-password)
+
+#### Adding the Key into the `authorized_keys` File
 
 - Add the key
 
-    Grab the contents of your public key. You may use the `cat filepath` command for this:
-    ```bash
-    cat /home/bob/.ssh/id_ed25519.pub
-    ```
+Grab the contents of your public key. You may use the `cat filepath` command for this:
 
-    On Wetty, enter the following command in the shell, with `YOUR_KEY` replaced with your **public** ssh key.
-    
-    ```bash
-    echo "YOUR_KEY" >> ~/.ssh/authorized_keys
-    ```
-    This command will append your public key to the end of the `authorized_keys` file.
+```bash
+cat /home/bob/.ssh/id_ed25519.pub
+```
 
-    --- *NOTE: The speech marks surrounding YOUR_KEY are important!*
+On Wetty, enter the following command in the shell, with `YOUR_KEY` replaced with your **public** ssh key.
 
-    ##### *PSSST... Made a mistake?*
+```bash
+echo "YOUR_KEY" >> ~/.ssh/authorized_keys
+```
+
+This command will append your public key to the end of the `authorized_keys` file.
+
+> [!NOTE] Note!
+> The speech marks surrounding YOUR_KEY are important!
+
+##### *PSSST… Made a mistake?*
 
     *You can manually edit the authorized_key file in a text editor with the following command to fix any issues:*
 
-    ```bash
-    nano ~/.ssh/authorized_keys
-    ```
+```bash
+nano ~/.ssh/authorized_keys
+```
 
 Congratulations! If you've made it this far, [you're ready to login](#logging-in) now. 
 
-## Forgot your password?
+## Forgot Your Password?
 
 [Contact an admin](../contact.md) on our [Discord Server](https://discord.gg/3D8kTX9auY) or at [elected-admins@redbrick.dcu.ie](mailto:elected-admins@redbrick.dcu.ie)

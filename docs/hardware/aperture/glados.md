@@ -1,6 +1,7 @@
 # Glados
 
 ## Details
+
 - **Type**: Dell R6515
 - **OS**: Debian 11
 - **CPU**: AMD 7302P 3GHz, 16C/32T, 128M, 155W
@@ -9,13 +10,13 @@
 
 Part of [aperture](../../aperture/index.md)
 
-## Where to find
+## Where to Find
+
 - **Internal**:
 	- `10.10.0.4`
 - **External**:
 	- `136.206.16.4`
 	- `glados.redbrick.dcu.ie`
 	- `glados.aperture.redbrick.dcu.ie`
-
 
 ![](../../res/glados.png)

@@ -4,19 +4,15 @@
 
 The source code for the API can be found [here](https://github.com/redbrick/api/).
 
-The Redbrick web API serves as an easy interface to carry out administrator tasks (mainly LDAP related), and for use in automation. 
+The Redbrick web API serves as an easy interface to carry out administrator tasks (mainly LDAP related), and for use in automation. This saves time instead of accessing machines, and formulating and executing manual LDAP queries or scripts.
 
-This saves time instead of accessing machines, and formulating and executing manual LDAP queries or scripts.
-
-The server code for the API is hosted on Zeus in a docker container called 'api-redbrick', written in Python with [FastAPI](https://fastapi.tiangolo.com/).
-This container is then served to the public using traefik, you can view the dashboard [here](https://traefik.zeus.redbrick.dcu.ie/dashboard/#/).
+The server code for the API is hosted on Zeus in a docker container called 'api-redbrick', written in Python with [FastAPI](https://fastapi.tiangolo.com/). This container is then served to the public using traefik, you can view the dashboard [here](https://traefik.zeus.redbrick.dcu.ie/dashboard/#/).
 
 ### Reference
 
 For the most up to date, rich API reference please visit [https://api.redbrick.dcu.ie/docs](https://api.redbrick.dcu.ie/docs)
 
 All requests are validated with Basic Auth for access. [See example.](https://docs.python-requests.org/en/master/user/authentication/#basic-authentication)
-
 
 |   Method   |         Route          |           URL Parameters             |        Body       |
 | :--------: | :--------------------: | :----------------------------------: | :---------------: |
@@ -26,7 +22,8 @@ All requests are validated with Basic Auth for access. [See example.](https://do
 
 #### Examples
 
-GET a user's LDAP data
+- GET a user's LDAP data
+
 ```python
 import requests
 
@@ -41,7 +38,8 @@ response = requests.request("GET", url, headers=headers)
 print(response.text)
 ```
 
-PUT a user's LDAP data to change their `loginShell` to `/usr/local/shells/zsh`
+- PUT a user's LDAP data to change their `loginShell` to `/usr/local/shells/zsh`
+
 ```python
 import requests
 import json
@@ -86,5 +84,3 @@ chown 13371337:103 /storage/webtree/U/USERNAME
 ```
 
 Note that USERNAME can be used to refer to the user's web directory here since it is the name of the directory and doesn't refer to the user object.
-
-&emsp;

@@ -17,4 +17,3 @@ You'll need a webserver to serve the `cloud-init` configs. There may be another 
 Plan the Nomad job and wait for the allocation to be created. If you used the correct image (for example a backup of the qcow file) the virtual machine should be configured and should connect as normal to the Consul and Nomad clusters and become eligible for allocations. If you started from scratch, then use the `ansible/redbrick-ansible.yml` playbook in the [`redbrick/nomad`](https://github.com/redbrick/nomad) repo and ensure that the `hosts` file is up to date.
 
 For security's sake, there is no root login and no user accounts on the bastion VM. This is an attempt to make the node more secure. If you need to make changes, you should change the base image and apply that. The less vulnerabilities that are discovered on the bastion VM, the happier we can keep ISS and the safer Redbrick will be.
-
