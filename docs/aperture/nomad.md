@@ -1,6 +1,6 @@
 # Nomad on Aperture - `distro`, `wizzdom`
 
-> Adapted from the [redbrick/nomad repo's README](https://github.com/redbrick/nomad/README.md)
+> Adapted from [redbrick/nomad README](https://github.com/redbrick/nomad/README.md)
 
 ## What is Nomad?
 
@@ -16,7 +16,27 @@ All Nomad job related configurations are stored in the `nomad` directory.
 
 The terminology used here is explained [here](https://developer.hashicorp.com/nomad/tutorials/get-started/get-started-vocab). This is **required reading**.
 
-All of the job files are stored in the `nomad` directory. To deploy a Nomad job manually, connect to a host and run
+- Install Nomad on your machine [here](https://developer.hashicorp.com/nomad/docs/install)
+- Clone this repo
+
+```bash
+git clone git@github.com:redbrick/nomad.git
+```
+
+- Connect to the [admin VPN](vpn.md)
+- Set the `NOMAD_ADDR` environment variable:
+
+```bash
+export NOMAD_ADDR=http://<IP-ADDRESS-OF-HOST>:4646
+```
+
+- Check you can connect to the nomad cluster:
+
+```bash
+nomad status
+```
+
+- You should receive a list back of all jobs, now you are ready to start deploying!
 
 ```bash
 nomad job plan path/to/job/file.hcl
@@ -42,22 +62,26 @@ This will plan and run the job file without the need for you to copy and paste t
 
 ## Restart a Nomad Job
 
+- First, stop and purge the currently-running job
+
 ```bash
 nomad job stop -purge name-of-running-job
 ```
 
+- Run a garbage collection of jobs, evaluations, allocations, and nodes ad reconcile summaries of all registered jobs.
+
 ```bash
 nomad system gc
-```
 
-```bash
 nomad system reconcile summaries
-```
 
-```bash
 nomad system gc # (yes, again)
 ```
 
+- Plan and run the job
+
 ```bash
 nomad job plan path/to/job/file.hcl
+
+nomad job run -check-index [id from last command] path/to/job/file.hcl
 ```
