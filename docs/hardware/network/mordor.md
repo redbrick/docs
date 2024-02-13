@@ -1,4 +1,4 @@
-# Firewall
+# Mordor
 
 <!-- Access through 10.10.0.1 -->
 
@@ -36,7 +36,7 @@ The UDM Pro should be kept up to date at all times using the web interface. Plea
 
 SSH is enabled to allow for rollbacks in case of a bad update *(I warned you!)*.
 
-Remote access is disabled as it should not be needed, the admin [`VPN`](./vpn.md) should provide enough access for you. If it is enabled in future, please update these docs with your reasons.
+Remote access is disabled as it should not be needed, the admin [`VPN`](../../procedures/vpn.md) should provide enough access for you. If it is enabled in future, please update these docs with your reasons.
 
 ### Backups
 

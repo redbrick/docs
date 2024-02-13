@@ -17,5 +17,5 @@ If you're a new admin, this is a cheat sheet for you. In order to get broadly up
 
 So, you've hit a problem. Here's some quicklinks to some common problems:
 
-- [I can't connect to Aperture](vpn.md)
-- [Ansible is running into an error](ansible.md#common-errors)
+- [I can't connect to Aperture](../../procedures/vpn.md)
+- [Ansible is running into an error](../../services/ansible.md#common-errors)
