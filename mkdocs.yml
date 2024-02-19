@@ -32,6 +32,7 @@ plugins:
   - awesome-pages
   - callouts
   - search
+  - material-plausible
   - git-revision-date-localized:
       type: timeago
 
@@ -48,6 +49,10 @@ markdown_extensions:
 
 extra:
   github_org: https://github.com/redbrick
+  analytics:
+    provider: plausible
+    domain: docs.redbrick.dcu.ie
+    src: "https://plausible.redbrick.dcu.ie/js/script.js"
 
 extra_css:
   - stylesheets/extra.css
