@@ -32,6 +32,7 @@ plugins:
   - awesome-pages
   - callouts
   - search
+  - material-plausible
   - git-revision-date-localized:
       type: timeago
 
@@ -48,6 +49,26 @@ markdown_extensions:
 
 extra:
   github_org: https://github.com/redbrick
+  analytics:
+    provider: plausible
+    domain: docs.redbrick.dcu.ie
+    src: "https://plausible.redbrick.dcu.ie/js/script.js"
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: good
+          note: >-
+            Thanks for your feedback!
+
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: bad
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            <a href="https://discord.redbrick.dcu.ie" >contacting us!</a>
+
 
 extra_css:
   - stylesheets/extra.css
