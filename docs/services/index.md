@@ -1,8 +1,6 @@
 # Preface
 
-Here you will find a list of all the services Redbrick runs, along with some configs and some important information
-
-surrounding them.
+Here you will find a list of all the services Redbrick runs, along with some configs and some important information surrounding them.
 
 - [api](api.md)
 - [bind](bind.md)

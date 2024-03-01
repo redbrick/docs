@@ -22,7 +22,7 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 - [**`wheatley`**](aperture/wheatley.md)
 - [**`chell`**](aperture/chell.md)
 - [**`johnson`**](aperture/johnson.md)
-- [**`bastion-vm`**](aperture/bastion-vm.md)
+- [**`bastion-vm`**](../services/bastion-vm.md)
 
 ## Network Hardware
 
