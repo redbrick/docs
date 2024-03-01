@@ -1,8 +1,9 @@
 nav:
 
 - index.md
-- contact.md
 - procedures
+- services
 - aperture
 - hardware
-- services
+- webgroup
+- contact.md
