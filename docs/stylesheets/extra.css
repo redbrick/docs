@@ -5,3 +5,7 @@
   --md-text-font: "Myriad Pro", sans-serif;
   --md-code-font: "Fira Code", monospace;
 }
+
+[data-md-color-scheme="slate"] * {
+  --md-typeset-a-color: #d62e2e;
+}

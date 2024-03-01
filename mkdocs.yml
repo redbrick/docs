@@ -18,21 +18,24 @@ theme:
     - content.code.copy
     - content.code.annotate
   palette:
-    # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-4
+        icon: material/link
         name: Switch to light mode
-        primary: custom
-        accent: custom
-
-    # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch
         name: Switch to dark mode
-        primary: custom
-        accent: custom
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
 
 plugins:
   - awesome-pages
