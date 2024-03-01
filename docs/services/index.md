@@ -3,11 +3,14 @@
 Here you will find a list of all the services Redbrick runs, along with some configs and some important information surrounding them.
 
 - [api](api.md)
+- [bastion-vm](bastion-vm.md)
 - [bind](bind.md)
 - [codimd](codimd.md)
+- [consul](consul.md)
 - [gitea](gitea.md)
 - [irc](irc.md)
 - [nfs](nfs.md)
+- [nomad](nomad.md)
 - [traefik](traefik.md)
 - [znapzend](znapzend.md)
 
