@@ -41,11 +41,28 @@ plugins:
   - search
   - git-revision-date-localized:
       type: timeago
+  - redirects:
+      redirect_maps:
+        'aperture/index.md': 'hardware/aperture/index.md'
+        'aperture/about.md': 'hardware/aperture/about.md'
+        'aperture/chell.md': 'hardware/aperture/chell.md'
+        'aperture/glados.md': 'hardware/aperture/glados.md'
+        'aperture/images.md': 'hardware/aperture/images.md'
+        'aperture/johnson.md': 'hardware/aperture/johnson.md'
+        'aperture/wheatley.md': 'hardware/aperture/wheatley.md'
+        'aperture/vpn.md': 'procedures/vpn.md'
+        'aperture/nomad.md': 'services/nomad.md'
+        'aperture/bastion-vm.md': 'services/bastion-vm.md'
+        'aperture/ansible.md': 'procedures/ansible.md'
+        'aperture/firewall.md': 'hardware/network/mordor.md'
+        'aperture/icecast.md': 'services/icecast.md'
+
 
 markdown_extensions:
   - attr_list
   - abbr
   - nl2br
+  - meta
   - admonition
   - pymdownx.snippets
   - pymdownx.details
@@ -57,10 +74,11 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
 
-copyright:  <img class="logo" src="res/logo.png" width="20px"> <a href="https://docs.redbrick.dcu.ie">Redbrick Docs</a>
+copyright:  <img class="logo" src="/res/logo.png" width="20px"> <a href="https://docs.redbrick.dcu.ie">Redbrick Docs</a>
 
 extra:
   github_org: https://github.com/redbrick
+  manifest: manifest.webmanifest
   social:
     - icon: fontawesome/solid/globe
       link: https://redbrick.dcu.ie
