@@ -16,7 +16,7 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - content.code.copy
-    - content.code.select
+    - content.code.annotate
   palette:
     # Palette toggle for dark mode
     - scheme: slate
@@ -37,6 +37,7 @@ theme:
 plugins:
   - awesome-pages
   - callouts
+  - glightbox
   - search
   - git-revision-date-localized:
       type: timeago
@@ -56,19 +57,29 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
 
+copyright:  <img class="logo" src="res/logo.png" width="20px"> <a href="https://docs.redbrick.dcu.ie">Redbrick Docs</a>
+
 extra:
   github_org: https://github.com/redbrick
   social:
+    - icon: fontawesome/solid/globe
+      link: https://redbrick.dcu.ie
+      name: Redbrick Website
     - icon: fontawesome/brands/github
       link: https://github.redbrick.dcu.ie
+      name: Github
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.redbrick.dcu.ie
+      name: Twitter
     - icon: fontawesome/brands/instagram
       link: https://instagram.redbrick.dcu.ie
+      name: Instagram
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.redbrick.dcu.ie
+      name: LinkedIn
     - icon: fontawesome/brands/discord
       link: https://discord.redbrick.dcu.ie
+      name: Discord
 
 extra_css:
   - stylesheets/extra.css
