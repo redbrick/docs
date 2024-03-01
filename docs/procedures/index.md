@@ -4,6 +4,10 @@ Here you can find a list of various procedures useful for the day-to-day running
 
 ### [New elected admins](new-admins.md)
 
+### [Admin VPN](vpn.md)
+
+### [Ansible](ansible.md)
+
 ### [Post-powercut Todo List](post-powercut.md)
 
 ### [NixOS](nixos.md)

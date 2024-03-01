@@ -2,7 +2,7 @@
 
 This VM is an ephemeral machine that can be placed on any nomad client that has the qemu driver enabled.
 
-It acts as the point of ingress for Aperture, with ISS and our [firewall](firewall.md) allowing traffic to reach it's IP address externally. The VM is configured as a Nomad client itself, in the `ingress` node pool to ensure that only ingress-type allocations are placed there (like [traefik](../services/traefik.md)). Those services can proxy requests from the Bastion VM to internal services using consul's service DNS resolution, it's service mesh, or by plain IP and port.
+It acts as the point of ingress for Aperture, with ISS and our [mordor](../hardware/network/mordor.md) allowing traffic to reach it's IP address externally. The VM is configured as a Nomad client itself, in the `ingress` node pool to ensure that only ingress-type allocations are placed there (like [traefik](./traefik.md)). Those services can proxy requests from the Bastion VM to internal services using consul's service DNS resolution, it's service mesh, or by plain IP and port.
 
 `cloud-init` is given a static address during the initialisation phase to configure the interface. This ensures that, even if it is replanned, it will be able to accept traffic.
 

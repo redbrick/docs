@@ -11,6 +11,8 @@ This is mostly intended for admins, future admins, webmasters, and everybody els
 - [Redbrick Website](https://redbrick.dcu.ie)
 - [SSH help](https://docs.redbrick.dcu.ie/services/servers/#logging-in)
 
+## Webgroup
+
 ## New Admins
 
 So, you want to become an admin. Brave of you. Here's some stuff you should probably read:

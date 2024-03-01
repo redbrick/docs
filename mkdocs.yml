@@ -15,40 +15,93 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
   palette:
-    # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-4
+        icon: material/link
         name: Switch to light mode
-
-    # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch
         name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
 
 plugins:
   - awesome-pages
   - callouts
+  - glightbox
   - search
   - material-plausible
   - git-revision-date-localized:
       type: timeago
+  - redirects:
+      redirect_maps:
+        'aperture/index.md': 'hardware/aperture/index.md'
+        'aperture/about.md': 'hardware/aperture/about.md'
+        'aperture/chell.md': 'hardware/aperture/chell.md'
+        'aperture/glados.md': 'hardware/aperture/glados.md'
+        'aperture/images.md': 'hardware/aperture/images.md'
+        'aperture/johnson.md': 'hardware/aperture/johnson.md'
+        'aperture/wheatley.md': 'hardware/aperture/wheatley.md'
+        'aperture/vpn.md': 'procedures/vpn.md'
+        'aperture/nomad.md': 'services/nomad.md'
+        'aperture/bastion-vm.md': 'services/bastion-vm.md'
+        'aperture/ansible.md': 'procedures/ansible.md'
+        'aperture/firewall.md': 'hardware/network/mordor.md'
+        'aperture/icecast.md': 'services/icecast.md'
+
 
 markdown_extensions:
   - attr_list
   - abbr
   - nl2br
+  - meta
   - admonition
   - pymdownx.snippets
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+copyright:  <img class="logo" src="/res/logo.png" width="20px"> <a href="https://docs.redbrick.dcu.ie"><strong>Redbrick Docs</strong></a>
 
 extra:
   github_org: https://github.com/redbrick
+  manifest: manifest.webmanifest
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://redbrick.dcu.ie
+      name: Redbrick Website
+    - icon: fontawesome/brands/github
+      link: https://github.redbrick.dcu.ie
+      name: Github
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.redbrick.dcu.ie
+      name: Twitter
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.redbrick.dcu.ie
+      name: Instagram
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.redbrick.dcu.ie
+      name: LinkedIn
+    - icon: fontawesome/brands/discord
+      link: https://discord.redbrick.dcu.ie
+      name: Discord
   analytics:
     provider: plausible
     domain: docs.redbrick.dcu.ie
@@ -68,7 +121,6 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             <a href="https://discord.redbrick.dcu.ie" >contacting us!</a>
-
 
 extra_css:
   - stylesheets/extra.css

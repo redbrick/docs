@@ -1,3 +1,13 @@
+---
+title: Nomad on Aperture
+author:
+- distro
+- wizzdom
+tags:
+- nomad
+- aperture
+---
+
 # Nomad on Aperture - `distro`, `wizzdom`
 
 > Adapted from [redbrick/nomad README](https://github.com/redbrick/nomad/README.md)
@@ -23,7 +33,7 @@ The terminology used here is explained [here](https://developer.hashicorp.com/no
 git clone git@github.com:redbrick/nomad.git
 ```
 
-- Connect to the [admin VPN](vpn.md)
+- Connect to the [admin VPN](../procedures/vpn.md)
 - Set the `NOMAD_ADDR` environment variable:
 
 ```bash

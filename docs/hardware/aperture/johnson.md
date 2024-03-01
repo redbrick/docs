@@ -14,7 +14,7 @@ Formerly `albus` (in a different life)
 - **Network**: 4x Onboard Ethernet, 802.3ad bonding
 - **iDRAC NIC**: Shared on port 1
 
-Part of [aperture](../../aperture/index.md)
+Part of [aperture](index.md)
 
 ## Where to Find
 
@@ -24,6 +24,6 @@ Part of [aperture](../../aperture/index.md)
 
 ## Services
 
-- `NFS` for [aperture](../../aperture/index.md)
+- `NFS` for [aperture](index.md)
 
 ![](../../res/johnson.png)
