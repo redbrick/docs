@@ -14,7 +14,7 @@ Redbrick currently uses [Privatebin](https://github.com/PrivateBin/PrivateBin) a
 
 ## Privatebin
 
-The Privatebin instance is deployed with [nomad](nomad.md) on [`aperture`](../hardware/aperture/index.md). Its configuration is available [here](https://github.com/redbrick/nomad/blob/master/jobs/services/privatebin.hcl). Privatebin doesn't support full configuration via environment variables but instead uses a `conf.php` file. This is passed in using [nomad templates](https://developer.hashicorp.com/nomad/docs/job-specification/template) .
+The Privatebin instance is deployed with [nomad](nomad.md) on [`aperture`](../hardware/aperture/index.md). Its configuration is available [here](https://github.com/redbrick/nomad/blob/master/jobs/services/privatebin.hcl). Privatebin doesn't support full configuration via environment variables but instead uses a `conf.php` file. This is passed in using [nomad templates](https://developer.hashicorp.com/nomad/docs/job-specification/template).
 
 All sensitive variables are stored in the [`consul`](consul.md) KV store. 
 
