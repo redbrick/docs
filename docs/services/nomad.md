@@ -1,14 +1,14 @@
 ---
-title: Nomad on Aperture
+title: Nomad
 author:
-- distro
-- wizzdom
+  - distro
+  - wizzdom
 tags:
-- nomad
-- aperture
+  - nomad
+  - aperture
 ---
 
-# Nomad on Aperture - `distro`, `wizzdom`
+# Nomad - `distro`, `wizzdom`
 
 > Adapted from [redbrick/nomad README](https://github.com/redbrick/nomad/README.md)
 
