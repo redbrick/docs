@@ -70,6 +70,7 @@ plugins:
         'aperture/ansible.md': 'procedures/ansible.md'
         'aperture/firewall.md': 'hardware/network/mordor.md'
         'aperture/icecast.md': 'services/icecast.md'
+        'services/codimd.md': 'services/md.md'
 
 
 markdown_extensions:
