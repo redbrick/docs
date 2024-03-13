@@ -4,6 +4,8 @@ Here you can find a list of various procedures useful for the day-to-day running
 
 ### [New elected admins](new-admins.md)
 
+### [Cheatsheet](cheatsheet.md)
+
 ### [Admin VPN](vpn.md)
 
 ### [Ansible](ansible.md)

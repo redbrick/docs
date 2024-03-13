@@ -50,6 +50,7 @@ See the [HedgeDoc docs](https://docs.hedgedoc.org/configuration/) for more info 
 The HedgeDoc database is backed up periodically by a [nomad](nomad.md) job, the configuration for which is [here](https://github.com/redbrick/nomad/blob/master/jobs/services/hedgedoc-backup.hcl).
 
 The bulk of this job is this script which:
+
 - grabs the `alloc_id` of the currently running HedgeDoc allocation from nomad
 - execs into the container running `pg_dumpall` dumping the database into a file with the current date and time
 - if the backup is unsuccessful the script notifies the admins on discord via a webhook.
@@ -79,4 +80,3 @@ else
   {{ key "postgres/webhook/discord" }}
 fi
 ```
-
