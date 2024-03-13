@@ -1,3 +1,10 @@
+---
+title: API
+tags:
+  - services
+  - api
+---
+
 # API
 
 ## Redbrick Administrator Web API

@@ -1,3 +1,12 @@
+---
+title: Services Exposed to the Internet
+author:
+  - wizzdom
+tags:
+  - services
+  - exposed
+---
+
 # Services Exposed to the Internet - `wizzdom`
 
 Firstly, it's important to mention that Redbrick is currently split in 2 parts:
@@ -40,7 +49,7 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 		- [Wetty](servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
 		- [Admin API](api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
 		- Secretary's email generator  at: [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
-		- [CodiMD](codimd.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
+		- [CodiMD](md.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
 		- all of this is routed through [traefik](traefik.md) as a reverse proxy
 - [paphos](../hardware/paphos.md) - `136.206.15.53`
 	- **OS**: Ubuntu 14.04 LTS

@@ -1,3 +1,11 @@
+---
+title: Aperture
+tags:
+  - aperture
+  - details
+  - getting-started
+---
+
 # Aperture
 
 ## What is Aperture?

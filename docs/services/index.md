@@ -5,7 +5,7 @@ Here you will find a list of all the services Redbrick runs, along with some con
 - [api](api.md)
 - [bastion-vm](bastion-vm.md)
 - [bind](bind.md)
-- [codimd](codimd.md)
+- [md](md.md)
 - [consul](consul.md)
 - [gitea](gitea.md)
 - [irc](irc.md)

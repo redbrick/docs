@@ -1,3 +1,12 @@
+---
+title: Wheatley
+tags:
+  - aperture
+  - hardware
+  - wheatley
+  - details
+---
+
 # Wheatley
 
 ## Details

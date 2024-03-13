@@ -1,3 +1,14 @@
+---
+title: Motherlode
+tags:
+  - nixos
+  - hardware
+  - motherlode
+  - details
+  - qemu
+  - libvirt
+---
+
 # Motherlode
 
 ## Details
