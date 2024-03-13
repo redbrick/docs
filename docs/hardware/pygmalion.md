@@ -1,3 +1,12 @@
+---
+title: Pygmalion
+tags:
+  - login-box
+  - hardware
+  - pygmalion
+  - ubuntu
+---
+
 # Pygmalion
 
 ## Details

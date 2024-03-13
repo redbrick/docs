@@ -1,5 +1,6 @@
 site_name: Redbrick Docs
 site_url: https://docs.redbrick.dcu.ie/
+site_description: The home for all Redbrick technical documentation
 repo_url: https://github.com/redbrick/docs
 repo_name: redbrick/docs
 use_directory_urls: true
@@ -17,6 +18,12 @@ theme:
     - navigation.indexes
     - content.code.copy
     - content.code.annotate
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -42,7 +49,10 @@ plugins:
   - callouts
   - glightbox
   - search
+  - social
   - material-plausible
+  - tags:
+      tags_file: tags.md
   - git-revision-date-localized:
       type: timeago
   - redirects:
@@ -77,6 +87,8 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - toc:
+      permalink: true
 
 copyright:  <img class="logo" src="/res/logo.png" width="20px"> <a href="https://docs.redbrick.dcu.ie"><strong>Redbrick Docs</strong></a>
 

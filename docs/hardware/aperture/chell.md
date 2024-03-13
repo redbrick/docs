@@ -1,3 +1,12 @@
+---
+title: Chell
+tags:
+  - hardware
+  - aperture
+  - chell
+  - details
+---
+
 # Chell
 
 ## Details

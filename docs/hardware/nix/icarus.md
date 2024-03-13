@@ -1,3 +1,13 @@
+---
+title: Icarus
+tags:
+  - nixos
+  - hardware
+  - icarus
+  - daedalus
+  - details
+---
+
 # Icarus
 
 Daedalus and Icarus ~~are~~ were twins ~~and thus share documentation.~~

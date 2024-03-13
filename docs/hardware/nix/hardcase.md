@@ -1,3 +1,12 @@
+---
+title: Hardcase
+tags:
+  - nixos
+  - hardware
+  - details
+  - hardcase
+---
+
 # Hardcase
 
 ## Details

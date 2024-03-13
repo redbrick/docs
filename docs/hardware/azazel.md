@@ -1,3 +1,13 @@
+---
+title: Azazel
+tags:
+  - login-box
+  - hardware
+  - azazel
+  - details
+  - debian
+---
+
 # Azazel
 
 ## Details

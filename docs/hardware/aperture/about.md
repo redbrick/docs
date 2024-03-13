@@ -1,3 +1,10 @@
+---
+title: About Aperture
+tags:
+  - aperture
+  - hardware
+---
+
 # About Aperture
 
 Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins`, `cawnj`, `ymacomp` and `arkues`.
@@ -6,9 +13,9 @@ It consists of:
 
 - 3x Dell R6515 - [`glados`](glados.md), [`wheatley`](wheatley.md), [`chell`](chell.md)
 
- |                    CPU                    |                RAM                |             Storage              |
- |:-----------------------------------------:|:---------------------------------:|:--------------------------------:|
- | AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
+| CPU                                       | RAM                               | Storage                          |
+| ----------------------------------------- | --------------------------------- | -------------------------------- |
+| AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
 
 - 2x Ubiquiti USW Pro - `rivendell`, `isengard`
 - 1x Ubiquiti UDM Pro - `mordor`

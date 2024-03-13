@@ -1,3 +1,13 @@
+---
+title: Bastion VM
+tags:
+  - aperture
+  - services
+  - nomad
+  - vm
+  - ingress
+---
+
 # Bastion VM
 
 This VM is an ephemeral machine that can be placed on any nomad client that has the qemu driver enabled.

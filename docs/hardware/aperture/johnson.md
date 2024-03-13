@@ -1,3 +1,12 @@
+---
+title: Johnson
+tags:
+  - aperture
+  - hardware
+  - johnson
+  - details
+---
+
 # Johnson
 
 ## Details

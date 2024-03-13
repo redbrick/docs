@@ -1,3 +1,12 @@
+---
+title: Images
+tags:
+  - hardware
+  - aperture
+  - install
+  - images
+---
+
 # Images
 
 ## Servers

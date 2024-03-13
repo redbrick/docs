@@ -1,3 +1,12 @@
+---
+title: Glados
+tags:
+  - hardware
+  - aperture
+  - glados
+  - details
+---
+
 # Glados
 
 ## Details

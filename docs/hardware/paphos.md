@@ -1,3 +1,14 @@
+---
+title: Paphos
+tags:
+  - hardware
+  - paphos
+  - details
+  - dns
+  - bind
+  - ubuntu
+---
+
 # Paphos
 
 ## Details
