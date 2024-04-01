@@ -22,13 +22,13 @@ The main points are as follows:
 
 - configure URL shortener ([`shlink`](shlink.md))
 
-```php
+```php title="conf.php"
 urlshortener = "https://s.rb.dcu.ie/rest/v1/short-urls/shorten?apiKey={{ key "privatebin/shlink/api" }}&format=txt&longUrl="
 ```
 
 - enable file upload, set file size limit and enable compression
 
-```php
+```php title="conf.php"
 fileupload = true
 sizelimit = 10485760
 compression = "zlib"
@@ -36,7 +36,7 @@ compression = "zlib"
 
 - Connect to PostgreSQL database
 
-```php
+```php title="conf.php"
 [model]
 class = Database
 [model_options]

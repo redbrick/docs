@@ -14,6 +14,8 @@ This VM is an ephemeral machine that can be placed on any nomad client that has 
 
 It acts as the point of ingress for Aperture, with ISS and our [mordor](../hardware/network/mordor.md) allowing traffic to reach it's IP address externally. The VM is configured as a Nomad client itself, in the `ingress` node pool to ensure that only ingress-type allocations are placed there (like [traefik](./traefik.md)). Those services can proxy requests from the Bastion VM to internal services using consul's service DNS resolution, it's service mesh, or by plain IP and port.
 
+![Ingress Topology with Bastion VM](../res/ingress-topology.png)
+
 `cloud-init` is given a static address during the initialisation phase to configure the interface. This ensures that, even if it is replanned, it will be able to accept traffic.
 
 The base image that the VM uses is a Debian 12 qcow file. After all configuration was done, the size of the image is `~3.2GB`. The image can be used to create replicas of the ingress on other external IP addresses, creating more availability if needed.
