@@ -78,7 +78,7 @@ This will plan and run the job file without the need for you to copy and paste t
 nomad job stop -purge name-of-running-job
 ```
 
-- Run a garbage collection of jobs, evaluations, allocations, and nodes ad reconcile summaries of all registered jobs.
+- Run a garbage collection of jobs, evaluations, allocations, nodes and reconcile summaries of all registered jobs.
 
 ```bash
 nomad system gc
@@ -96,11 +96,25 @@ nomad job plan path/to/job/file.hcl
 nomad job run -check-index [id from last command] path/to/job/file.hcl
 ```
 
+## Exec into Container
+
+At times it is necessary to exec into a docker container to complete maintenance, perform tests or change configurations. The syntax to do this on nomad is similar to `docker exec` with some small additions:
+
+```bash
+nomad alloc exec -i -t -task <task-name> <nomad-alloc-id> <command>
+```
+
+Where:
+
+- `<task-name>` is the name of the task you want to exec into *(only needed when there is more than one task in job)*
+- `<nomad-alloc-id>` is the id for the currently running allocation, obtained from the web UI, nomad CLI, or nomad API
+- `<command>` is the command you want to run. e.g. `sh`, `rcon-cli`
+
 ## Cluster Configuration
 
 [`nomad/cluster-config`](https://github.com/redbrick/nomad/tree/master/cluster-config) contains configuration relating to the configuration of the cluster including:
 
-- node pools
+- [Node Pools](#node-pools)
 - agent config
 
 ### Node Pools
