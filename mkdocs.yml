@@ -84,10 +84,16 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+      anchor_linenums: true
   - toc:
       permalink: true
 

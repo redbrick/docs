@@ -1,5 +1,5 @@
 ---
-title: HedgeDoc
+title: MD (HedgeDoc)
 author:
   - wizzdom
 tags:
@@ -20,13 +20,13 @@ The important points are as follows:
 
 - connecting to the database:
 
-```bash
+```hcl title="Nomad"
 CMD_DB_URL = "postgres://{{ key "hedgedoc/db/user" }}:{{ key "hedgedoc/db/password" }}@{{ env "NOMAD_ADDR_db" }}/{{ key "hedgedoc/db/name" }}"
 ```
 
 - disabling anonymous users and email signup:
 
-```bash
+```hcl title="Nomad"
 CMD_ALLOW_EMAIL_REGISTER = "false"
 CMD_ALLOW_ANONYMOUS      = "false"
 CMD_EMAIL                = "false"
@@ -34,7 +34,7 @@ CMD_EMAIL                = "false"
 
 - LDAP configuration:
 
-```bash
+```hcl title="Nomad"
 CMD_LDAP_URL             = "{{ key "hedgedoc/ldap/url" }}"
 CMD_LDAP_SEARCHBASE      = "ou=accounts,o=redbrick"
 CMD_LDAP_SEARCHFILTER    = "{{`(uid={{username}})`}}"

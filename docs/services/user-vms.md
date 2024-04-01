@@ -1,3 +1,14 @@
+---
+title: User VMs
+author:
+  - distro
+  - wizzdom
+tags:
+  - aperture
+  - nomad
+  - qemu
+---
+
 # User VMs
 
 User VMs are deployed on [`aperture`](../hardware/aperture/index.md) using [nomad](nomad.md)'s [QEMU driver](https://developer.hashicorp.com/nomad/docs/drivers/qemu). 
@@ -58,7 +69,7 @@ nomad alloc logs <alloc-id> | grep -E "ens3.*global" | cut -d "|" -f 4 | xargs
 
 The VMs are configured with cloud-init. Their docs are pretty good, so I won't repeat them here. The files can be served by any HTTP server, and the address is placed into the job file in the QEMU options.
 
-```hcl
+```hcl title="Nomad"
 ...
         args = [
           ...
