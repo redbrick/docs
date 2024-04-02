@@ -14,6 +14,8 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 - Redbrick 2.0 *a.k.a. "old redbrick"* (on `136.206.15.0/24`)
 - [Aperture](../hardware/aperture/index.md) *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
 
+![](../network-divorce.png)
+
 ## Old Redbrick
 
 - [**azazel**](../hardware/azazel.md) - `136.206.15.24`
@@ -36,21 +38,13 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 		- `apache httpd`:
 			- websites from the webtree (including, but not limited to):
 				- all user's websites `<user>.redbrick.dcu.ie`
-				- [redbrick.dcu.ie](https://redbrick.dcu.ie)
                 - other websites are mentioned in the [nix-configs repo](https://github.com/redbrick/nix-configs/blob/master/services/httpd/vhosts.nix)
 			- legacy websites (pretty much anything that isn't dockerized)
+			- [thecollegeview.ie](https://thecollegeview.ie)
+			- [thelookonline.dcu.ie](https://thelookonline.dcu.ie)
 		- email (`postfix` and `dovecot`)
 		- mailing [lists](https://lists.redbrick.dcu.ie) (`mailman`)
 		- `*.redbrick.dcu.ie` also points here
-- [**zeus**](../hardware/zeus.md) - `136.206.15.31`
-	- **OS**: Ubuntu 18.04 LTS
-	- **Note**: this is a docker host, everything on here is in a container
-	- **Services**:
-		- [Wetty](servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
-		- [Admin API](api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
-		- Secretary's email generator  at: [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
-		- [CodiMD](md.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
-		- all of this is routed through [traefik](traefik.md) as a reverse proxy
 - [paphos](../hardware/paphos.md) - `136.206.15.53`
 	- **OS**: Ubuntu 14.04 LTS
 	- **Services**:
@@ -72,6 +66,14 @@ In aperture, things are done a little differently than on the other network. Ins
 		- [chell](https://chell.redbrick.dcu.ie)
 	- the [amikon.me](https://amikon.me) website for DCU AMS in an `nginx` container
 	- [timetable.redbrick.dcu.ie](https://timetable.redbrick.dcu.ie) a timetable that actually works, 10x better than the [official DCU timetable](https://mytimetable.dcu.ie)
+	- Redbrick main site [redbrick.dcu.ie](https://redbrick.dcu.ie)
+	- [HedgeDoc](md.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
+	- [Admin API](api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
+	- [Wetty](servers.md#Logging%20in%20to%20Wetty) at: [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie)
+	- DCU Solar Racing Website [solarracing.ie](https://solarracing.ie)
+	- [Redbrick Password Vault](vault.md) (Vaultwarden) at: [vault.redbrick.dcu.ie](https://vault.redbrick.dcu.ie)
+	- [URL Shortener](shlink.md)
+	- [Plausible Analytics](plausible.md) at [plausible.redbrick.dcu.ie](https://plausible.redbrick.dcu.ie)
 - **Notes**:
 	- all web traffic is routed through [traefik](traefik.md)
 	- all new services will be deployed here
