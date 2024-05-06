@@ -1,8 +1,5 @@
 ---
-id: Open-Governance-Tagging
-aliases:
-  - Before the Tagging Ceremony
-  - Open Governance Tagging
+title: Open Governance Tagging
 tags:
   - open-gov
   - gpg
