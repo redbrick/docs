@@ -1,10 +1,13 @@
 ---
-title: Services Exposed to the Internet
-author:
-  - wizzdom
+id: exposed
+aliases:
+  - Services Exposed to the Internet - `wizzdom`
 tags:
   - services
   - exposed
+author:
+  - wizzdom
+title: Services Exposed to the Internet
 ---
 
 # Services Exposed to the Internet - `wizzdom`
@@ -12,22 +15,12 @@ tags:
 Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 
 - Redbrick 2.0 *a.k.a. "old redbrick"* (on `136.206.15.0/24`)
-- [Aperture](../hardware/aperture/index.md) *a.k.a. "new redbrick"* (on `136.206.16.0/24`)
+- New Redbrick which includes [Aperture](../hardware/aperture/index.md) (on `136.206.16.0/24`)
 
 ![](../network-divorce.png)
 
 ## Old Redbrick
 
-- [**azazel**](../hardware/azazel.md) - `136.206.15.24`
-	- **OS**: Debian 10
-	- **Services**:
-		- primary ssh login box for users (see [Logging in](servers.md#Logging%20in))
-		- jump-box for admins
-- [**pygmalion**](../hardware/pygmalion.md) - `136.206.15.25`
-	- **OS**: Ubuntu 18.04 LTS
-	- **Services**:
-		- secondary ssh login box for users (see [Logging in](servers.md#Logging%20in))
-		- jump-box for admins
 - [**motherlode**](../hardware/nix/motherlode.md) - `136.206.15.250`
 	- **OS**: NixOS 22.05
 	- **Services**:
@@ -50,15 +43,28 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 	- **Services**:
 		- DNS ([bind](bind.md))
 
-## [Aperture](../hardware/aperture/index.md)
+## New Redbrick
 
-In aperture, things are done a little differently than on the other network. Instead of having  a single host per service, aperture is configured to allow services to be allocated dynamically across all 3 servers using [nomad](nomad.md), [consul](consul.md) and [traefik](traefik.md).
+- [**azazel**](../hardware/azazel.md) - `136.206.16.24`
+	- **OS**: Debian 12 `bookworm`
+	- **Services**:
+		- primary ssh login box for users (see [Logging in](servers.md#Logging%20in))
+		- jump-box for admins
+- [**pygmalion**](../hardware/pygmalion.md) - `136.206.16.25`
+	- **OS**: Debian 12 `bookworm`
+	- **Services**:
+		- secondary ssh login box for users (see [Logging in](servers.md#Logging%20in))
+		- jump-box for admins
+
+### [Aperture](../hardware/aperture/index.md)
+
+In aperture, things are done a little differently than on the other network. Instead of having a single host per service, aperture is configured to allow services to be allocated dynamically across all 3 servers using [nomad](nomad.md), [consul](consul.md) and [traefik](traefik.md).
 
 - [glados](../hardware/aperture/glados.md) - `136.206.16.4`
 - [wheatley](../hardware/aperture/wheatley.md) - `136.206.16.5`
 - [chell](../hardware/aperture/chell.md) - `136.206.16.6`
 - all 3 boxes are identical
-- **OS**: Debian 11
+- **OS**: Debian 11 `bullseye`
 - **Services**:
 	- simple `nginx` containers with the mascot of each server in aperture:
 		- [glados](https://glados.redbrick.dcu.ie)
@@ -75,7 +81,7 @@ In aperture, things are done a little differently than on the other network. Ins
 	- [URL Shortener](shlink.md)
 	- [Plausible Analytics](plausible.md) at [plausible.redbrick.dcu.ie](https://plausible.redbrick.dcu.ie)
 - **Notes**:
-	- all web traffic is routed through [traefik](traefik.md)
-	- all new services will be deployed here
+	- All web traffic is routed through [traefik](traefik.md) on the [bastion VM](./bastion-vm.md)
+	- All new services will be deployed here
 	- Most services here are deployed as docker containers but there's no reason you couldn't use any of the other [nomad drivers](https://developer.hashicorp.com/nomad/docs/drivers)
 	- For more information see redbrick's [Nomad repo](https://github.com/redbrick/nomad)
