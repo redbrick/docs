@@ -1,3 +1,9 @@
+---
+title: irc
+created: 2021-06-29T04:44:29
+modified: 2024-03-13T04:49:14
+---
+
 # IRC
 
 ## Redbrick InspIRCd

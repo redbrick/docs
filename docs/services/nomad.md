@@ -1,11 +1,13 @@
 ---
-title: Nomad
-author:
-  - distro
-  - wizzdom
+title: nomad
+created: 2023-10-11T02:53:18
+modified: 2024-04-02T00:12:29
 tags:
   - nomad
   - aperture
+author:
+  - distro
+  - wizzdom
 ---
 
 # Nomad - `distro`, `wizzdom`

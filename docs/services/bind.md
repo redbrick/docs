@@ -1,5 +1,7 @@
 ---
-title: Bind9 (DNS)
+title: bind
+created: 2021-06-29T04:44:29
+modified: 2024-04-03T17:52:43
 tags:
   - services
   - dns

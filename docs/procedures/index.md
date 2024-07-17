@@ -1,3 +1,9 @@
+---
+title: index
+created: 2023-12-05T01:36:11
+modified: 2024-03-13T06:05:10
+---
+
 # Procedures
 
 Here you can find a list of various procedures useful for the day-to-day running of Redbrick

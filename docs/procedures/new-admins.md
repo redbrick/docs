@@ -1,3 +1,9 @@
+---
+title: new-admins
+created: 2023-12-05T01:36:11
+modified: 2024-01-31T08:23:37
+---
+
 # New Elected Admins
 
 The chronological process of becoming an admin usually looks very similar each year. There are some important things you should know.

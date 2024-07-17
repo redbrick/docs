@@ -1,3 +1,9 @@
+---
+title: vpn
+created: 2022-09-05T04:00:22
+modified: 2024-03-01T21:17:25
+---
+
 # Admin VPN
 
 The admin VPN is set up to allow admins to access the network from outside of DCU, giving them an IP address on the internal network for troubleshooting, testing and integrating.

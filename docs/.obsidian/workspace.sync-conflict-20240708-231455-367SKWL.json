@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "e6f62641f3b31d0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "67837d9516b6a19d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b14e32e8f6525902",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "knowledge/Tagging.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "23defdf058d26a9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "knowledge/Tagging.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fe88dd38151a01bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "5303bb5af6d39d2e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4e0829699213201",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "93d8f15fd4a7e1a8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ffc6dc4f7494c473",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6f1cb2a76765485a",
+    "type": "split",
+    "children": [
+      {
+        "id": "115cba0e25af735c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e8ec847157aa587",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "knowledge/Tagging.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "02f8a230af208342",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "knowledge/Tagging.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2547cad809ec95a2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "422889f6840cb3c6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "knowledge/Tagging.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "23defdf058d26a9c",
+  "lastOpenFiles": [
+    "res/index.md",
+    "res/ingress_topology_aperture.bmp",
+    "res/example_of_nested_dirs.png",
+    "knowledge/Tagging.md",
+    "admin/Tagging Procedure.md",
+    "webgroup/Discord Bots.md",
+    "webgroup/Webgroup.md",
+    "knowledge/docs.redbrick.dcu.ie.md",
+    "admin/Network Request - 2023-12-10.md",
+    "admin/Aperture Design.md",
+    "resources/Useful Links.md",
+    "knowledge/Nubar.md",
+    "admin/GPGtagging.md",
+    "Style Guide.md",
+    "knowledge/Untitled.md",
+    "knowledge/student life/Office of Student Life.md",
+    "knowledge/student life/ISS.md",
+    "knowledge/student life/Society Life Committee.md",
+    "knowledge/student life/Club Life Committee.md",
+    "knowledge/terminology/Living Documentation.md",
+    "knowledge/terminology/Open Governance.md",
+    "documents/Constitution.md"
+  ]
+}

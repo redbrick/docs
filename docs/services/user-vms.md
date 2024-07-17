@@ -1,12 +1,14 @@
 ---
-title: User VMs
-author:
-  - distro
-  - wizzdom
+title: user-vms
+created: 2024-03-13T04:05:22
+modified: 2024-04-04T18:04:58
 tags:
   - aperture
   - nomad
   - qemu
+author:
+  - distro
+  - wizzdom
 ---
 
 # User VMs

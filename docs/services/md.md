@@ -1,11 +1,13 @@
 ---
-title: MD (HedgeDoc)
-author:
-  - wizzdom
+title: md
+created: 2024-03-13T04:32:53
+modified: 2024-04-02T00:12:41
 tags:
   - aperture
   - nomad
   - docker
+author:
+  - wizzdom
 ---
 
 # HedgeDoc - `wizzdom`

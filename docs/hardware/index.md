@@ -1,3 +1,9 @@
+---
+title: index
+created: 2023-12-04T22:35:50
+modified: 2024-03-01T21:17:25
+---
+
 # Hardware
 
 Here is a list of current hardware in Redbrick's suite of servers, switches and other bits.
