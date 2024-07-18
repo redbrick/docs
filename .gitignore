@@ -3,3 +3,5 @@ docs/.obsidian/workspace.json
 docs/.obsidian/graph.json
 .cache/
 venv/
+docs/.obsidian/plugins/
+!docs/.obsidian/plugins/*/data.json
