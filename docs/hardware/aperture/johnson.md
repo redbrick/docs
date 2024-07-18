@@ -1,5 +1,7 @@
 ---
-title: Johnson
+title: johnson
+created: 2023-12-06T01:22:03
+modified: 2024-03-13T04:49:14
 tags:
   - aperture
   - hardware

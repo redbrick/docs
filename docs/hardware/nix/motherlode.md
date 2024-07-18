@@ -1,5 +1,7 @@
 ---
-title: Motherlode
+title: motherlode
+created: 2023-12-04T22:28:41
+modified: 2024-03-13T04:49:14
 tags:
   - nixos
   - hardware

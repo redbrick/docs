@@ -1,5 +1,7 @@
 ---
-title: Open Governance Tagging
+title: Open-Governance-Tagging
+created: 2024-05-07T00:23:58
+modified: 2024-05-07T00:23:58
 tags:
   - open-gov
   - gpg

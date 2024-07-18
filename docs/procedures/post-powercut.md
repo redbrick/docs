@@ -1,3 +1,9 @@
+---
+title: post-powercut
+created: 2023-12-05T01:36:11
+modified: 2024-01-31T08:23:37
+---
+
 # Post-powercut Todo List
 
 A list of things that should be done/checked immediately after a power cut:

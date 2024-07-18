@@ -1,5 +1,7 @@
 ---
-title: Bastion VM
+title: bastion-vm
+created: 2024-01-23T15:43:40
+modified: 2024-04-02T00:12:41
 tags:
   - aperture
   - services

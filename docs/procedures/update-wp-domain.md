@@ -1,3 +1,9 @@
+---
+title: update-wp-domain
+created: 2024-01-25T04:31:32
+modified: 2024-01-31T08:23:37
+---
+
 # Update a WordPress Domain - `wizzdom`, `distro`
 
 Redbrick hosts a variety of services and websites for various clubs and societies in DCU. Oftentimes these websites hosted for societies run on WordPress due to it's ease of use. 

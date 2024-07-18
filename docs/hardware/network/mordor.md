@@ -1,3 +1,9 @@
+---
+title: mordor
+created: 2022-05-16T02:53:25
+modified: 2024-03-01T21:17:25
+---
+
 # Mordor
 
 <!-- Access through 10.10.0.1 -->

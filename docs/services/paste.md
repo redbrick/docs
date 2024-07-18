@@ -1,11 +1,13 @@
 ---
-title: Pastebin
-author:
-  - wizzdom
+title: paste
+created: 2024-03-13T06:04:42
+modified: 2024-04-02T00:12:41
 tags:
   - aperture
   - nomad
   - docker
+author:
+  - wizzdom
 ---
 
 # Pastebin - `wizzdom`

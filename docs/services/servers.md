@@ -1,3 +1,9 @@
+---
+title: servers
+created: 2021-08-14T23:47:50
+modified: 2024-01-31T08:23:37
+---
+
 # Servers
 
 Redbrick provides two main servers ([Azazel](../hardware/azazel.md) and [Pygmalion](../hardware/pygmalion.md)) for it's members to use for various use cases, for example running applications or user programs.
