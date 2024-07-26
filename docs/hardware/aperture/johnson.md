@@ -1,12 +1,15 @@
 ---
-title: johnson
-created: 2023-12-06T01:22:03
-modified: 2024-03-13T04:49:14
+id: johnson
+aliases:
+  - Johnson
 tags:
   - aperture
   - hardware
   - johnson
   - details
+created: 2023-12-06T01:22:03
+modified: 2024-03-13T04:49:14
+title: Johnson
 ---
 
 # Johnson

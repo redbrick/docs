@@ -1,13 +1,16 @@
 ---
-title: nomad
-created: 2023-10-11T02:53:18
-modified: 2024-04-02T00:12:29
+id: nomad
+aliases:
+  - Nomad - `distro`, `wizzdom`
 tags:
   - nomad
   - aperture
 author:
   - distro
   - wizzdom
+created: 2023-10-11T02:53:18
+modified: 2024-04-02T00:12:29
+title: Nomad
 ---
 
 # Nomad - `distro`, `wizzdom`

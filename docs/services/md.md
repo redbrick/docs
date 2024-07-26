@@ -1,13 +1,16 @@
 ---
-title: md
-created: 2024-03-13T04:32:53
-modified: 2024-04-02T00:12:41
+id: md
+aliases:
+  - HedgeDoc - `wizzdom`
 tags:
   - aperture
   - nomad
   - docker
 author:
   - wizzdom
+created: 2024-03-13T04:32:53
+modified: 2024-04-02T00:12:41
+title: MD (HedgeDoc)
 ---
 
 # HedgeDoc - `wizzdom`
@@ -16,7 +19,7 @@ HedgeDoc is deployed with [nomad](nomad.md) on [`aperture`](../hardware/aperture
 
 HedgeDoc auths against LDAP and its configuration is available [here](https://github.com/redbrick/nomad/blob/master/jobs/services/hedgedoc.hcl)
 
-All sensitive variables are stored in the [`consul`](consul.md) KV store. 
+All sensitive variables are stored in the [`consul`](consul.md) KV store.
 
 The important points are as follows:
 
@@ -45,7 +48,7 @@ CMD_LDAP_USERIDFIELD     = "uidNumber"
 CMD_LDAP_USERNAMEFIELD   = "uid"
 ```
 
-See the [HedgeDoc docs](https://docs.hedgedoc.org/configuration/) for more info on configuration. 
+See the [HedgeDoc docs](https://docs.hedgedoc.org/configuration/) for more info on configuration.
 
 ## Backups
 

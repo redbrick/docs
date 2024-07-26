@@ -1,11 +1,14 @@
 ---
-title: index
-created: 2022-05-16T01:44:40
-modified: 2024-03-13T04:49:14
+id: index
+aliases:
+  - Aperture
 tags:
   - aperture
   - details
   - getting-started
+created: 2022-05-16T01:44:40
+modified: 2024-03-13T04:49:14
+title: Aperture
 ---
 
 # Aperture

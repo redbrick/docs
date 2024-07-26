@@ -1,7 +1,11 @@
 ---
-title: index
+id: index
+aliases:
+  - Procedures
+tags: []
 created: 2023-12-05T01:36:11
 modified: 2024-03-13T06:05:10
+title: Procedures
 ---
 
 # Procedures

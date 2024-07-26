@@ -1,7 +1,11 @@
 ---
-title: socs
+id: socs
+aliases:
+  - Socs Using Redbrick Infrastructure
+tags: []
 created: 2024-03-01T21:17:25
 modified: 2024-04-02T00:12:41
+title: Socs using Redbrick Infrastructure
 ---
 
 # Socs Using Redbrick Infrastructure

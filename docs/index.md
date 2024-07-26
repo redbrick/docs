@@ -1,7 +1,11 @@
 ---
-title: index
+id: index
+aliases:
+  - Home
+tags: []
 created: 2021-06-28T22:38:22
 modified: 2024-03-13T06:05:10
+title: Home
 ---
 
 # Home

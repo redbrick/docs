@@ -1,10 +1,13 @@
 ---
-title: about
-created: 2022-05-16T01:44:40
-modified: 2024-03-13T04:49:14
+id: about
+aliases:
+  - About Aperture
 tags:
   - aperture
   - hardware
+created: 2022-05-16T01:44:40
+modified: 2024-03-13T04:49:14
+title: About Aperture
 ---
 
 # About Aperture

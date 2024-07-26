@@ -1,13 +1,16 @@
 ---
-title: zeus
-created: 2023-12-02T14:18:51
-modified: 2024-03-13T04:49:14
+id: zeus
+aliases:
+  - Zeus
 tags:
   - hardware
   - zeus
   - details
   - docker
   - ubuntu
+created: 2023-12-02T14:18:51
+modified: 2024-03-13T04:49:14
+title: Zeus
 ---
 
 # Zeus

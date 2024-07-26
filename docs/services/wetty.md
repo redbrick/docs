@@ -1,20 +1,23 @@
 ---
-title: Wetty
-created: 2024-07-16T23:52:13
-modified: 2024-07-18T23:08:33
+id: wetty
+aliases:
+  - Wetty - `wizzdom`
 tags:
   - aperture
   - nomad
   - docker
 author:
   - wizzdom
+created: 2024-07-16T23:52:13
+modified: 2024-07-18T23:08:33
+title: Wetty
 ---
 
 # Wetty - `wizzdom`
 
 Redbrick uses [Wetty](https://github.com/butlerx/wetty) as our web terminal of choice. It is accessible at [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie), [wetty.rb.dcu.ie](https://wetty.rb.dcu.ie),[term.redbrick.dcu.ie](https://term.redbrick.dcu.ie), [anyterm.redbrick.dcu.ie](https://anyterm.redbrick.dcu.ie) and [ajaxterm.redbrick.dcu.ie](https://ajaxterm.redbrick.dcu.ie).
 
-*Why all the different domains?* - ***For legacy reasons!*** 
+*Why all the different domains?* - ***For legacy reasons!***
 
 The configuration is located [here](https://github.com/redbrick/nomad/blob/master/jobs/services/wetty.hcl)
 
