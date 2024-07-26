@@ -1,7 +1,11 @@
 ---
-title: post-powercut
+id: post-powercut
+aliases:
+  - Post-powercut Todo List
+tags: []
 created: 2023-12-05T01:36:11
 modified: 2024-01-31T08:23:37
+title: Post-Powercut Todo List
 ---
 
 # Post-powercut Todo List

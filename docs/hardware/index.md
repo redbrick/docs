@@ -1,7 +1,11 @@
 ---
-title: index
+id: index
+aliases:
+  - Hardware
+tags: []
 created: 2023-12-04T22:35:50
 modified: 2024-03-01T21:17:25
+title: Hardware
 ---
 
 # Hardware

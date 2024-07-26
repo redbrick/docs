@@ -1,7 +1,11 @@
 ---
-title: policies
+id: policies
+aliases:
+  - Redbrick System Administrator Policies
+tags: []
 created: 2023-12-05T01:36:11
 modified: 2024-01-30T01:31:37
+title: Systems Administrator Policies
 ---
 
 # Redbrick System Administrator Policies

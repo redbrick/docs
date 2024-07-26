@@ -1,7 +1,11 @@
 ---
-title: znapzend
+id: znapzend
+aliases:
+  - ZnapZend
+tags: []
 created: 2021-06-29T04:44:29
 modified: 2024-01-31T08:23:37
+title: ZnapZend
 ---
 
 # ZnapZend

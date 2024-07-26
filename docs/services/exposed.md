@@ -1,15 +1,15 @@
 ---
-title: exposed
-created: 2023-12-02T14:11:33
-modified: 2024-07-16T23:41:06
+id: exposed
+aliases:
+  - Services Exposed to the Internet - `wizzdom`
 tags:
   - services
   - exposed
-aliases:
-  - Services Exposed to the Internet - `wizzdom`
 author:
   - wizzdom
-id: exposed
+created: 2023-12-02T14:11:33
+modified: 2024-07-16T23:41:06
+title: Services Exposed to the Internet
 ---
 
 # Services Exposed to the Internet - `wizzdom`

@@ -1,12 +1,15 @@
 ---
-title: wheatley
-created: 2023-12-04T22:28:41
-modified: 2024-03-13T04:49:14
+id: wheatley
+aliases:
+  - Wheatley
 tags:
   - aperture
   - hardware
   - wheatley
   - details
+created: 2023-12-04T22:28:41
+modified: 2024-03-13T04:49:14
+title: Wheatley
 ---
 
 # Wheatley

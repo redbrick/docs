@@ -1,7 +1,7 @@
 ---
-title: bind
-created: 2021-06-29T04:44:29
-modified: 2024-04-03T17:52:43
+id: bind
+aliases:
+  - Bind9 - `distro`, `ylmcc`, `wizzdom`
 tags:
   - services
   - dns
@@ -9,6 +9,9 @@ author:
   - distro
   - ylmcc
   - wizzdom
+created: 2021-06-29T04:44:29
+modified: 2024-04-03T17:52:43
+title: Bind (DNS)
 ---
 
 # Bind9 - `distro`, `ylmcc`, `wizzdom`

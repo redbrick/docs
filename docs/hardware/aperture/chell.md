@@ -1,12 +1,15 @@
 ---
-title: chell
-created: 2023-12-04T22:28:41
-modified: 2024-03-13T04:49:14
+id: chell
+aliases:
+  - Chell
 tags:
   - hardware
   - aperture
   - chell
   - details
+created: 2023-12-04T22:28:41
+modified: 2024-03-13T04:49:14
+title: Chell
 ---
 
 # Chell

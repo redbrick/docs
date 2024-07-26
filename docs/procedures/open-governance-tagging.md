@@ -1,7 +1,7 @@
 ---
-title: Open-Governance-Tagging
-created: 2024-05-07T00:23:58
-modified: 2024-05-07T00:23:58
+id: open-governance-tagging
+aliases:
+  - Open Governance Tagging - `hypnoant`, `wizzdom`
 tags:
   - open-gov
   - gpg
@@ -9,6 +9,9 @@ tags:
 author:
   - hypnoant
   - wizzdom
+created: 2024-05-07T00:23:58
+modified: 2024-05-07T00:23:58
+title: Open Governance Tagging
 ---
 
 # Open Governance Tagging - `hypnoant`, `wizzdom`

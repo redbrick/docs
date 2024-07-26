@@ -1,13 +1,16 @@
 ---
-title: paste
-created: 2024-03-13T06:04:42
-modified: 2024-04-02T00:12:41
+id: paste
+aliases:
+  - Pastebin - `wizzdom`
 tags:
   - aperture
   - nomad
   - docker
 author:
   - wizzdom
+created: 2024-03-13T06:04:42
+modified: 2024-04-02T00:12:41
+title: Pastebin
 ---
 
 # Pastebin - `wizzdom`
@@ -18,7 +21,7 @@ Redbrick currently uses [Privatebin](https://github.com/PrivateBin/PrivateBin) a
 
 The Privatebin instance is deployed with [nomad](nomad.md) on [`aperture`](../hardware/aperture/index.md). Its configuration is available [here](https://github.com/redbrick/nomad/blob/master/jobs/services/privatebin.hcl). Privatebin doesn't support full configuration via environment variables but instead uses a `conf.php` file. This is passed in using [nomad templates](https://developer.hashicorp.com/nomad/docs/job-specification/template).
 
-All sensitive variables are stored in the [`consul`](consul.md) KV store. 
+All sensitive variables are stored in the [`consul`](consul.md) KV store.
 
 The main points are as follows:
 

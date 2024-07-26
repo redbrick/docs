@@ -1,7 +1,11 @@
 ---
-title: new-admins
+id: new-admins
+aliases:
+  - New Elected Admins
+tags: []
 created: 2023-12-05T01:36:11
 modified: 2024-01-31T08:23:37
+title: New Elected Admins
 ---
 
 # New Elected Admins

@@ -1,13 +1,16 @@
 ---
-title: bastion-vm
-created: 2024-01-23T15:43:40
-modified: 2024-04-02T00:12:41
+id: bastion-vm
+aliases:
+  - Bastion VM
 tags:
   - aperture
   - services
   - nomad
   - vm
   - ingress
+created: 2024-01-23T15:43:40
+modified: 2024-04-02T00:12:41
+title: Bastion VM
 ---
 
 # Bastion VM

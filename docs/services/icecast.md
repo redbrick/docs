@@ -1,7 +1,11 @@
 ---
-title: icecast
+id: icecast
+aliases:
+  - Icecast
+tags: []
 created: 2022-11-08T04:34:34
 modified: 2024-03-01T21:17:25
+title: Icecast
 ---
 
 # Icecast

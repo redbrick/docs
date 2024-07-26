@@ -1,15 +1,19 @@
 ---
-title: images
-created: 2024-03-01T21:17:25
-modified: 2024-03-13T04:49:14
+id: images
+aliases:
+  - Images
+  - Aperture Images
 tags:
   - hardware
   - aperture
   - install
   - images
+created: 2024-03-01T21:17:25
+modified: 2024-03-13T04:49:14
+title: Aperture Images
 ---
 
-# Images
+# Aperture Images
 
 ## Servers
 

@@ -1,12 +1,16 @@
 ---
-title: update-wp-domain
+id: update-wp-domain
+aliases:
+  - Update a WordPress Domain - `wizzdom`, `distro`
+tags: []
 created: 2024-01-25T04:31:32
 modified: 2024-01-31T08:23:37
+title: Update a WordPress Domain
 ---
 
 # Update a WordPress Domain - `wizzdom`, `distro`
 
-Redbrick hosts a variety of services and websites for various clubs and societies in DCU. Oftentimes these websites hosted for societies run on WordPress due to it's ease of use. 
+Redbrick hosts a variety of services and websites for various clubs and societies in DCU. Oftentimes these websites hosted for societies run on WordPress due to it's ease of use.
 
 However, what happens when you no longer have access to the domain? You can change the domain on the webserver however WordPress will redirect you to the old domain. In this case you must update the database to change the domain. This happened with TheCollegeView in 2023, you can read more about that [here](https://github.com/redbrick/open-governance/tree/master/admin/)
 

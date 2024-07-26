@@ -1,13 +1,16 @@
 ---
-title: icarus
-created: 2021-06-28T23:17:10
-modified: 2024-03-13T04:49:14
+id: icarus
+aliases:
+  - Icarus
 tags:
   - nixos
   - hardware
   - icarus
   - daedalus
   - details
+created: 2021-06-28T23:17:10
+modified: 2024-03-13T04:49:14
+title: Icarus
 ---
 
 # Icarus

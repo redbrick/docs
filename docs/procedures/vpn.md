@@ -1,7 +1,11 @@
 ---
-title: vpn
+id: vpn
+aliases:
+  - Admin VPN
+tags: []
 created: 2022-09-05T04:00:22
 modified: 2024-03-01T21:17:25
+title: Admin VPN
 ---
 
 # Admin VPN

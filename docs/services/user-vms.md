@@ -1,7 +1,7 @@
 ---
-title: user-vms
-created: 2024-03-13T04:05:22
-modified: 2024-04-04T18:04:58
+id: user-vms
+aliases:
+  - User VMs
 tags:
   - aperture
   - nomad
@@ -9,11 +9,14 @@ tags:
 author:
   - distro
   - wizzdom
+created: 2024-03-13T04:05:22
+modified: 2024-04-04T18:04:58
+title: User VMs
 ---
 
 # User VMs
 
-User VMs are deployed on [`aperture`](../hardware/aperture/index.md) using [nomad](nomad.md)'s [QEMU driver](https://developer.hashicorp.com/nomad/docs/drivers/qemu). 
+User VMs are deployed on [`aperture`](../hardware/aperture/index.md) using [nomad](nomad.md)'s [QEMU driver](https://developer.hashicorp.com/nomad/docs/drivers/qemu).
 
 Each VM is configured with cloud-init. Those configuration files are served by [`wheatley`](../hardware/aperture/wheatley.md), but they can be served by any HTTP server.
 

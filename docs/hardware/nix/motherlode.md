@@ -1,7 +1,7 @@
 ---
-title: motherlode
-created: 2023-12-04T22:28:41
-modified: 2024-03-13T04:49:14
+id: motherlode
+aliases:
+  - Motherlode
 tags:
   - nixos
   - hardware
@@ -9,6 +9,9 @@ tags:
   - details
   - qemu
   - libvirt
+created: 2023-12-04T22:28:41
+modified: 2024-03-13T04:49:14
+title: Motherlode
 ---
 
 # Motherlode

@@ -1,13 +1,16 @@
 ---
-title: ldap
-created: 2024-03-13T06:05:23
-modified: 2024-03-13T06:05:23
+id: ldap
+aliases:
+  - LDAP - `m1cr0man`
 tags:
   - ldap
   - icarus
   - daedalus
 author:
   - m1cr0man
+created: 2024-03-13T06:05:23
+modified: 2024-03-13T06:05:23
+title: LDAP
 ---
 
 # LDAP - `m1cr0man`

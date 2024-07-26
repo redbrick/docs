@@ -1,11 +1,14 @@
 ---
-title: api
-created: 2021-08-13T23:28:49
-modified: 2024-03-31T18:48:31
+id: api
+aliases:
+  - Redbrick Administrative Web API
 tags:
   - services
   - api
   - ldap
+created: 2021-08-13T23:28:49
+modified: 2024-03-31T18:48:31
+title: Admin API
 ---
 
 # Redbrick Administrative Web API
@@ -120,7 +123,7 @@ print(response.text)
 
 As the FastAPI server for the API is hosted inside of a Docker container, there are limitations to the commands we can execute that affect the "outside" world.
 
-*This is especially important with commands that rely on LDAP.* 
+*This is especially important with commands that rely on LDAP.*
 
 For example inside the `ldap-register.sh` script used by the `/register` endpoint.
 
@@ -130,7 +133,7 @@ For example inside the `ldap-register.sh` script used by the `/register` endpoin
 
 *How do we fix this?*
 
-Instead of relying on using users/group names for the `chown` command, it is advisable to instead use their unique id's. 
+Instead of relying on using users/group names for the `chown` command, it is advisable to instead use their unique id's.
 
 ```bash
 # For example, the following commands are equivalent.
