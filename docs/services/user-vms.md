@@ -38,7 +38,7 @@ sudo ip link set dev br0 up
 We'll be adding a physical interface to this bridge to allow it to communicate with the external ([UDM](../hardware/network/mordor.md)) network.
 
 ```bash
-sudo ip link set eno1 master br0
+sudo ip link set eno2 master br0
 ```
 
 You'll need to assign an IP address to the bridge interface. This will be used as the default address for the host. You can do this with DHCP or by assigning a static IP address. The best way to do this is to create a DHCP static lease on the [UDM](../hardware/network/mordor.md) for the bridge interface MAC address.
