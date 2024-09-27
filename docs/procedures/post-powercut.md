@@ -24,9 +24,9 @@ A list of things that should be done/checked immediately after a power cut:
 	- `vm-resources.service.consul` is running and `http://vm-resources.service.consul:8000/bastion/bastion-vm-latest.qcow2` is accessible
 	- if the `latest` symlink points to a corrupted image, `ln -sf` it to an earlier one
 - All the [`nixos`](docs/procedures/nixos.md) boxes rely on [`DNS`](docs/services/bind.md) for [`ldap`](docs/services/ldap.md) and [`nfs`](docs/services/nfs.md):
-   - Make sure bind is running on [`paphos`](docs/hardware/paphos.md)
-   - mount `/storage`
-   - `systemctl restart` `httpd`, `php-fpm-rbusers-*` and `ldap`
+	- Make sure bind is running on [`paphos`](docs/hardware/paphos.md)
+	- mount `/storage`
+	- `systemctl restart` `httpd`, `php-fpm-rbusers-*` and `ldap`
 - Apache on [`hardcase`](../hardware/nix/hardcase.md) sometimes tries to start before networking is finished starting. To fix it, disable/re-enable it a few times. This usually makes it turn on.
 - [`paphos`](../hardware/paphos.md) is old and sometimes its time will become out of sync. To make sure its time is accurate, run:
 
