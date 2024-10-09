@@ -1,3 +1,0 @@
-# Socs
-
-DCUfm - Icecast

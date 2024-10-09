@@ -1,3 +1,13 @@
+---
+id: ansible
+aliases:
+  - Ansible
+tags: []
+created: 2022-11-08T04:34:34
+modified: 2024-03-01T21:17:25
+title: Ansible
+---
+
 # Ansible
 
 Redbrick uses ansible to manage its infrastructure. This document describes the procedures and some tips to get the most out of it.

@@ -1,3 +1,13 @@
+---
+id: nfs
+aliases:
+  - NFS / Network File Storage
+tags: []
+created: 2021-06-29T04:44:29
+modified: 2024-01-31T08:23:37
+title: NFS
+---
+
 # NFS / Network File Storage
 
 NFS is used to serve the notorious `/storage` directory on Icarus to all of Redbrick's machines, which in turn serves `/home`, `/webtree` and some other critical folders.

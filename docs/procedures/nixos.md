@@ -1,3 +1,13 @@
+---
+id: nixos
+aliases:
+  - NixOS
+tags: []
+created: 2023-12-05T01:36:11
+modified: 2024-01-31T08:23:37
+title: NixOS
+---
+
 # NixOS
 
 Familiarise yourself with the layout of the following. Bookmarking the page is also a good shout.

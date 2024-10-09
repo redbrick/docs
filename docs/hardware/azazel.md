@@ -1,9 +1,24 @@
+---
+id: azazel
+aliases:
+  - Azazel
+tags:
+  - login-box
+  - hardware
+  - azazel
+  - details
+  - debian
+created: 2023-12-02T14:18:51
+modified: 2024-03-13T04:49:14
+title: Azazel
+---
+
 # Azazel
 
 ## Details
 
 - **Type**: Dell PowerEdge R515
-- **OS**: Debian 10
+- **OS**: Debian 12 `bookworm`
 - **CPU**: 2 x AMD Opteron 4180 @ 2.6Ghz
 - **RAM**: 16GB
 - **Storage**: Dell PERC H200 Integrated RAID Controller

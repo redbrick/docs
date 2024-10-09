@@ -1,10 +1,20 @@
+---
+id: servers
+aliases:
+  - Servers
+tags: []
+created: 2021-08-14T23:47:50
+modified: 2024-01-31T08:23:37
+title: Servers
+---
+
 # Servers
 
 Redbrick provides two main servers ([Azazel](../hardware/azazel.md) and [Pygmalion](../hardware/pygmalion.md)) for it's members to use for various use cases, for example running applications or user programs.
 
 ## Entrypoints
 
-The main login server used in Redbrick is [Azazel](../hardware/azazel.md). You may also log in to [Pygmalion](../hardware/pygmalion.md) if you wish at `pyg.redbrick.dcu.ie` 
+The main login server used in Redbrick is [Azazel](../hardware/azazel.md). You may also log in to [Pygmalion](../hardware/pygmalion.md) if you wish at `pyg.redbrick.dcu.ie`
 
 **2 Factor Authentication is required to log in to Redbrick servers.** This is done via an SSH key and your Redbrick username/password combination. For more information on how to create an SSH key, and configure your account for 2FA, please read below.
 
@@ -80,7 +90,7 @@ This key is saved under .ssh under your User directory. (i.e `C:\Users\Bob\.ssh\
 
 ### 3. Copying the Public Key to the Server
 
-In this step we store our **public** key on the server we intend to log in to. This key will be used against our secret private key to authenticate our login. 
+In this step we store our **public** key on the server we intend to log in to. This key will be used against our secret private key to authenticate our login.
 
 For the purposes of this tutorial we will be using [Pygmalion](../hardware/pygmalion.md) (`pyg.redbrick.dcu.ie`) as our server.
 
@@ -127,7 +137,7 @@ This command will append your public key to the end of the `authorized_keys` fil
 nano ~/.ssh/authorized_keys
 ```
 
-Congratulations! If you've made it this far, [you're ready to login](#logging-in) now. 
+Congratulations! If you've made it this far, [you're ready to login](#logging-in) now.
 
 ## Forgot Your Password?
 

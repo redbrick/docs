@@ -1,3 +1,17 @@
+---
+id: hardcase
+aliases:
+  - Hardcase
+tags:
+  - nixos
+  - hardware
+  - details
+  - hardcase
+created: 2023-12-04T22:28:41
+modified: 2024-03-13T04:49:14
+title: Hardcase
+---
+
 # Hardcase
 
 ## Details
@@ -23,7 +37,8 @@
 ## Services
 
 - postgreSQL
-- ~~git~~
 - apache
-- [pastebin](https://paste.redbrick.dcu.ie)
 - ~~monitoring~~
+- postfix (SMTP)
+- dovecot (IMAP)
+- mailman - mailing lists
