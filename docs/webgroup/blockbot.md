@@ -1,38 +1,46 @@
 # Blockbot - `magma`
 
-Blockbot is a Discord bot, written in Python, that is maintained by the Redbrick Webgroup. This project uses [`hikari`](https://github.com/hikari-py/hikari/), an opinionated microframework, to interface with the Discord API. [`hikari-arc`](https://github.com/hypergonial/hikari-arc) is the command handler of choice.
+Blockbot is a Discord bot, written in Python, that is maintained by the Redbrick Webgroup. This project uses [`hikari`](https://github.com/hikari-py/hikari/), an opinionated microframework, to interface with the Discord API. [`hikari-arc`](https://github.com/hypergonial/hikari-arc) is the command handler and [`hikari-miru`](https://github.com/hypergonial/hikari-miru) is the component handler of choice.
 
 ## Resources
 
 - [`hikari` Documentation](https://docs.hikari-py.dev/en/latest/)
+- [`hikari` Examples](https://github.com/hikari-py/hikari/tree/master/examples)
 - [`hikari-arc` Documentation](https://arc.hypergonial.com/)
-- [Examples](https://github.com/hypergonial/hikari-arc/tree/main/examples/gateway)
+- [`hikari-arc` Examples](https://github.com/hypergonial/hikari-arc/tree/main/examples/gateway)
+- [`hikari-miru` Documentation](https://miru.hypergonial.com/)
+- [`hikari-miru` Examples](https://github.com/hypergonial/hikari-miru/tree/main/examples)
 
 ## File Structure
 
+All bot files are under `src/`.
+
 - `bot.py`
-  - This is the file that contains the bot configuration and instantiation, while also being responsible for loading the bot extensions.
+  - Contains the bot configuration and instantiation (e.g. loading the bot extensions).
 - `extensions/`
-  - This directory is home to the custom extensions (known as cogs in `discord.py`, or command groups) that are loaded when the bot is started. Extensions are classes that encapsulate command logic and can be dynamically loaded/unloaded. In `hikari-arc`, an intuitive [plugin system](https://arc.hypergonial.com/guides/plugins_extensions/) is used.
+  - Contains extensions (files) that are loaded when the bot is started. Extensions are a way to split bot logic across multiple files, commonly used to group different features. Extensions can contain plugins, command, event listeners and other logic. [Read more](https://arc.hypergonial.com/guides/plugins_extensions/).
+- `hello_world/`
+  - Contains example extensions for commands, components and more as reference for developers.
 - `config.py`
   - Configuration secrets and important constants (such as identifiers) are stored here. The secrets are loaded from environment variables, so you can set them in your shell or in a `.env` file.
 - `utils.py`
-  - Simple utility functions are stored here, that can be reused across the codebase.
+  - Utility functions are stored here, that can be reused across the codebase.
 
 ## Installation
 
 ### Discord Developer Portal
 
-As a prerequisite, you need to have a bot application registered on the Discord developer portal.
+As a prerequisite, you need to have an application registered on the Discord developer portal.
 
-1. Create a Discord bot application [here](https://discord.com/developers/applications/). 
-2. When you have a bot application, register it for slash commands:
-3. Go to *"OAuth2 > URL Generator"* on the left sidebar, select the `bot` and `applications.commands` scopes, scroll down & select the bot permissions you need (for development, you can select `Administator`).
-4. Copy and visit the generated URL at the bottom of the page to invite it to the desired server.
+1. Create a Discord application [here](https://discord.com/developers/applications/).
+2. Go to *"OAuth2 > URL Generator"* on the left sidebar, select the `bot` and `applications.commands` scopes, and then select the bot permissions you need (for development, you can select `Administrator`).
+3. Go to the generated URL and invite it to the desired server.
 
 #### Bot Token
 
-- Go to the Discord developer portal and under *"Bot"* on the left sidebar, click `Reset Token`. Copy the generated token.
+1. Open the application on the Discord developer portal.
+2. Go to *"Bot"* on the left sidebar, click `Reset Token`.
+3. Copy the newly generated token.
 
 ### Source Code
 
@@ -44,15 +52,11 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Create a new file called `.env` inside the repo folder and paste your bot token into the file as such:
+3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
 
 ```
 TOKEN=<Discord bot token here>
 ```
 
 4. Run `pip install -r requirements.txt` to install the required packages.
-5. Once that's done, start the bot by running `python3 -m src`.
-
-## FAQ
-
-- If you get errors related to missing token environment variables, run `source .env`.
+5. Start the bot by running `python3 -m src`.
