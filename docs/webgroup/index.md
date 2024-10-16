@@ -7,3 +7,5 @@ Read more about how the webgroup operates in [open governance](https://redbrick.
 ## Webgroup Projects
 
 ### [Blockbot](blockbot.md)
+
+A Discord bot, written in Python, that is maintained by the Redbrick Webgroup.
