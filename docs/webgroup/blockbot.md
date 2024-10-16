@@ -1,4 +1,4 @@
-# Blockbot - `magma`
+# Blockbot
 
 Blockbot is a Discord bot, written in Python, that is maintained by the Redbrick Webgroup. This project uses [`hikari`](https://github.com/hikari-py/hikari/), an opinionated microframework, to interface with the Discord API. [`hikari-arc`](https://github.com/hypergonial/hikari-arc) is the command handler and [`hikari-miru`](https://github.com/hypergonial/hikari-miru) is the component handler of choice.
 
@@ -16,15 +16,15 @@ Blockbot is a Discord bot, written in Python, that is maintained by the Redbrick
 All bot files are under `src/`.
 
 - `bot.py`
-  - Contains the bot configuration and instantiation (e.g. loading the bot extensions).
+    - Contains the bot configuration and instantiation (e.g. loading the bot extensions).
 - `extensions/`
-  - Contains extensions (files) that are loaded when the bot is started. Extensions are a way to split bot logic across multiple files, commonly used to group different features. Extensions can contain plugins, command, event listeners and other logic. [Read more](https://arc.hypergonial.com/guides/plugins_extensions/).
-- `hello_world/`
-  - Contains example extensions for commands, components and more as reference for developers.
+    - Contains extensions (files) that are loaded when the bot is started. Extensions are a way to split bot logic across multiple files, commonly used to group different features. Extensions can contain plugins, command, event listeners and other logic. [Read more](https://arc.hypergonial.com/guides/plugins_extensions/).
+- `examples/`
+    - Contains example extensions with commands, components and more as reference for developers.
 - `config.py`
-  - Configuration secrets and important constants (such as identifiers) are stored here. The secrets are loaded from environment variables, so you can set them in your shell or in a `.env` file.
+    - Configuration secrets and important constants (such as identifiers) are stored here. The secrets are loaded from environment variables, so you can set them in your shell or in a `.env` file.
 - `utils.py`
-  - Utility functions are stored here, that can be reused across the codebase.
+    - Utility functions are stored here, that can be reused across the codebase.
 
 ## Installation
 
@@ -34,7 +34,7 @@ As a prerequisite, you need to have an application registered on the Discord dev
 
 1. Create a Discord application [here](https://discord.com/developers/applications/).
 2. Go to *"OAuth2 > URL Generator"* on the left sidebar, select the `bot` and `applications.commands` scopes, and then select the bot permissions you need (for development, you can select `Administrator`).
-3. Go to the generated URL and invite it to the desired server.
+3. Go to the generated URL and invite the application to the desired server.
 
 #### Bot Token
 
@@ -44,19 +44,19 @@ As a prerequisite, you need to have an application registered on the Discord dev
 
 ### Source Code
 
-1. `git clone` and `cd` into this repository.
-2. It's generally advised to work in a Python [virtual environment](https://docs.python.org/3/library/venv.html):
+1. `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
+2. It is generally advised to work in a Python [virtual environment](https://docs.python.org/3/library/venv.html):
 
-```sh
-python3 -m venv .venv
-source .venv/bin/activate
-```
+    ```sh
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
 
 3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
 
-```
-TOKEN=<Discord bot token here>
-```
+    ```
+    TOKEN=<Discord bot token here>
+    ```
 
 4. Run `pip install -r requirements.txt` to install the required packages.
 5. Start the bot by running `python3 -m src`.
