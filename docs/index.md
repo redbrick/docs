@@ -24,6 +24,10 @@ This is mostly intended for admins, future admins, webmasters, and everybody els
 
 ## Webgroup
 
+## Webgroup
+
+The [webgroup](webgroup/index.md) is a subgroup of Redbrick consisting of volunteers who work with the webmaster on a number of projects.
+
 ## New Admins
 
 So, you want to become an admin. Brave of you. Here's some stuff you should probably read:

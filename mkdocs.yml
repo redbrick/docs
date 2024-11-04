@@ -84,6 +84,9 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.highlight:
@@ -98,6 +101,7 @@ markdown_extensions:
       permalink: true
 
 copyright:  <img class="logo" src="/res/logo.png" width="20px"> <a href="https://docs.redbrick.dcu.ie"><strong>Redbrick Docs</strong></a>
+
 
 extra:
   github_org: https://github.com/redbrick
