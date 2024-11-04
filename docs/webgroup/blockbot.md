@@ -1,3 +1,13 @@
+---
+id: blockbot
+aliases:
+  - Blockbot
+tags:
+  - webgroup
+  - discord
+title: Blockbot
+---
+
 # Blockbot
 
 Blockbot is a Discord bot, written in Python, that is maintained by the Redbrick Webgroup. This project uses [`hikari`](https://github.com/hikari-py/hikari/), an opinionated microframework, to interface with the Discord API. [`hikari-arc`](https://github.com/hypergonial/hikari-arc) is the command handler and [`hikari-miru`](https://github.com/hypergonial/hikari-miru) is the component handler of choice.
@@ -39,8 +49,8 @@ As a prerequisite, you need to have an application registered on the Discord dev
 2. It is generally advised to work in a Python [virtual environment](https://docs.python.org/3/library/venv.html):
 
     ```sh
-    python3 -m venv .venv
-    source .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
     ```
 
 3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
@@ -89,7 +99,7 @@ As a prerequisite, you need to have an application registered on the Discord dev
     * listen for events from Discord, like [message edits](https://docs.hikari-py.dev/en/stable/reference/hikari/events/message_events/#hikari.events.message_events.MessageUpdateEvent)
 * `hikari-arc` - the command handler. Can be used to:
     * create application commands ([slash](https://arc.hypergonial.com/guides/options/#declaring-options), [message & user commands](https://arc.hypergonial.com/guides/context_menu/))
-    * respond to command interactions 
+    * respond to command interactions
 * `hikari-miru` - the component handler. Can be used to:
     * create message components (buttons, select menus & modals)
     * respond to component interactions (button clicks, select menu selections & modal submissions)

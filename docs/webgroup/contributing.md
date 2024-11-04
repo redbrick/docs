@@ -1,3 +1,13 @@
+---
+id: contributing
+aliases:
+  - Contributing to Webgroup
+  - contributing
+tags:
+  - webgroup
+title: Contributing to Webgroup
+---
+
 # Contributing to Webgroup
 
 ## Basic Contribution Workflow
@@ -16,19 +26,19 @@
     ```
 
 - Make changes to the codebase.
-    
-    !!! note
-        You don't have to make all the necessary changes in one commit. It's much better to split a bigger pull request over multiple commits. This will make it easier to manage and review.
+
+> [!NOTE]
+> You don't have to make all the necessary changes in one commit. It's much better to split a bigger pull request over multiple commits. This will make it easier to manage and review.
 
 - Stage and commit the changes.
 
     ```bash
-    git add <files you changed>
-    git commit -m "<commit message>"
+git add <files you changed>
+git commit -m "<commit message>"
     ```
 
-    !!! tip
-        See [Writing Meaningful Commit Messages](https://reflectoring.io/meaningful-commit-messages/)
+> [!NOTE] Tip
+> See [Writing Meaningful Commit Messages](https://reflectoring.io/meaningful-commit-messages/)
 
 - On GitHub, navigate to your fork repository and switch to the branch you created.
 
@@ -42,5 +52,6 @@
 
     ![Pull Request page on GitHub](../res/pull-request.png)
 
-    !!! tip
-        For bigger contributions, it's advisable to open a draft pull request when you begin development so other maintainers (e.g. other members of webgroup) can review your changes and provide feedback as you work.
+
+> [!NOTE] Tip
+> For bigger contributions, it's advisable to open a draft pull request when you begin development so other maintainers (e.g. other members of webgroup) can review your changes and provide feedback as you work.
