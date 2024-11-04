@@ -1,3 +1,16 @@
+---
+id: index
+aliases:
+  - Aperture
+tags:
+  - aperture
+  - details
+  - getting-started
+created: 2022-05-16T01:44:40
+modified: 2024-03-13T04:49:14
+title: Aperture
+---
+
 # Aperture
 
 ## What is Aperture?
@@ -17,5 +30,5 @@ If you're a new admin, this is a cheat sheet for you. In order to get broadly up
 
 So, you've hit a problem. Here's some quicklinks to some common problems:
 
-- [I can't connect to Aperture](vpn.md)
-- [Ansible is running into an error](ansible.md#common-errors)
+- [I can't connect to Aperture](../../procedures/vpn.md)
+- [Ansible is running into an error](../../procedures/ansible.md#common-errors)

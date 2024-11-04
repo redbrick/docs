@@ -1,3 +1,18 @@
+---
+id: zeus
+aliases:
+  - Zeus
+tags:
+  - hardware
+  - zeus
+  - details
+  - docker
+  - ubuntu
+created: 2023-12-02T14:18:51
+modified: 2024-03-13T04:49:14
+title: Zeus
+---
+
 # Zeus
 
 ## Details
@@ -21,5 +36,5 @@
 - [Admin API](../services/api.md) at: [api.redbrick.dcu.ie](https://api.redbrick.dcu.ie)
 - brickbot2
 - Secretary's email generator  at: [generator.redbrick.dcu.ie](https://generator.redbrick.dcu.ie)
-- [CodiMD](../services/codimd.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
+- [CodiMD](../services/md.md) at: [md.redbrick.dcu.ie](https://md.redbrick.dcu.ie)
 - all of this is routed through [traefik](../services/traefik.md) as a reverse proxy

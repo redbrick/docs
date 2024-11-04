@@ -1,3 +1,17 @@
+---
+id: johnson
+aliases:
+  - Johnson
+tags:
+  - aperture
+  - hardware
+  - johnson
+  - details
+created: 2023-12-06T01:22:03
+modified: 2024-03-13T04:49:14
+title: Johnson
+---
+
 # Johnson
 
 ## Details
@@ -14,7 +28,7 @@ Formerly `albus` (in a different life)
 - **Network**: 4x Onboard Ethernet, 802.3ad bonding
 - **iDRAC NIC**: Shared on port 1
 
-Part of [aperture](../../aperture/index.md)
+Part of [aperture](index.md)
 
 ## Where to Find
 
@@ -24,6 +38,6 @@ Part of [aperture](../../aperture/index.md)
 
 ## Services
 
-- `NFS` for [aperture](../../aperture/index.md)
+- `NFS` for [aperture](index.md)
 
 ![](../../res/johnson.png)

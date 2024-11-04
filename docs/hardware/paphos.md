@@ -1,9 +1,25 @@
+---
+id: paphos
+aliases:
+  - Paphos
+tags:
+  - hardware
+  - paphos
+  - details
+  - dns
+  - bind
+  - ubuntu
+created: 2023-12-02T14:18:51
+modified: 2024-03-13T04:49:14
+title: Paphos
+---
+
 # Paphos
 
 ## Details
 
 - **Type**: Dell PowerEdge R710
-- **OS**: Ubuntu 14.04.5 LTS
+- **OS**: Ubuntu 14.04.5 LTS 😭
 - **CPU**: 2 x Intel Xeon CPU E5620 @ 2.40Ghz
 - **RAM**: 16GB
 - **Drives**: Internal SATA DVD±RW

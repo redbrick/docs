@@ -1,3 +1,13 @@
+---
+id: cheatsheet
+aliases:
+  - Cheatsheet
+tags: []
+created: 2021-06-28T23:17:10
+modified: 2024-03-13T06:05:10
+title: Cheatsheet
+---
+
 # Cheatsheet
 
 ## LDAP

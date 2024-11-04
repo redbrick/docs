@@ -1,25 +1,37 @@
+---
+id: about
+aliases:
+  - About Aperture
+tags:
+  - aperture
+  - hardware
+created: 2022-05-16T01:44:40
+modified: 2024-03-13T04:49:14
+title: About Aperture
+---
+
 # About Aperture
 
 Aperture is Redbrick's fleet of hardware that was installed in May 2022 by `distro`, `pints`, `skins`, `cawnj`, `ymacomp` and `arkues`.
 
 It consists of:
 
-- 3x Dell R6515 - [`glados`](../hardware/aperture/glados.md), [`wheatley`](../hardware/aperture/wheatley.md), [`chell`](../hardware/aperture/chell.md)
+- 3x Dell R6515 - [`glados`](glados.md), [`wheatley`](wheatley.md), [`chell`](chell.md)
 
- |                    CPU                    |                RAM                |             Storage              |
- |:-----------------------------------------:|:---------------------------------:|:--------------------------------:|
- | AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
+| CPU                                       | RAM                               | Storage                          |
+| ----------------------------------------- | --------------------------------- | -------------------------------- |
+| AMD 7302P 3GHz, 16C/32T, 128M, 155W, 3200 | 2x 16GB RDIMM, 3200MT/s Dual Rank | 4x 2TB SATA HDDs (hardware RAID) |
 
 - 2x Ubiquiti USW Pro - `rivendell`, `isengard`
 - 1x Ubiquiti UDM Pro - `mordor`
 
 ## Servers
 
-The three servers are named [`glados`](../hardware/aperture/glados.md) , [`wheatley`](../hardware/aperture/wheatley.md) and [`chell`](../hardware/aperture/chell.md).
+The three servers are named [`glados`](glados.md) , [`wheatley`](wheatley.md) and [`chell`](chell.md).
 
 ## Networks
 
-The firewall is called [`mordor`](firewall.md), and the two 24-port switches are called [`rivendell` and `isengard`](switches.md).
+The firewall is called [`mordor`](../network/mordor.md), and the two 24-port switches are called [`rivendell` and `isengard`](../network/switches.md).
 
 ## Networking
 
@@ -41,7 +53,7 @@ The IP address range for the [`aperture`](index.md) subnet is `10.10.0.0/24`, wi
 
 `nexus` is the name of the KVM switch. It's internal IP address is `10.10.0.10`.
 
-[`glados`](../hardware/aperture/glados.md) is connected on port 1, [`wheatley`](../hardware/aperture/wheatley.md) on port 2, and [`chell`](../hardware/aperture/chell.md) on port 3.
+[`glados`](glados.md) is connected on port 1, [`wheatley`](wheatley.md) on port 2, and [`chell`](chell.md) on port 3.
 
 > [!WARNING] Note!
 > **Yellow** cables are used for **KVM network**.

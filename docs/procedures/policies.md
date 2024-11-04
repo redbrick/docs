@@ -1,3 +1,13 @@
+---
+id: policies
+aliases:
+  - Redbrick System Administrator Policies
+tags: []
+created: 2023-12-05T01:36:11
+modified: 2024-01-30T01:31:37
+title: Systems Administrator Policies
+---
+
 # Redbrick System Administrator Policies
 
 The purpose of this is to brief new Redbrick system administrators on the current setup, policies and practices in place and to serve as the place to record all such information for current and future administrators.

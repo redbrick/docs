@@ -1,4 +1,19 @@
-# Glados
+---
+id: glados
+aliases:
+  - Glados
+  - GlaDOS
+tags:
+  - hardware
+  - aperture
+  - glados
+  - details
+created: 2023-12-04T22:28:41
+modified: 2024-03-13T04:49:14
+title: GlaDOS
+---
+
+# GlaDOS
 
 ## Details
 
@@ -8,7 +23,7 @@
 - **RAM**: 2x 16GB RDIMM, 3200MT/s Dual Rank
 - **Storage**: 4x 2TB SATA HDDs (hardware RAID)
 
-Part of [aperture](../../aperture/index.md)
+Part of [aperture](index.md)
 
 ## Where to Find
 

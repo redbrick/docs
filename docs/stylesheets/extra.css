@@ -5,3 +5,19 @@
   --md-text-font: "Myriad Pro", sans-serif;
   --md-code-font: "Fira Code", monospace;
 }
+
+[data-md-color-scheme="slate"] * {
+  --md-typeset-a-color: #d62e2e;
+}
+
+@keyframes logo {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.5);
+  }
+}
+.md-logo {
+  animation: logo 1000ms 1;
+}

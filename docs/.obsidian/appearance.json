@@ -1,7 +1,5 @@
 {
   "accentColor": "#c53030",
   "cssTheme": "Minimal",
-  "nativeMenus": false,
-  "baseFontSize": 17,
   "theme": "obsidian"
 }
