@@ -11,7 +11,9 @@ This is mostly intended for admins, future admins, webmasters, and everybody els
 - [Redbrick Website](https://redbrick.dcu.ie)
 - [SSH help](https://docs.redbrick.dcu.ie/services/servers/#logging-in)
 
-The webgroup is a subgroup of Redbrick consisting of volunteers who work with the webmaster on a number of projects.
+## Webgroup
+
+The [webgroup](webgroup/index.md) is a subgroup of Redbrick consisting of volunteers who work with the webmaster on a number of projects.
 
 ## New Admins
 
