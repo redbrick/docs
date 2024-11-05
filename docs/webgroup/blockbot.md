@@ -46,42 +46,44 @@ As a prerequisite, you need to have an application registered on the Discord dev
 2. Go to *"Bot"* on the left sidebar, click `Reset Token`.
 3. Copy the newly generated token.
 
-### Source Code
+### Running from source (deprecated)
 
-1. `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
+1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
+
+    > [!TIP]
+    > Read the [contributing docs](./contributing.md) for more information on using Git and GitHub.
+
 2. It is generally advised to work in a Python [virtual environment](https://docs.python.org/3/library/venv.html):
 
-```sh
-python3 -m venv .venv
-source .venv/bin/activate
-```
+    ```sh
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
 
 3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
 
-```
-TOKEN=<Discord bot token here>
-```
+    ```
+    TOKEN=<Discord bot token here>
+    ```
 
 4. Run `pip install -r requirements.txt` to install the required packages.
 5. Start the bot by running `python3 -m src`.
 
-### Docker
+### Running with Docker Compose
 
-1. `git clone` and `cd` into this repository.
-2. Create a new file called `.env` inside the repo folder and paste your bot token into the file as such:
-```
-TOKEN=<Discord bot token here>
-```
-3. Build the docker image `docker build --tag "blockbot-testing" .`
-4. Run this image `docker run "blockbot-testing"`
+1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
 
-### Docker Compose
-1. `git clone` and `cd` into this repository.
-2. Create a new file called `.env` inside the repo folder and paste your bot token into the file as such:
-```
-TOKEN=<Discord bot token here>
-```
-3. Run the docker-compose.yml file `docker-compose up -d`
+    > [!TIP]
+    > Read the [contributing docs](./contributing.md) for more information on using Git and GitHub.
+
+
+2. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
+
+    ```
+    TOKEN=<Discord bot token here>
+    ```
+
+3. Run the `compose.yaml` file: `docker compose up --build`
 
 ## Library Resources
 
@@ -109,7 +111,9 @@ TOKEN=<Discord bot token here>
 * [Getting Started](https://miru.hypergonial.com/getting_started/) - first steps of using `hikari-miru`
 * [Guides](https://miru.hypergonial.com/guides/) - various guides on aspects of `hikari-miru`
 
-## What's the difference between `hikari`, `hikari-arc` and `hikari-miru`?
+## FAQ
+
+### What's the difference between `hikari`, `hikari-arc` and `hikari-miru`?
 
 * `hikari` -  the Discord API wrapper. Can be used to, for example:
     * [add roles to server members](https://docs.hikari-py.dev/en/stable/reference/hikari/api/rest/#hikari.api.rest.RESTClient.add_role_to_member)
@@ -125,7 +129,7 @@ TOKEN=<Discord bot token here>
     * create message components (buttons, select menus & modals)
     * respond to component interactions (button clicks, select menu selections & modal submissions)
 
-## Why use a `hikari.GatewayBot` instead of a `hikari.RESTBot`?
+### Why use a `hikari.GatewayBot` instead of a `hikari.RESTBot`?
 
 **TL;DR:** `RESTBot`s do not receive events required for some blockbot features (e.g. starboard), so `GatewayBot` must be used instead.
 
@@ -133,7 +137,7 @@ TOKEN=<Discord bot token here>
 
 **Further reading:** <https://arc.hypergonial.com/getting_started/#difference-between-gatewaybot-restbot>
 
-## What's the difference between `hikari.GatewayBot`, `arc.GatewayClient` and `miru.Client`?
+### What's the difference between `hikari.GatewayBot`, `arc.GatewayClient` and `miru.Client`?
 
 * `hikari.GatewayBot` is the actual Discord bot. It:
     * manages the websocket connection to Discord
@@ -152,3 +156,11 @@ TOKEN=<Discord bot token here>
 ## Do's and Don'ts
 
 * Always try to get data from the cache before fetching it from the API.
+    
+    ```py
+    # command example
+    async def command(ctx: arc.GatewayContext) -> None:
+        user = ctx.client.cache.get_user(123)
+        if not user:
+            user = await ctx.client.rest.fetch_user(123)
+    ```
