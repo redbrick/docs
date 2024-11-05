@@ -30,7 +30,7 @@ All bot files are under `src/`.
 ## Installation
 
 > [!TIP]
-> Docker Compose for local development is highly reccommended. This is similar to how it is deployed on Redbrick.
+> Docker Compose for local development is highly recommended. This is similar to how it is deployed on Redbrick.
 
 ### Discord Developer Portal
 
@@ -51,16 +51,16 @@ As a prerequisite, you need to have an application registered on the Discord dev
 1. `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
 2. It is generally advised to work in a Python [virtual environment](https://docs.python.org/3/library/venv.html):
 
-    ```sh
+```sh
 python3 -m venv .venv
 source .venv/bin/activate
-    ```
+```
 
 3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
 
-    ```
-    TOKEN=<Discord bot token here>
-    ```
+```
+TOKEN=<Discord bot token here>
+```
 
 4. Run `pip install -r requirements.txt` to install the required packages.
 5. Start the bot by running `python3 -m src`.

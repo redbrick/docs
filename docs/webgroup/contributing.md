@@ -37,7 +37,7 @@ git add <files you changed>
 git commit -m "<commit message>"
     ```
 
-> [!NOTE] Tip
+> [!TIP]
 > See [Writing Meaningful Commit Messages](https://reflectoring.io/meaningful-commit-messages/)
 
 - On GitHub, navigate to your fork repository and switch to the branch you created.
@@ -53,5 +53,5 @@ git commit -m "<commit message>"
     ![Pull Request page on GitHub](../res/pull-request.png)
 
 
-> [!NOTE] Tip
+> [!TIP]
 > For bigger contributions, it's advisable to open a draft pull request when you begin development so other maintainers (e.g. other members of webgroup) can review your changes and provide feedback as you work.
