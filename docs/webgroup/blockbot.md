@@ -50,6 +50,23 @@ As a prerequisite, you need to have an application registered on the Discord dev
 2. Go to *"Bot"* on the left sidebar and click `Reset Token`.
 3. Copy the newly generated token.
 
+### Running with Docker Compose (recommended)
+
+1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
+
+    > [!TIP]
+    > Read the [contributing docs](./contributing.md) for more information on using Git and GitHub.
+
+
+2. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
+
+    ```
+    TOKEN=<Discord bot token here>
+    ```
+
+3. Run the bot: `docker compose up --build bot`
+    This will also start the database.
+
 ### Running from source (deprecated)
 
 Blockbot uses [`uv`](https://docs.astral.sh/uv/) to manage dependencies and run the project.
@@ -77,23 +94,6 @@ Blockbot uses [`uv`](https://docs.astral.sh/uv/) to manage dependencies and run 
 
     > [!NOTE]
     > Currently a valid database connection is required for the bot to start. Therefore we recommend running Blockbot with docker compose (the compose file includes a PostgreSQL service).
-
-### Running with Docker Compose
-
-1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
-
-    > [!TIP]
-    > Read the [contributing docs](./contributing.md) for more information on using Git and GitHub.
-
-
-2. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
-
-    ```
-    TOKEN=<Discord bot token here>
-    ```
-
-3. Run the bot: `docker compose up --build bot`
-    This will also start the database.
 
 ### Contributing Tools
 
