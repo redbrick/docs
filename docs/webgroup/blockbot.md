@@ -24,6 +24,10 @@ All bot files are under `src/`.
     - Contains example extensions with commands, components and more as reference for developers.
 - `config.py`
     - Configuration secrets and important constants (such as identifiers) are stored here. The secrets are loaded from environment variables, so you can set them in your shell or in a `.env` file.
+- `database.py`
+    - Contains database configuration and models. Uses [SQLAlchemy](https://www.sqlalchemy.org/)
+- `hooks.py`
+    - Contains command hooks - functions which run before command invocation to determine whether or not the command should actually be run (e.g. permissions check).
 - `utils.py`
     - Utility functions are stored here, that can be reused across the codebase.
 
@@ -43,33 +47,10 @@ As a prerequisite, you need to have an application registered on the Discord dev
 #### Bot Token
 
 1. Open the application on the Discord developer portal.
-2. Go to *"Bot"* on the left sidebar, click `Reset Token`.
+2. Go to *"Bot"* on the left sidebar and click `Reset Token`.
 3. Copy the newly generated token.
 
-### Running from source (deprecated)
-
-1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
-
-    > [!TIP]
-    > Read the [contributing docs](./contributing.md) for more information on using Git and GitHub.
-
-2. It is generally advised to work in a Python [virtual environment](https://docs.python.org/3/library/venv.html):
-
-    ```sh
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
-
-3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
-
-    ```
-    TOKEN=<Discord bot token here>
-    ```
-
-4. Run `pip install -r requirements.txt` to install the required packages.
-5. Start the bot by running `python3 -m src`.
-
-### Running with Docker Compose
+### Running with Docker Compose (recommended)
 
 1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
 
@@ -83,16 +64,72 @@ As a prerequisite, you need to have an application registered on the Discord dev
     TOKEN=<Discord bot token here>
     ```
 
-3. Run the `compose.yaml` file: `docker compose up --build`
+3. Run the bot: `docker compose up --build bot`
+    This will also start the database.
+
+### Running from source (deprecated)
+
+Blockbot uses [`uv`](https://docs.astral.sh/uv/) to manage dependencies and run the project.
+
+1. Fork, `git clone` and `cd` into the [blockbot repository](https://github.com/redbrick/blockbot).
+
+    > [!TIP]
+    > Read the [contributing docs](./contributing.md) for more information on using Git and GitHub.
+
+2. It is generally advised to work in a Python [virtual environment](https://docs.astral.sh/uv/reference/cli/#uv-venv):
+
+    ```sh
+    uv venv
+    source .venv/bin/activate
+    ```
+
+3. Rename `.env.sample` to `.env` inside the repo folder and fill in the environment variables with your secrets. e.g.:
+
+    ```
+    TOKEN=<Discord bot token here>
+    ```
+
+4. Run `uv sync --frozen` to install the required packages.
+5. Start the bot by running `uv run -m src`.
+
+    > [!NOTE]
+    > Currently a valid database connection is required for the bot to start. Therefore we recommend running Blockbot with docker compose (the compose file includes a PostgreSQL service).
+
+### Contributing Tools
+
+Blockbot adheres to various code styling and typing rules (listed under `[tool.ruff.format]` and `[tool.ruff.lint]` in `pyproject.toml`).
+To make sure you're following these rules when developing Blockbot, we use [`nox`](https://nox.thea.codes/en/stable/index.html).
+
+`nox` is configured in a `noxfile.py` file, located [here](https://github.com/redbrick/blockbot/blob/main/noxfile.py) for Blockbot.
+
+1. Install `nox`
+
+    ```sh
+    uv sync --group nox --frozen
+    ```
+
+2. Run `nox`
+
+    ```sh
+    uv run nox
+    ```
+
+    To run a specific session (e.g. `format_fix`):
+    ```sh
+    uv run nox -s format_fix
+    ```
+
+3. Fix any issues `nox` reports. This could be:
+
+    * code style issues, most of which [`ruff`](https://docs.astral.sh/ruff/) (the code linter/formatter) will try to fix automatically
+    * typing issues found by [`pyright`](https://github.com/microsoft/pyright). These will need to be fixed manually.
+    
+    Contact the webmaster if you need assistance fixing any issues!
 
 ## Library Resources
-
-- [`hikari` Documentation](https://docs.hikari-py.dev/en/latest/)
-- [`hikari` Examples](https://github.com/hikari-py/hikari/tree/master/examples)
-- [`hikari-arc` Documentation](https://arc.hypergonial.com/)
-- [`hikari-arc` Examples](https://github.com/hypergonial/hikari-arc/tree/main/examples/gateway)
-- [`hikari-miru` Documentation](https://miru.hypergonial.com/)
-- [`hikari-miru` Examples](https://github.com/hypergonial/hikari-miru/tree/main/examples)
+- `hikari` [Documentation](https://docs.hikari-py.dev/en/latest/) & [Examples](https://github.com/hikari-py/hikari/tree/master/examples)
+- `hikari-arc` [Documentation](https://arc.hypergonial.com/) & [Examples](https://github.com/hypergonial/hikari-arc/tree/main/examples/gateway)
+- `hikari-miru` [Documentation](https://miru.hypergonial.com/) & [Examples](https://github.com/hypergonial/hikari-miru/tree/main/examples)
 
 ## Usage Guides
 
@@ -116,7 +153,6 @@ As a prerequisite, you need to have an application registered on the Discord dev
 ### What's the difference between `hikari`, `hikari-arc` and `hikari-miru`?
 
 * `hikari` -  the Discord API wrapper. Can be used to, for example:
-    * [add roles to server members](https://docs.hikari-py.dev/en/stable/reference/hikari/api/rest/#hikari.api.rest.RESTClient.add_role_to_member)
     * [create threads](https://docs.hikari-py.dev/en/stable/reference/hikari/api/rest/#hikari.api.rest.RESTClient.create_thread)
     * [send individual messages](https://docs.hikari-py.dev/en/stable/reference/hikari/api/rest/#hikari.api.rest.RESTClient.create_message)
     * [fetch guild (server) information](https://docs.hikari-py.dev/en/stable/reference/hikari/api/rest/#hikari.api.rest.RESTClient.fetch_guild)
