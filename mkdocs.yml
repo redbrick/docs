@@ -128,7 +128,7 @@ extra:
   analytics:
     provider: plausible
     domain: docs.redbrick.dcu.ie
-    src: "https://plausible.redbrick.dcu.ie/js/script.js"
+    src: "https://pa.redbrick.dcu.ie/js/script.js"
     feedback:
       title: Was this page helpful?
       ratings:
