@@ -20,7 +20,7 @@ Remember, being a SysAdmin for the society is *not* a job, it is a volunteered t
 
 Anyone wishing to run and be elected as a SysAdmin must complete a technical exam as an assessment of your knowledge and competency in solving some of the many problems that will be thrown at you.
 
-You can find some archives of past exams [here](https://github.com/theycallmemac/redbrick-admin-exams/tree/master/exams), however note that these vary year to year as they are created each year by the currently elected admins.
+You can find some archives of past exams [here](https://github.com/redbrick/exams/tree/master/admin), however note that these vary year to year as they are created each year by the currently elected admins.
 
 ### Election at AGM
 
