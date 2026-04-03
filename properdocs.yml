@@ -55,6 +55,7 @@ plugins:
       tags_file: tags.md
   - git-revision-date-localized:
       type: timeago
+      fallback_to_build_date: true
   - redirects:
       redirect_maps:
         'aperture/index.md': 'hardware/aperture/index.md'
