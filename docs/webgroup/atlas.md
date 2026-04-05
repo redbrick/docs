@@ -116,8 +116,6 @@ A multi-stage Docker build is used:
 - Deployments use Nomad job specifications in `.github/deploy/` for:
     - **Production** (`production.hcl`)
     - **Review** per-branch (`review.hcl`)
-
-
 ## Running locally with Docker
 
 To run the site locally in a Docker container (serving the production build via Nginx):
@@ -160,6 +158,7 @@ layout: default.njk
 Navigation links are defined in `src/_data/site.yml` under navigation and global taking a `- text` which is the text shown in the nav and a `link` which is the path to the page (e.g., `/new-page` for `src/site/new-page.md`).
 
 ## Outside contributions
+
 - Contributions to the website are always welcome!
 
 > [!WARNING]
