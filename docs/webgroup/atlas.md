@@ -18,14 +18,14 @@ Atlas is Redbrick's static website, built with [Eleventy (11ty)](https://www.11t
 
 ## Tech stack / tooling
 
-- **Node.js**: `^18.17 || ^20`
-- **Package manager**: Yarn (`yarn@4.1.0`, via Corepack)
-- **Static site generator**: Eleventy (`@11ty/eleventy`)
-- **Templating**: Nunjucks (`.njk`) + Markdown (`.md`) + HTML
-- **CSS**: Tailwind CSS + PostCSS (Autoprefixer)
-- **Search**: Pagefind
+- [**Node.js**](https://nodejs.org/en): `^18.17 || ^20`
+- **Package manager**: [Yarn](https://yarnpkg.com/) (`yarn@4.1.0`, via Corepack)
+- **Static site generator**: [Eleventy](https://www.11ty.dev/) (`@11ty/eleventy`)
+- **Templating**: [Nunjucks](https://mozilla.github.io/nunjucks/) (`.njk`) + Markdown (`.md`) + HTML
+- **CSS**: [Tailwind CSS](https://tailwindcss.com/) + [PostCSS](https://postcss.org/) (Autoprefixer)
+- **Search**: [Pagefind](https://pagefind.app/)
 - **Container build/runtime**: multi-stage Docker build (Node build → Nginx runtime)
-- **CI/CD**: GitHub Actions (build/publish + deploy)
+- **CI/CD**: [GitHub Actions](https://github.com/features/actions) (build/publish + deploy)
 
 ## Development
 
