@@ -14,7 +14,7 @@ Atlas is Redbrick's static website, built with [Eleventy (11ty)](https://www.11t
 
 ## Quick links
 
-- Live site: [https://redbrick.dcu.ie](https://redbrick.dcu.ie)
+- Live site: <https://redbrick.dcu.ie>
 
 ## Tech stack / tooling
 
