@@ -21,4 +21,4 @@ A Discord bot, written in Python, that is maintained by the Redbrick Webgroup.
 
 ### [Atlas (Redbrick Website)](atlas.md)
 
-A static website, written in Eleventy (11ty), that is maintained by the Redbrick Webgroup. The website is hosted at [https://redbrick.dcu.ie](https://redbrick.dcu.ie).
+A static website, written in Eleventy (11ty), that is maintained by the Redbrick Webgroup. The website is hosted at <https://redbrick.dcu.ie>.
