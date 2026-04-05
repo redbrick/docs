@@ -116,6 +116,7 @@ A multi-stage Docker build is used:
 - Deployments use Nomad job specifications in `.github/deploy/` for:
     - **Production** (`production.hcl`)
     - **Review** per-branch (`review.hcl`)
+
 ## Running locally with Docker
 
 To run the site locally in a Docker container (serving the production build via Nginx):
