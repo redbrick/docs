@@ -42,15 +42,15 @@ title: Contributing to Webgroup
 
 - On GitHub, navigate to your fork repository and switch to the branch you created.
 
-    ![Branches on GitHub](../res/branches.png)
+    ![Branches on GitHub](https://cdn.redbrick.dcu.ie/docs/res/branches.png)
 
 - Use the ":material-source-pull: Contribute" button to open the pull request page.
 
-    ![Contribution modal on GitHub](../res/contribute.png)
+    ![Contribution modal on GitHub](https://cdn.redbrick.dcu.ie/docs/res/contribute.png)
 
 - Fill in the title and description fields, then open a pull request. If you have not finished making all the necessary changes, then open a **draft** pull request instead.
 
-    ![Pull Request page on GitHub](../res/pull-request.png)
+    ![Pull Request page on GitHub](https://cdn.redbrick.dcu.ie/docs/res/pull-request.png)
 
 
     > [!TIP]

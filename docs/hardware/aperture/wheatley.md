@@ -33,4 +33,4 @@ Part of [aperture](index.md)
 	- `wheatley.redbrick.dcu.ie`
 	- `wheatley.aperture.redbrick.dcu.ie`
 
-![](../../res/wheatley.png)
+![](https://cdn.redbrick.dcu.ie/docs/res/wheatley.png)
