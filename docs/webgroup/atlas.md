@@ -120,6 +120,7 @@ A multi-stage Docker build is used:
 ## Running locally with Docker
 
 To run the site locally in a Docker container (serving the production build via Nginx):
+
 1. Build the Docker image:
 
 ```bash
@@ -136,6 +137,7 @@ docker run -p 8080:80 redbrick-atlas
 > When making changes note that the docker image will need to be rebuilt to see the changes reflected in the container.
 
 ## Creating a new page
+
 1. Create a new Markdown file in `src/site/` (e.g., `src/site/new-page.md`).
 2. Add front matter and content:
 
