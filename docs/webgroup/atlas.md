@@ -151,7 +151,7 @@ layout: default.njk
 ```
 
 > [!NOTE]
-> We advise using a nunjucks include for the page content to keep the Markdown file clean and focused on content, while the layout and styling can be handled in the included Nunjucks template.
+> We advise using a [nunjucks include](https://mozilla.github.io/nunjucks/templating.html#include) for the page content to keep the Markdown file clean and focused on content, while the layout and styling can be handled in the included Nunjucks template.
 
 3. Create the corresponding Nunjucks template in `src/_includes/` (e.g., `src/_includes/newpage.njk`) and add your HTML content there.
 4. Link to the new page from the navigation or other pages as needed.
