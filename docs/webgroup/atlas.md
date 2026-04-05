@@ -113,8 +113,8 @@ A multi-stage Docker build is used:
 
 - Docker images are built and published via GitHub Actions.
 - Deployments use Nomad job specifications in `.github/deploy/` for:
-  - **production** (`production.hcl`)
-  - **review environments** per-branch (`review.hcl`)
+    - **Production** (`production.hcl`)
+    - **Review** per-branch (`review.hcl`)
 
 
 ## Running locally with Docker
@@ -155,3 +155,9 @@ layout: default.njk
 4. Link to the new page from the navigation or other pages as needed.
 
 Navigation links are defined in `src/_data/site.yml` under navigation and global taking a `- text` which is the text shown in the nav and a `link` which is the path to the page (e.g., `/new-page` for `src/site/new-page.md`).
+
+## Outside contributions
+- Contributions to the website are always welcome!
+
+> [!WARNING]
+> If you want to have the preview deployment for a Pull request the PR must be opened from a branch in the main repository (not a fork) due to GitHub Actions permissions. If you want to open a PR from a fork, you will need to merge it into a branch in the repoisitory and open the PR from there to have the preview deployment. If you are not able to do this, ask a webgroup member to open the PR for you or to merge your PR into a branch in the repository.
