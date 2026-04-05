@@ -19,7 +19,7 @@ Firstly, it's important to mention that Redbrick is currently split in 2 parts:
 - Redbrick 2.0 *a.k.a. "old redbrick"* (on `136.206.15.0/24`)
 - New Redbrick which includes [Aperture](../hardware/aperture/index.md) (on `136.206.16.0/24`)
 
-![](../network-divorce.png)
+![](https://cdn.redbrick.dcu.ie/docs/res/network-divorce.png)
 
 ## Old Redbrick
 
