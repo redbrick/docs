@@ -10,7 +10,7 @@ title: Atlas
 
 # Atlas (Redbrick Website)
 
-Atlas is Redbrick’s static website, built with [Eleventy (11ty)](https://www.11ty.dev/) and styled with Tailwind CSS + PostCSS. The site output is generated into `dist/` and can be served locally during development, or built into a production container served by Nginx.
+Atlas is Redbrick's static website, built with [Eleventy (11ty)](https://www.11ty.dev/) and styled with Tailwind CSS + PostCSS. The site output is generated into `dist/` and can be served locally during development, or built into a production container served by Nginx.
 
 ## Quick links
 
