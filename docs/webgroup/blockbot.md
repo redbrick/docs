@@ -126,6 +126,9 @@ To make sure you're following these rules when developing Blockbot, we use [`nox
     
     Contact the webmaster if you need assistance fixing any issues!
 
+> [!WARNING]
+> If you are contributing to Blockbot from a fork, you will not be able to run the blockbot-dev preview deployment for your pull request due to GitHub Actions permissions. To have the preview deployment, you will need to merge your PR into a branch in the repository and open the PR from there. If you are unable to do this, ask a webgroup member or the webmaster to open the PR for you or to merge your PR into a branch in the repository.
+
 ## Library Resources
 - `hikari` [Documentation](https://docs.hikari-py.dev/en/latest/) & [Examples](https://github.com/hikari-py/hikari/tree/master/examples)
 - `hikari-arc` [Documentation](https://arc.hypergonial.com/) & [Examples](https://github.com/hypergonial/hikari-arc/tree/main/examples/gateway)
