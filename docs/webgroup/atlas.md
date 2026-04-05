@@ -57,7 +57,8 @@ yarn build
 
 ## File structure breakdown
 
-> Note: `dist/` is generated at build time and is not committed.
+> [!NOTE]
+> `dist/` is generated at build time and is not committed.
 
 ```text
 .
