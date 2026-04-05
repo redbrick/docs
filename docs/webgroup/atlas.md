@@ -125,11 +125,13 @@ To run the site locally in a Docker container (serving the production build via 
 ```bash
 docker build -t redbrick-atlas .
 ```
+
 2. Run the container:
 
 ```bash
 docker run -p 8080:80 redbrick-atlas
 ```
+
 3. Access the site at [`http://localhost:8080`](http://localhost:8080).
 
 > [!NOTE]
