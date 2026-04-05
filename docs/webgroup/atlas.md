@@ -51,7 +51,7 @@ yarn build
 ## Build output
 
 - Eleventy input: `src/site`
-- Eleventy output: `dist`
+- Eleventy output: `dist/`
 
 (These are configured in `package.json` under the `eleventy.dir` section.)
 
