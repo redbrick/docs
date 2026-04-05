@@ -18,3 +18,7 @@ Read more about how the webgroup operates in [open governance](https://redbrick.
 ### [Blockbot](blockbot.md)
 
 A Discord bot, written in Python, that is maintained by the Redbrick Webgroup.
+
+### [Atlas (Redbrick Website)](atlas.md)
+
+A static website, written in Eleventy (11ty), that is maintained by the Redbrick Webgroup. The website is hosted at <https://redbrick.dcu.ie>.
