@@ -134,7 +134,7 @@ docker run -p 8080:80 redbrick-atlas
 3. Access the site at [`http://localhost:8080`](http://localhost:8080).
 
 > [!NOTE]
-> When making changes note that the docker image will need to be rebuilt to see the changes reflected in the container.
+> When making changes the docker image will need to be re-built and re-run to see the changes reflected in the container.
 
 ## Creating a new page
 
