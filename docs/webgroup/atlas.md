@@ -83,7 +83,7 @@ yarn build
 │   ├── _includes/                  # Includes/partials used by templates
 │   ├── _layouts/                   # Layout templates
 │   └── site/                       # Main Eleventy input directory
-│       ├── assets/                # Static assets (images, fonts, etc.)
+│       ├── assets/                 # Static assets (images, fonts, etc.)
 │       ├── index.md                # Homepage content
 │       ├── links.md                # Links page content
 │       └── 404.md                  # 404 page content
