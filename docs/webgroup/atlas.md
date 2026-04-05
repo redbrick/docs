@@ -106,8 +106,8 @@ yarn build
 
 A multi-stage Docker build is used:
 
-1. **build stage**: installs deps + runs `yarn build` to generate `dist/`
-2. **production stage**: serves `dist/` via `nginx`
+1. **Build stage**: installs deps + runs `yarn build` to generate `dist/`
+2. **Production stage**: serves `dist/` via `nginx`
 
 ## Deployments (high-level)
 
