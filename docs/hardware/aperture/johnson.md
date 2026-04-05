@@ -40,4 +40,4 @@ Part of [aperture](index.md)
 
 - `NFS` for [aperture](index.md)
 
-![](../../res/johnson.png)
+![](https://cdn.redbrick.dcu.ie/docs/res/johnson.png)

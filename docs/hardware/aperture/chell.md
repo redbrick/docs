@@ -33,4 +33,4 @@ Part of [aperture](index.md)
 	- `chell.redbrick.dcu.ie`
 	- `chell.aperture.redbrick.dcu.ie`
 
-![](../../res/chell.png)
+![](https://cdn.redbrick.dcu.ie/docs/res/chell.png)

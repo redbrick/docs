@@ -34,4 +34,4 @@ Part of [aperture](index.md)
 	- `glados.redbrick.dcu.ie`
 	- `glados.aperture.redbrick.dcu.ie`
 
-![](../../res/glados.png)
+![](https://cdn.redbrick.dcu.ie/docs/res/glados.png)
