@@ -32,3 +32,4 @@ Storage Boxes
 - [**`mordor`**](network/mordor.md)
 - [**`Isengard`**](network/isengard.md)
 - [**`Rivendell`**](network/rivendell.md)
+- [**`Arse`**](network/arse.md)
