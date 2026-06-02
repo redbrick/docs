@@ -24,8 +24,8 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 - [**`chell`**](aperture/chell.md)
 
 ## Storage Boxes
-- [**`Mirage`**](aperture/mirage.md)
-- [**`Anubis`**](aperture/anubis.md)
+- [**`Mirage`**](storage/mirage.md)
+- [**`Anubis`**](storage/anubis.md)
 
 ## Network Hardware
 
