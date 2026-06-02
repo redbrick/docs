@@ -9,7 +9,7 @@ tags:
   - glados
   - details
 created: 2023-12-04T22:28:41
-modified: 2024-03-13T04:49:14
+modified: 2026-06-02T00:00:00
 title: GlaDOS
 ---
 
@@ -28,7 +28,9 @@ Part of [aperture](index.md)
 ## Where to Find
 
 - **Internal**:
-	- `10.10.0.4`
+    - `10.10.10.4`
+    - `10.10.30.4`
+    - `10.10.40.4`
 - **External**:
 	- `136.206.16.4`
 	- `glados.redbrick.dcu.ie`

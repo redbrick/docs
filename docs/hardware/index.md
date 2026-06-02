@@ -23,7 +23,7 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 - [**`wheatley`**](aperture/wheatley.md)
 - [**`chell`**](aperture/chell.md)
 
-Storage Boxes
+## Storage Boxes
 - [**`Mirage`**](aperture/mirage.md)
 - [**`Anubis`**](aperture/anubis.md)
 
