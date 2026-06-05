@@ -33,3 +33,7 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 - [**`Isengard`**](network/isengard.md)
 - [**`Rivendell`**](network/rivendell.md)
 - [**`Arse`**](network/arse.md)
+
+## Power Hardware
+- [**`Applejack`**](power/applejack.md)
+- [**`Rainbowdash`**](power/rainbowdash.md)
