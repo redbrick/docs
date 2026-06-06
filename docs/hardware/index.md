@@ -14,8 +14,8 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 
 ## [Login](../services/servers.md#Logging%20in) Boxes
 
-- [**`Callisto`**](callisto.md)
-- [**`Europa`**](europa.md)
+- [**`Callisto`**](login/callisto.md)
+- [**`Europa`**](login/europa.md)
 
 ## [Aperture](aperture/index.md)
 
