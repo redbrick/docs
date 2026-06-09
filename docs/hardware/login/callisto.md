@@ -32,7 +32,6 @@ Callisto is a twin of [Europa](./europa.md).
 
 ## Where to Find
 - **Internal**:
-    - `10.10.10.25`
     - `10.10.20.25`
     - `10.10.30.25`
     - `10.10.40.25`
