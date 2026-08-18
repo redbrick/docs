@@ -17,9 +17,9 @@ title: Chell
 ## Details
 
 - **Type**: Dell R6515
-- **OS**: Debian 11
+- **OS**: Debian 12
 - **CPU**: AMD 7302P 3GHz, 16C/32T, 128M, 155W
-- **RAM**: 2x 16GB RDIMM, 3200MT/s Dual Rank
+- **RAM**: 16x 64GB RDIMM, 3200MT/s Dual Rank
 - **Storage**: 4x 2TB SATA HDDs (hardware RAID)
 
 Part of [aperture](index.md)
@@ -29,7 +29,6 @@ Part of [aperture](index.md)
 - **Internal**:
     - `10.10.10.6`
     - `10.10.30.6`
-    - `10.10.40.6`
 - **External**:
 	- `136.206.16.6`
 	- `chell.redbrick.dcu.ie`

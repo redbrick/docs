@@ -34,7 +34,6 @@ Callisto is a twin of [Europa](./europa.md).
 - **Internal**:
     - `10.10.20.25`
     - `10.10.30.25`
-    - `10.10.40.25`
 - **External**:
     - `136.206.16.25`
 

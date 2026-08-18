@@ -34,7 +34,6 @@ Europa is a twin of [Callisto](./callisto.md).
 - **Internal**:
     - `10.10.20.24`
     - `10.10.30.24`
-    - `10.10.40.24`
 - **External**:
     - `136.206.16.24`
 

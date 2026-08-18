@@ -34,6 +34,10 @@ The owner account of the unifi equipment is `rbadmins` (email: elected-admins@re
 
 There is a "super admin" account that can be used for **local access only**, details are stored in `pwsafe` under `udmpro-super-admin`.
 
+### VPN
+
+The admin VPN is currently hosted directly on mordor. Wireguard certs for new vpn connections can be created in the settings for the vpn.
+
 ### Updates
 
 The UDM Pro should be kept up to date at all times using the web interface. Please ensure there are no breaking changes before updating.

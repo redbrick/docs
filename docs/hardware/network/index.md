@@ -18,4 +18,4 @@ Redbrick has a number of VLANs in use, which are used to separate different type
 - **VLAN 20** (Login): Used for login boxes and other devices that need to be accessible from the rest of the network.
 - **VLAN 30** (Storage): Used for storage servers to be able to communicate with the rest of the network.
 - **VLAN 40** (Management): Used for management of the servers by the sysadmins.
-- **VLAN 99**: *SCP-CLASSIFIED* - Access Denied. Danger: Unstable Network.
+- **VLAN 99**: Void VLAN for unconfigured devices, so that they cannot access anything they shouldn't

@@ -18,12 +18,9 @@ It consists of:
 
 - 3x Dell R6515 - [`glados`](glados.md), [`wheatley`](wheatley.md), [`chell`](chell.md)
 
-- 2x Ubiquiti USW Pro - `rivendell`, `isengard`
-- 1x Ubiquiti UDM Pro - `mordor`
-
 ## Servers
 
-The three servers are named [`glados`](glados.md) , [`wheatley`](wheatley.md) and [`chell`](chell.md).
+The three servers are named [`glados`](glados.md), [`wheatley`](wheatley.md) and [`chell`](chell.md).
 
 ## Networks
 
@@ -34,7 +31,7 @@ The firewall is called [`mordor`](../network/mordor.md), and the two 24-port swi
 
 ## KVM
 
-`nexus` is the name of the KVM switch. It's internal IP address is `10.10.0.100`.
+`nexus` is the name of the KVM switch. It's internal IP address is `10.10.0.100`. This is used to directly access the machines from the server room.
 
 > [!ERROR] Note!
 > **Red** cables are used for **KVM network**.
@@ -42,13 +39,10 @@ The firewall is called [`mordor`](../network/mordor.md), and the two 24-port swi
 
 ## IDRAC
 
-The new servers are all equipped with IDRACs. These still need to be configured.
+The new servers are all equipped with IDRACs. These are configured for access through the vpn. The ips assigned for these are a bit all over the place
+so you need to find it on mordor.
 
 > [!WARNING] Note!
 > **Yellow** cables are used for **iDRAC network**.
 
 ## [Images (click me)](images.md)
-
-## Switching from the Old Network to the New
-
-We have two address ranges that come in on a single redundant link, so we're exchanging that redundant link for two separate links, each taking responsibility for an address range (`136.26.15.0/24` and `136.206.16.0/24`). So we're surrendering redundancy to gain uptime/connectivity during the switchover only. Once the new servers are production ready, we can recombine the link to regain the redundancy.

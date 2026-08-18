@@ -27,7 +27,7 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 - [**`Mirage`**](storage/mirage.md)
 - [**`Anubis`**](storage/anubis.md)
 
-# Infrastructure Hardware
+## Infrastructure
 - [**`Habibi`**](infrastructure/habibi.md)
 - [**`Pygmalion`**](infrastructure/pygmalion.md)
 
