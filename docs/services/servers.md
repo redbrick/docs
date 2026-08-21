@@ -22,22 +22,17 @@ The main login server used in Redbrick is [Azazel](../hardware/azazel.md). You m
 
 You've set up 2FA on your account with an SSH key, right? [_If not, you really have to, I'm sorry._](#setting-up-an-ssh-key)
 
-You can log in using SSH in your command prompt or terminal application of choice with your Redbrick username and password like so:
+You can log in using SSH in your command prompt or terminal application of choice with your Redbrick username like so:
 
 ```bash
-ssh YOUR_USERNAME@redbrick.dcu.ie -i SSH_KEY_LOCATION_PATH
+ssh YOUR_USERNAME@login.redbrick.dcu.ie -i SSH_KEY_LOCATION_PATH
 
-# When prompted for the password, please input your Redbrick account password.
 # NOTE: The "-i" flag specifies the location of your private ssh key.
 ```
 
-### Alternatives
-
-If you are an unbothered king/queen that simply does not mind using a web interface, let me introduce you to [wetty.redbrick.dcu.ie](https://wetty.redbrick.dcu.ie/). You do not need an SSH key here.
-
 ### Logging in to other Servers
 
-Your home directory is synced (i.e the same) on all public Redbrick servers. Thus the `authorized_keys` file will be the same on [Azazel](../hardware/azazel.md) as it is on [Pygmalion](../hardware/pygmalion.md), meaning you can log in to `pyg.redbrick.dcu.ie` too, and so on.
+Your home directory is synced (i.e the same) on all public Redbrick servers. Thus your public key will be the same on [Callisto](../hardware/login/callisto.md) as it is on [Europa](../hardware/login/europa.md), meaning you can log in to `europa.redbrick.dcu.ie` too, and so on.
 
 ## Setting up an SSH Key
 
@@ -88,57 +83,16 @@ Here you may protect this key file with a passphrase. This is optional and recom
 
 This key is saved under .ssh under your User directory. (i.e `C:\Users\Bob\.ssh\id_ed25519`)
 
-### 3. Copying the Public Key to the Server
+### 3. Add your Public Key to your Redbrick Account
 
-In this step we store our **public** key on the server we intend to log in to. This key will be used against our secret private key to authenticate our login.
-
-For the purposes of this tutorial we will be using [Pygmalion](../hardware/pygmalion.md) (`pyg.redbrick.dcu.ie`) as our server.
-
-#### Logging in to Wetty
-
-In order to access the server to actually place our keys in it, we need to log in via Wetty - a shell interface for [Pygmalion](../hardware/pygmalion.md) on the web.
-
-- Head to <a href="https://wetty.redbrick.dcu.ie/" target="_blank">wetty.redbrick.dcu.ie</a>.
-
-You should see this prompt:
-
-```
-pygmalion.redbrick.dcu.ie login:
-```
-
-Enter your Redbrick username and press <kbd>ENTER</kbd>. When prompted, enter your Redbrick password. [*Forgot either of these?*](#forgot-your-password)
-
-#### Adding the Key into the `authorized_keys` File
-
-- Add the key
-
-Grab the contents of your public key. You may use the `cat filepath` command for this:
+To do this you will need to run the `/account pubkey` command on the Redbrick Discord server. This will give you a field called "key" where you can paste your public key. You can get the contents of your public key by running the following command in your terminal:
 
 ```bash
 cat /home/bob/.ssh/id_ed25519.pub
-```
-
-On Wetty, enter the following command in the shell, with `YOUR_KEY` replaced with your **public** ssh key.
-
-```bash
-echo "YOUR_KEY" >> ~/.ssh/authorized_keys
-```
-
-This command will append your public key to the end of the `authorized_keys` file.
-
-> [!NOTE] Note!
-> The speech marks surrounding YOUR_KEY are important!
-
-##### *PSSST… Made a mistake?*
-
-    *You can manually edit the authorized_key file in a text editor with the following command to fix any issues:*
-
-```bash
-nano ~/.ssh/authorized_keys
 ```
 
 Congratulations! If you've made it this far, [you're ready to login](#logging-in) now.
 
 ## Forgot Your Password?
 
-[Contact an admin](../contact.md) on our [Discord Server](https://discord.gg/3D8kTX9auY) or at [elected-admins@redbrick.dcu.ie](mailto:elected-admins@redbrick.dcu.ie)
+[Contact an admin](../contact.md) on our [Discord Server](https://discord.redbrick.dcu.ie) or at [elected-admins@redbrick.dcu.ie](mailto:elected-admins@redbrick.dcu.ie)

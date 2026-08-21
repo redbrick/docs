@@ -25,8 +25,5 @@ Habibi is one of the machines we had donated to us by susquehana. Currently it j
     - `10.10.10.6`
     - `10.10.30.6`
 - **External**:
-    - `136.206.16.6`
-    - `chell.redbrick.dcu.ie`
-    - `chell.aperture.redbrick.dcu.ie`
-
-![](https://cdn.redbrick.dcu.ie/docs/res/chell.png)
+    - `136.206.15.53`
+    - `ns1.redbrick.dcu.ie`
