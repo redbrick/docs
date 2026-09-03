@@ -2,15 +2,14 @@
 id: ldap
 aliases:
   - LDAP
+created: 2024-03-13T06:05:23
+modified: 2026-09-03T13:52:41
 tags:
   - ldap
-  - icarus
-  - daedalus
-author:
-  - m1cr0man and graggle
-created: 2024-03-13T06:05:23
-modified: 2026-09-03T06:05:23
 title: LDAP
+author:
+  - m1cr0man
+  - graggle
 ---
 
 # LDAP
@@ -34,7 +33,7 @@ LDAP's structure is different to most other database systems. If you are not fam
 - At the time of writing most of our services are not configured to use TLS with LDAPS. LDAPS does work, however, it is only configured for use with sssd on the [login boxes](../hardware/login/index.md)
 - Storage quotas are managed by a python script that runs once every hour. It gets user quotas from LDAP and sends them to the TrueNAS API to apply restrictions on the `home` and `webtree` datasets by uid number.
 
-## LDAP commands
+## LDAP Commands
 
 While we primarily use the API for LDAP operations, these commands may come in useful. These commands were for a previous version of our LDAP schema and may not work as-is.
 

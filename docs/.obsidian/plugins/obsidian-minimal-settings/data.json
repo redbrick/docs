@@ -1,10 +1,8 @@
 {
-  "theme": "moonstone",
   "lightStyle": "minimal-light",
   "darkStyle": "minimal-dark",
   "lightScheme": "minimal-flexoki-light",
   "darkScheme": "minimal-flexoki-dark",
-  "editorFont": "",
   "lineHeight": 1.5,
   "lineWidth": 40,
   "lineWidthWide": 50,
@@ -28,9 +26,11 @@
   "focusMode": true,
   "underlineInternal": true,
   "underlineExternal": true,
-  "useSystemTheme": false,
   "folding": true,
   "lineNumbers": false,
   "readableLineLength": true,
+  "theme": "moonstone",
+  "editorFont": "",
+  "useSystemTheme": false,
   "devBlockWidth": false
 }
