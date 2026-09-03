@@ -1,11 +1,11 @@
 ---
-id: index
+title: index
+created: 2021-06-29T04:44:29
+modified: 2026-09-03T13:52:45
+tags: []
 aliases:
   - Preface
-tags: []
-created: 2021-06-29T04:44:29
-modified: 2024-04-02T00:12:41
-title: Services
+id: index
 ---
 
 # Preface
