@@ -6,38 +6,97 @@ tags:
   - powercut
   - todo
 created: 2023-12-05T01:36:11
-modified: 2024-09-30T19:24:57
+modified: 2026-06-18T13:24:57
 title: Post-powercut Todo List
 ---
 
-# Post-powercut Todo List
+# Post-Powercut Verification Checklist
 
 A list of things that should be done/checked immediately after a power cut:
 
-- Ensure the [`aperture`](../hardware/aperture/index.md) servers have the correct IP addresses:
-	- `eno1` should have the internal IP address (`10.10.0.0/24`) - this should be reserved by DHCP on [`mordor`](../hardware/network/mordor.md)
-	- `eno2` should have *no IP address*
-	- `br0` should have the external IP address (`136.206.16.0/24`) - this should also be reserved by DHCP on [`mordor`](../hardware/network/mordor.md)
-- If the [`bastion-vm`](../services/bastion-vm.md) fails to start, check:
-	- `/storage` is mounted `rw` on each [`aperture`](../hardware/aperture/index.md) server
-	- `br0` is present and configured on each [`aperture`](../hardware/aperture/index.md) server
-	- `vm-resources.service.consul` is running and `http://vm-resources.service.consul:8000/bastion/bastion-vm-latest.qcow2` is accessible
-	- if the `latest` symlink points to a corrupted image, `ln -sf` it to an earlier one
-- All the [`nixos`](..//procedures/nixos.md) boxes rely on [`DNS`](..//services/bind.md) for [`LDAP`](../services/ldap.md) and [`NFS`](../services/nfs.md):
-	- Make sure bind is running on [`paphos`](../hardware/paphos.md)
-	- mount `/storage`
-	- `systemctl restart` `httpd`, `php-fpm-rbusers-*` and `ldap`
-- Apache on [`hardcase`](../hardware/nix/hardcase.md) sometimes tries to start before networking is finished starting. To fix it, disable/re-enable it a few times. This usually makes it turn on.
-- Mailman on [`hardcase`](../hardware/nix/hardcase.md) has a lock file at `/var/lib/mailman/lock/master.lck`. If it doesn't shut down correctly, this lock file will block mailman from starting up. Remove it with:
+> [!NOTE] Note!
+> An announcement should be made in the Redbrick Discord server to notify members that a power cut has occurred and that the team is working on restoring services.
 
+## 1. Network & VLAN Verification
+
+Run these baseline commands on each [`aperture`](../hardware/aperture/index.md) server to refresh the network states and make sure that all bridges are up and running correctly:
 ```bash
-rm /var/lib/mailman/lock/master.lck
+sudo systemctl daemon-reload
+sudo systemctl restart networking
 ```
 
-- [`paphos`](../hardware/paphos.md) is old and sometimes its time will become out of sync. To make sure its time is accurate, run:
+### IP Address & Bridge Validation
+Ensure all [`aperture`](../hardware/aperture/index.md) servers have their correct IP addresses across **vlan16**, **vlan10**, **vlan30**, and **vlan40**.
 
+#### For [`glados`](../hardware/aperture/glados.md):
+* Verify `br0` is up.
+* Verify `br0` holds the vlan16 IP: `136.206.16.4`
+* Verify `br0` holds the Keepalived IP: `136.206.16.50`
+
+### Troubleshooting Network Bridges
+
+* **If `br0` is down**, force the link:
+  ```bash
+  sudo ip link set vlan16 master br0
+  ```
+
+* **Verify VM communication** link by checking if `br0` is linked to `vnet0` and `vlan16`:
+  ```bash
+  sudo brctl show br0
+  ```
+
+* **If `br0` lacks a link to `vnet0`**, manually bridge them:
+  ```bash
+  sudo brctl addif br0 vnet0
+  ```
+  **Note:** You must restart any VMs running on that host after running this command to restore their connectivity.
+
+---
+
+## 2. Storage Mounts
+
+Verify that shared storage is attached before checking any Nomad jobs.
+
+1. Access each [`aperture`](../hardware/aperture/index.md) server.
+2. Force mount all entries:
+   ```bash
+   sudo mount -a
+   ```
+3. Confirm `/storage` is mounted correctly. 
+4. *If mounting fails, inspect `/etc/fstab` for issues.*
+
+---
+
+## 3. Nomad Workloads
+
+If Nomad jobs started while `/storage` was unmounted, they will be in a broken state and must be restarted.
+
+Run this loop script to automatically reschedule and fix all active Nomad jobs on the host:
 ```bash
-sudo service ntp restart
+for job in \$(nomad job status | awk 'NR>1 {print \$1}'); do
+    echo "Rescheduling job to fix storage: \$job"
+    nomad job restart -reschedule "\$job"
+done
 ```
 
-and ensure you have the correct time with `date`
+---
+
+## 4. System Time Verification
+
+Ensure you have the correct time on each server.
+
+* Check current system time:
+  ```bash
+  date
+  ```
+
+## 5. Debug current services.
+
+Some services might be in a corrupted or unstable state, especially if they are running with databases like PostgreSQL. Check the status of all services and restart any that are not running correctly.
+
+One useful step is to run pg_resetwal on those databases to reset the write-ahead log and restore them to a consistent state. This should be done with caution and ideally after taking a backup of the database.
+
+```bash
+sudo docker run --rm -u <userid> -v "$(pwd)/db:/var/lib/postgresql/data" postgres:17-alpine pg_resetwal -f /var/lib/postgresql/data
+```
+

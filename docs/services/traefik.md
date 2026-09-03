@@ -9,3 +9,5 @@ title: Traefik
 ---
 
 # Traefik
+
+Traefik is our reverse proxy. It runs as a system job on aperture, meaning there's one instance of it per client.

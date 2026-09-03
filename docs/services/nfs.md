@@ -4,116 +4,33 @@ aliases:
   - NFS / Network File Storage
 tags: []
 created: 2021-06-29T04:44:29
-modified: 2024-01-31T08:23:37
+modified: 2026-09-03T08:23:37
 title: NFS
 ---
 
 # NFS / Network File Storage
 
-NFS is used to serve the notorious `/storage` directory on Icarus to all of Redbrick's machines, which in turn serves `/home`, `/webtree` and some other critical folders.
+NFS is the protocol we use to share our storage drive over the network to all our servers. It is managed by TrueNAS on [mirage](../hardware/storage/mirage.md) with [anubis](../hardware/storage/anubis.md) as an active backup.
 
 ## Deployment
 
-- NFS is deployed with Nix on [Icarus](../hardware/nix/icarus.md)
-- It is backed onto the PowerVault MD1200 with all its disk passed through single-drive RAID 0s toallow for setup of ZFS:
-    - 1 mirror of 2x 500GB drives
-    - 1 mirror of 2x 750GB drives
-    - 1 mirror of 2x 1TB drives
-    - Stripe across all the mirrors for 2TB of usable storage
-    - 1 hot spare 750GB drive
+- NFS is deployed with TrueNAS on [mirage](../hardware/storage/mirage.md)
+- The drives are setup like this:
+
+| VDEV Type   | RAID Type  | Array Width | Drive Size |
+| ----------- | ---------- | ----------- | ---------- |
+| Data VDEVs  | 2 x RAIDZ2 | 6 wide      | 3.64 TiB   |
+| Log VDEVs   | 1 x DISK   | 1 wide      | 931.51 GiB |
+| Cache VDEVs | 2 x DISK   |             | 465.76 GiB |
+
 - ZFS is configured with compression onand dedup off
-- The ZFS pool is called `zbackup`
+- [Anubis](../hardware/storage/anubis.md) is an active backup of mirage. They are identical machines and are configured to sync with each other. All our services are configured to use [mirage](../hardware/storage/mirage.md). If mirage were to fail, you would need to manually switch all our servers over to using [anubis](../hardware/storage/anubis.md).
+- The storage dataset is split into a number of different smaller datasets, which can each be individually mounted on servers so that you don't, for example, mount all of our service databases to the login boxes.
 
 ## Redbrick Special Notes
 
-On each machine where `/storage` is where NFS is mounted, but `/home` and `/webtree` are symlinks into there.
-
-There are 2 scripts used to control quotas, detailed below.
-
-NFS is backed up to Albus via [ZnapZend](znapzend.md).
-
-## `zfsquota` And `zfsquotaquery`
-
-These are two bash scripts that run as systemd services on Icarus to manage quotas. This is achieved through getting and setting the `userquota` and `userused` properties of the ZFS dataset.
-
-### Zfsquota
-
-ZFSQuota will read the `quota` field from LDAP and sync this with the userquota value on the dataset. It is not event driven - it runs on a timer every 3 hours and syncs all LDAP quotas with ZFS. It can be kicked off manually, which is described below. Users with no quota in LDAP will have no quota in `/storage`, and users who have their quota removed will persist on ZFS.
-
-Changing user names has no impact on this since it is synced with `uidNumber`.
-
-### Zfsquotaquery
-
-ZFSQuotaQuery returns the quota and used space of a particular user. This is used to then inform `rbquota` which provides the data for the MOTD used space report. Both of these scripts are defined and deployed in the Nix config repo. It runs on port 1995/tcp.
-
-## Operation
-
-In general, there isn't too much to do with NFS. Below are some commands of interest for checking its status.
-
-```bash
-# On the NFS server, list the exported filesystems
-showmount -e
-
-# Get the real space usage + fragmentation percent from ZFS
-zpool list zbackup
-
-# Check a user's quota
-zpool get userquota@m1cr0man zbackup
-zpool get userused@m1cr0man zbackup
-
-# Delete a quota from ZFS (useful if a user is deleted)
-zpool set userquota@123456=none zbackup
-
-# Get all user quota usage, and sort it by usage
-zfs userspace -o used,name zbackup | sort -h | tee used_space.txt
-
-# Resync quotas (this command will not return until it is finished)
-systemctl start zfsquota
-
-# Check the status of zfsquotaquery
-systemctl status zfsquotaquery
-```
+Storage quotas are managed by a python script that runs once every hour. It queries LDAP for user storageQuota fields then sends it off to the TrueNAS API which applies those quotas to the `webtree` and `home` datasets using the users `uidNumber`
 
 ## Troubleshooting
 
-In the event where clients are unable to read from NFS, your priority should be restoring the NFS server, rather than
-
-unmounting NFS from clients. This is because NFS is mounted in `hard` mode everywhere, meaning that it will block on IO until a request can be fulfilled.
-
-### Check The Server
-
-```bash
-# Check the ZFS volume is readable and writable
-ls -l /zbackup/home
-touch /zbackup/testfile
-
-# Check that rpc.mountd, rpc.statd and rpcbind are running and lisening
-ss -anlp | grep rpc
-
-# Check the above services for errors (don't worry about blkmap)
-systemctl status nfs-{server,idmapd,mountd}
-journalctl -fu nfs-server -u nfs-idmapd -u nfs-mountd
-```
-
-### Check The Client
-
-```bash
-# Check for connection to NFS
-ss -atp | grep nfs
-
-# Check the fstab entry
-grep storage /etc/fstab
-
-# Check if the NFS server port can be reached
-telnet 192.168.0.150 2049
-# Entering gibberish should cause the connection to close
-
-# Remount read-only
-mount -o remount,ro /storage
-
-# Not much left you can do but remount entirely or reboot
-```
-
-### Rolling Back or Restoring a Backup
-
-See [znapzend](znapzend.md)
+In the event where clients are unable to read from NFS, your priority should be restoring the NFS server, rather than unmounting NFS from clients. Usually it's a networking or permissions issue which can be resolved through the TrueNAS control panel.

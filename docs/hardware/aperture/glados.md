@@ -9,7 +9,7 @@ tags:
   - glados
   - details
 created: 2023-12-04T22:28:41
-modified: 2024-03-13T04:49:14
+modified: 2026-06-02T00:00:00
 title: GlaDOS
 ---
 
@@ -18,9 +18,9 @@ title: GlaDOS
 ## Details
 
 - **Type**: Dell R6515
-- **OS**: Debian 11
+- **OS**: Debian 12
 - **CPU**: AMD 7302P 3GHz, 16C/32T, 128M, 155W
-- **RAM**: 2x 16GB RDIMM, 3200MT/s Dual Rank
+- **RAM**: 16x 64GB RDIMM, 3200MT/s Dual Rank
 - **Storage**: 4x 2TB SATA HDDs (hardware RAID)
 
 Part of [aperture](index.md)
@@ -28,7 +28,8 @@ Part of [aperture](index.md)
 ## Where to Find
 
 - **Internal**:
-	- `10.10.0.4`
+    - `10.10.10.4`
+    - `10.10.30.4`
 - **External**:
 	- `136.206.16.4`
 	- `glados.redbrick.dcu.ie`

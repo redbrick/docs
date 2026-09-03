@@ -4,11 +4,13 @@ aliases:
   - IRC Ops
 tags: []
 created: 2023-12-05T01:36:11
-modified: 2024-01-31T08:23:37
+modified: 2026-09-03T08:23:37
 title: IRC Ops
 ---
 
 # IRC Ops
+
+IRC is currently not hosted on redbrick, but may come back in the future. This might be useful then.
 
 This is a mirror of:
 

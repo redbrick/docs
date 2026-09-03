@@ -4,7 +4,7 @@ aliases:
   - Hardware
 tags: []
 created: 2023-12-04T22:35:50
-modified: 2024-03-01T21:17:25
+modified: 2026-09-03T21:17:25
 title: Hardware
 ---
 
@@ -12,31 +12,29 @@ title: Hardware
 
 Here is a list of current hardware in Redbrick's suite of servers, switches and other bits.
 
-## [Login](../services/servers.md#Logging%20in) Boxes
+## [Login](login/index)
+- [**`Callisto`**](login/callisto)
+- [**`Europa`**](login/europa)
 
-- [**`azazel`**](azazel.md)
-- [**`pygmalion`**](pygmalion.md)
+## [Aperture](aperture/index)
+- [**`Glados`**](aperture/glados)
+- [**`Wheatley`**](aperture/wheatley)
+- [**`Chell`**](aperture/chell)
 
-## [NixOS](../procedures/nixos.md) Boxes
+## [Storage](storage/index)
+- [**`Mirage`**](storage/mirage)
+- [**`Anubis`**](storage/anubis)
 
-- [**`hardcase`**](nix/hardcase.md)
-- [**`motherlode`**](nix/motherlode.md)
-- [**`icarus`**](nix/icarus.md)
+## [Infrastructure](infrastructure/index)
+- [**`Habibi`**](infrastructure/habibi)
+- [**`Pygmalion`**](infrastructure/pygmalion)
 
-- [**`paphos`**](paphos.md)
-- [**`zeus`**](zeus.md)
+## [Network](network/index)
+- [**`Mordor`**](network/mordor)
+- [**`Isengard`**](network/isengard)
+- [**`Rivendell`**](network/rivendell)
+- [**`Arse`**](network/arse)
 
-## [Aperture](aperture/index.md)
-
-- [**`glados`**](aperture/glados.md)
-- [**`wheatley`**](aperture/wheatley.md)
-- [**`chell`**](aperture/chell.md)
-- [**`johnson`**](aperture/johnson.md)
-- [**`bastion-vm`**](../services/bastion-vm.md)
-
-## Network Hardware
-
-- [**`arse`**](network/arse.md)
-- [**`cerberus`**](network/cerberus.md)
-- [**`mordor`**](network/mordor.md)
-- [**switches**](network/switches.md)
+## [Power](power/index)
+- [**`Applejack`**](power/applejack)
+- [**`Rainbowdash`**](power/rainbowdash)

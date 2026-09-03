@@ -4,10 +4,9 @@ aliases:
   - Admin VPN
 tags: []
 created: 2022-09-05T04:00:22
-modified: 2024-03-01T21:17:25
+modified: 2026-09-03T21:17:25
 title: Admin VPN
 ---
-
 # Admin VPN
 
 The admin VPN is set up to allow admins to access the network from outside of DCU, giving them an IP address on the internal network for troubleshooting, testing and integrating.
@@ -16,30 +15,23 @@ If you just want to create a new client configuration, go here: [adding a new cl
 
 ## Setup
 
-Installed OpenVPN using [this script](https://github.com/Nyr/openvpn-install) on [`glados`](../hardware/aperture/glados.md).
-
+We use a `WireGuard` VPN managed by [mordor](hardware/network/mordor). 
 ## Adding a New Client
 
-To add a new client, run the following command (as root) on Glados:
-
-```bash
-bash /root/ovpn/openvpn-install.sh
-```
-
-You will be prompted to add a new client, enter a name for the client and then the script will generate a new client.
-
-It will be saved in `/root/[client name].ovpn`.
+To add a new client simply select the Aperture VPN and click add client on the [mordor](hardware/network/mordor) webui.
 
 ## Revoking a Client
 
-To revoke a client, run the following command (as root) on Glados:
-
-```bash
-bash /root/ovpn/openvpn-install.sh
-```
-
-You will be prompted to revoke a client, enter the name of the client you want to revoke.
+To revoke a client just select it and click remove.
 
 ## Connecting to the VPN
 
-To connect to the VPN, you will need to download the client configuration file from [glados](../hardware/aperture/glados.md) and then import it into your OpenVPN client.
+To connect to the VPN, you will need to download the client configuration file or scan the qr code from [mordor](hardware/network/mordor) and load it onto `WireGuard`.
+
+If you use `NetworkManager` on your machine and have `WireGuard` installed you can import the client file to `NetworkManager` with:
+
+```bash
+nmcli connection import type wireguard file /path/to/file
+```
+
+It can then be toggled on and off with `nmtui` or your desktop environments network configuration screen.
