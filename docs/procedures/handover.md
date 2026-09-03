@@ -7,7 +7,6 @@ created: 2022-05-16T00:59:20
 modified: 2024-01-30T01:31:37
 title: Handover
 ---
-
 # Committee Handover
 
 When a new committee is elected, there are many things to hand over. This is a list of those things.

@@ -2,12 +2,13 @@
 id: servers
 aliases:
   - Servers
+  - Logging in
+  - Login
 tags: []
 created: 2021-08-14T23:47:50
-modified: 2024-01-31T08:23:37
+modified: 2026-09-03T08:23:37
 title: Servers
 ---
-
 # Servers
 
 Redbrick provides two main servers ([Europa](../hardware/login/europa.md) and [Callisto](../hardware/login/callisto.md)) for it's members to use for various use cases, for example running applications or user programs.
@@ -17,7 +18,7 @@ Redbrick provides two main servers ([Europa](../hardware/login/europa.md) and [C
 **With the introduction of our new login boxes, [Europa](../hardware/login/europa.md) and [Callisto](../hardware/login/callisto.md) we now require public key authentication. You can no longer login with just a password.**
 If you had a public ssh key added to your account in the past, it should still work. If not, the prefferred way to add one is to join the redbrick [Discord server](https://discord.redbrick.dcu.ie), link your Discord account with your redbrick account, and add your key using the `/account pubkey <publickey>` blockbot command.
 
-If you have any issues, please contact the admins either by creating a ticket in the Discord server or by [email](mailto://elected-admins@redbrick.dcu.ie).
+If you have any issues, please contact the admins either by creating a ticket in the Discord server or by [email](mailto:elected-admins@redbrick.dcu.ie).
 
 ## Logging in
 

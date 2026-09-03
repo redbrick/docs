@@ -4,7 +4,7 @@ aliases:
   - Hardware
 tags: []
 created: 2023-12-04T22:35:50
-modified: 2024-03-01T21:17:25
+modified: 2026-09-03T21:17:25
 title: Hardware
 ---
 
@@ -12,32 +12,29 @@ title: Hardware
 
 Here is a list of current hardware in Redbrick's suite of servers, switches and other bits.
 
-## [Login](../services/servers.md#Logging%20in) Boxes
+## [Login](login/index)
+- [**`Callisto`**](login/callisto)
+- [**`Europa`**](login/europa)
 
-- [**`Callisto`**](login/callisto.md)
-- [**`Europa`**](login/europa.md)
+## [Aperture](aperture/index)
+- [**`Glados`**](aperture/glados)
+- [**`Wheatley`**](aperture/wheatley)
+- [**`Chell`**](aperture/chell)
 
-## [Aperture](aperture/index.md)
+## [Storage](storage/index)
+- [**`Mirage`**](storage/mirage)
+- [**`Anubis`**](storage/anubis)
 
-- [**`glados`**](aperture/glados.md)
-- [**`wheatley`**](aperture/wheatley.md)
-- [**`chell`**](aperture/chell.md)
+## [Infrastructure](infrastructure/index)
+- [**`Habibi`**](infrastructure/habibi)
+- [**`Pygmalion`**](infrastructure/pygmalion)
 
-## Storage Boxes
-- [**`Mirage`**](storage/mirage.md)
-- [**`Anubis`**](storage/anubis.md)
+## [Network](network/index)
+- [**`Mordor`**](network/mordor)
+- [**`Isengard`**](network/isengard)
+- [**`Rivendell`**](network/rivendell)
+- [**`Arse`**](network/arse)
 
-## Infrastructure
-- [**`Habibi`**](infrastructure/habibi.md)
-- [**`Pygmalion`**](infrastructure/pygmalion.md)
-
-## Network Hardware
-
-- [**`mordor`**](network/mordor.md)
-- [**`Isengard`**](network/isengard.md)
-- [**`Rivendell`**](network/rivendell.md)
-- [**`Arse`**](network/arse.md)
-
-## Power Hardware
-- [**`Applejack`**](power/applejack.md)
-- [**`Rainbowdash`**](power/rainbowdash.md)
+## [Power](power/index)
+- [**`Applejack`**](power/applejack)
+- [**`Rainbowdash`**](power/rainbowdash)

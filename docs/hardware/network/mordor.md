@@ -30,14 +30,10 @@ We have a 10 GB/s link to DCU's core.
 
 The current elected admins should all have access to the rbadmin account on the firewall. Rootholders **should not** have access to the firewall unless they are explicitly granted access.
 
-The owner account of the unifi equipment is `rbadmins` (email: elected-admins@redbrick.dcu.ie) with the password stored in `pwsafe` under `unifi`.
-
-There is a "super admin" account that can be used for **local access only**, details are stored in `pwsafe` under `udmpro-super-admin`.
-
+The owner account of the unifi equipment is `rbadmins` (email: elected-admins@redbrick.dcu.ie) with the password stored in bitwarden.
 ### VPN
 
 The admin VPN is currently hosted directly on mordor. Wireguard certs for new vpn connections can be created in the settings for the vpn.
-
 ### Updates
 
 The UDM Pro should be kept up to date at all times using the web interface. Please ensure there are no breaking changes before updating.
@@ -51,11 +47,9 @@ The UDM Pro should be kept up to date at all times using the web interface. Plea
 SSH is enabled to allow for rollbacks in case of a bad update *(I warned you!)*.
 
 Remote access is disabled as it should not be needed, the admin [`VPN`](../../procedures/vpn.md) should provide enough access for you. If it is enabled in future, please update these docs with your reasons.
-
 ### Backups
 
 Backups are configured to run every week at 1am on a Sunday. 20 backups are stored at a time, therefore storing 20 weeks of configuration. This should be plenty of time to recover from a bad configuration change.
-
 ## External Addresses
 
 `Mordor` is NATted when it accesses the Internet. This is because the link address between it and DCU is on a private address.

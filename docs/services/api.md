@@ -7,13 +7,13 @@ tags:
   - api
   - ldap
 created: 2021-08-13T23:28:49
-modified: 2026-08-18T10:01:49
+modified: 2026-09-03T10:01:49
 title: Admin API
 ---
 
 # Redbrick Administrative Web API
 
-The source code for the API can be found [here](https://github.com/redbrick/api/). The repository is private and accessible only to committee.
+The source code for the API can be found [here](https://github.com/redbrick/api/). The repository is private and accessible only to committee members.
 
 The Redbrick web API serves as an easy interface to carry out administrator tasks *(mainly LDAP related)*, and for use in automation. This saves time instead of accessing machines, and formulating and executing manual LDAP queries or scripts.
 
@@ -71,7 +71,7 @@ Most endpoints require [HTTP basic auth](https://docs.python-requests.org/en/mas
 
 Instead, you should create an account with the specific permissions you need for that service. You can do this by going onto the allocation for the API on [nomad](./nomad.md) and execing into the allocation with a shell. You can then run `python -m app account -h` to see a list of commands for account creation and management.
 
-```
+```bash
 Select a task to start your session.
 
 Customize your command, then hit ‘return’ to run.

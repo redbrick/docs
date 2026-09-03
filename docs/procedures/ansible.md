@@ -4,24 +4,18 @@ aliases:
   - Ansible
 tags: []
 created: 2022-11-08T04:34:34
-modified: 2024-03-01T21:17:25
+modified: 2026-09-03T21:17:25
 title: Ansible
 ---
-
 # Ansible
 
-Redbrick uses ansible to manage its infrastructure. This document describes the procedures and some tips to get the most out of it.
+Redbrick maintains some ansible scripts that make some tasks easier.
 
 ## Getting Started
 
 ### Installing Ansible
 
-Ansible is a python package, so you'll need to install python first. On Debian/Ubuntu, you can do this with:
-
-```bash
-pip install ansible
-```
-
+You can install ansible using your package manager of choice. Because ansible is a python package it can also be installed using `pip` or `uv`.
 ### Add an SSH Key
 
 Ansible uses ssh to connect to the remote hosts. You'll need to set up your ssh key so that you can connect to the hosts without constant prompts for passwords.
@@ -31,16 +25,15 @@ Ansible uses ssh to connect to the remote hosts. You'll need to set up your ssh 
 This is used a phonebook of sorts for ansible. It tells ansible which hosts to connect to, and what user to use.
 
 ```ini
-[aperture]
+glados ansible_host=10.10.10.4
+wheatley ansible_host=10.10.10.5
+chell ansible_host=10.10.10.6
+
+[nomad]
 glados
 wheatley
 chell
-
-[aperture:vars]
-ansible_user= <your username>
 ```
-
-> Contact @distro for a fully populated file.
 
 ### Test it out
 
@@ -69,7 +62,7 @@ Ansible playbooks are written in YAML. The basic structure is:
 #### Example
 
 ```yaml
-- hosts: aperture
+- hosts: nomad
   tasks:
     - name: Install curl
       apt:

@@ -4,11 +4,14 @@ aliases:
   - IRC
 tags: []
 created: 2021-06-29T04:44:29
-modified: 2024-03-13T04:49:14
+modified: 2026-09-03T04:49:14
 title: IRC
 ---
 
 # IRC
+
+IRC is currently not online on Redbrick. It may return in the future...
+This is the old documentation for it:
 
 ## Redbrick InspIRCd
 

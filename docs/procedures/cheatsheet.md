@@ -4,11 +4,13 @@ aliases:
   - Cheatsheet
 tags: []
 created: 2021-06-28T23:17:10
-modified: 2024-03-13T06:05:10
+modified: 2026-09-03T06:05:10
 title: Cheatsheet
 ---
 
 # Cheatsheet
+
+While we primarily use the API for LDAP operations, these commands may come in useful. These commands were for a previous version of our LDAP schema and may not work as-is.
 
 ## LDAP
 
@@ -47,74 +49,18 @@ ___
 
 ### Onboarding New Admins
 
-- Create `root` ssh key for [NixOS](../procedures/nixos.md) Machines
-Following creation of the key, add to the whitelist in *[nix configs](https://github.com/redbrick/nix-configs/blob/master/services/ssh.nix)*.
-
-```bash
-ssh-keygen -t ed25519 # Generate key
-cat ~/.ssh/id_ed25519.pub # Verify it's been created
-ssh-copy-id -i ~/.ssh/id_ed25519 user@redbrick.dcu.ie # Copy to local account's ssh dir
-ssh -i ~/.ssh/mykey user@redbrick.dcu.ie # Verify that this key was copied
-```
-
-### Access Passwordsafe (pwsafe)
-
-Location of master password vault.
-
-> [!NOTE] Note:
-> `getpw` will prompt you for the Master root password.
-
-```bash
-ssh localroot@halfpint
-sudo -i # to log in as root with local user password
-pwsafe # to list passwords
-getpw <name_of_pass> # Grab password by name key | getpw pygmalion
-```
-
-___
-
-## SSH to Root on a [NixOS](../procedures/nixos.md) Machine
-
-- From the account you generated your ssh key on (in nix configs) type:
-
-```bash
-ssh root@hardcase.internal
-```
-
-___
-
-## NixOS
-
-- Install a temporary program
-
-```bash
-nix-shell -p [space seperated package names]
-```
-
-- Run brickbot2 (running on Metharme)
-
-```bash
-cd brickbot2
-nix-shell
-source venv/bin/activate
-python3 main.py config.toml
-```
-
-Brickbot runs in `tmux a -t 0` and can be restarted by pressing ctrl+c and running the above python command
-
+New admins should have a local account created on each box with an ssh key loaded onto them.
+They should also be given a config file to access the [admin VPN](procedures/vpn) on [mordor](hardware/network/mordor)
 ## Minecraft Servers
 
-The Redbrick Minecraft server's are dockerized applications running on [`zeus`](../hardware/zeus.md) on a server-per-container basis, using the tools on this GitHub Repo: https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
+The Redbrick Minecraft server's are dockerized applications running on [Aperture](hardware/aperture/index) on a server-per-container basis, using the tools on this [GitHub Repo](https://github.com/itzg/docker-minecraft-server): .
 
-Repo is very well documented so have a look at the README but here's the basics:
+Repo is very well documented so have a look at the [docs](https://docker-minecraft-server.readthedocs.io/en/latest/) but here's the basics:
 
-**NOTE:** *Local Root accounts must be added to the docker group before they can run the docker commands.* `usermod -a -G docker ACCOUNT_NAME`
+The configuration for these minecraft servers is almost entirely managed through environment variables. The exception to this is individual configs for mods or plugins that are installed on the server. To edit those you need to modify the config files directly.
 
-You can `docker ps | grep minec` to find the docker containers running the servers.
+We use [Gate](services/gate) as our minecraft proxy. This lets us host multiple minecraft servers with just one exposed port.
 
-The docker compose files are located in `/etc/docker-compose/services`, Unmodded Vanilla compose for example is in `/etc/docker-compose/services/minecraft_unmodded/`
+[Gate](services/gate) is configured to automatically work for any nomad job that has the prefix `minecraft-` in it's name.
 
-To see the configuration for the container you can do `docker inspect CONTAINER_NAME_OR_ID`
-
-- Interacting with the Server Console
-    - https://github.com/itzg/docker-minecraft-server#interacting-with-the-server
+To execute commands on one of our minecraft servers you need to go onto [nomad](services/nomad) and exec into one of the allocations. Once you have a shell open, you can run `rcon-cli` and you will be able to execute commands on the serverl.

@@ -7,13 +7,13 @@ tags:
   - hardware
   - pygmalion
 created: 2023-12-02T14:18:51
-modified: 2024-03-13T04:49:14
+modified: 2026-09-03T04:49:14
 title: Pygmalion
 ---
 
 # Pygmalion
 
-Former login box, now used as a fafo box with proxmox
+Former login box, now used as a fafo box running proxmox.
 
 ## Details
 

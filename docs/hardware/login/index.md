@@ -7,7 +7,7 @@ tags:
   - details
   - getting-started
 created: 2022-05-16T01:44:40
-modified: 2024-03-13T04:49:14
+modified: 2026-09-03T04:49:14
 title: Login Boxes
 ---
 
@@ -28,3 +28,7 @@ If you need to reset or setup a new login box, there are quite a few things that
 - Check that users cannot access or view other user folders (including admin home dirs).
 - Check that users can change their own passwords.
 - Check that users have permissions for their webtree.
+
+## Hardware
+- [Europa](europa)
+- [Callisto](callisto)
