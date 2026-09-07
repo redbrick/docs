@@ -1,7 +1,7 @@
 ---
 title: exposed
 created: 2023-12-02T14:11:33
-modified: 2026-09-07T11:31:06
+modified: 2026-09-07T11:35:51
 tags:
   - services
   - exposed
@@ -27,7 +27,7 @@ id: exposed
 - [Mail](https://webmail.redbrick.dcu.ie/) - Every redbrick member gets their own redbrick email address.
 - [Privatebin](https://paste.rb.dcu.ie) - Pretty much just pastebin.
 - Webtree - We offer webhosting for all our members using the `public_html` folders in their home dirs. You can access the folder using our [login boxes](servers.md). Your site is then accessible at `your_username.redbrick.dcu.ie`.
-- Project Hosting - We host projects for our members on our servers on request. [Contact](contact) the admins if you are interested.
+- Project Hosting - We host projects for our members on our servers on request. [Contact](../contact.md) the admins if you are interested.
 
 ## Sewer
 
