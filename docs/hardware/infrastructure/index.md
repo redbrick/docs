@@ -1,18 +1,20 @@
 ---
-id: index
+title: index
+created: 2022-05-16T01:44:40
+modified: 2026-09-17T17:49:27
+tags:
 aliases:
   - Infrastructure
-tags:
-created: 2022-05-16T01:44:40
-modified: 2026-09-03T04:49:14
-title: Infrastructure
+id: index
 ---
 
 # Infrastructure
 
-## What are these servers?
+## What Are These Servers?
 
 These are the servers that we use for specific services or as backups.
+
 ## Hardware
-- [Habibi](habibi)
-- [Pygmalion](pygmalion)
+
+- [Habibi](habibi.md)
+- [Pygmalion](pygmalion.md)

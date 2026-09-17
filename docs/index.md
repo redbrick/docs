@@ -1,11 +1,11 @@
 ---
-id: index
+title: index
+created: 2021-06-28T22:38:22
+modified: 2026-09-17T17:47:47
+tags: []
 aliases:
   - Home
-tags: []
-created: 2021-06-28T22:38:22
-modified: 2026-09-03T06:05:10
-title: Home
+id: index
 ---
 
 # Home
@@ -19,12 +19,12 @@ This is mostly intended for admins, future admins, webmasters, and everybody els
 ## Quick Links
 
 - [Redbrick Website](https://redbrick.dcu.ie)
-- [SSH help](services/servers#Logging in)
+- [SSH help](services/servers.md#Logging in)
 - [Aperture - Our production cluster](hardware/aperture/about.md)
 
 ## Webgroup
 
-The [webgroup](webgroup/index.md) is a subgroup of Redbrick consisting of volunteers who work with the webmaster on a number of projects, mainly [Atlas](webgroup/atlas) and [Blockbot](webgroup/blockbot).
+The [webgroup](webgroup/index.md) is a subgroup of Redbrick consisting of volunteers who work with the webmaster on a number of projects, mainly [Atlas](webgroup/atlas.md) and [Blockbot](webgroup/blockbot.md).
 
 ## New Admins
 

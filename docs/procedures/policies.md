@@ -1,11 +1,11 @@
 ---
-id: policies
+title: policies
+created: 2023-12-05T01:36:11
+modified: 2026-09-17T18:00:32
+tags: []
 aliases:
   - Redbrick System Administrator Policies
-tags: []
-created: 2023-12-05T01:36:11
-modified: 2026-09-03T01:31:37
-title: Systems Administrator Policies
+id: policies
 ---
 
 # Redbrick System Administrator Policies
@@ -15,7 +15,7 @@ The purpose of this is to brief new Redbrick system administrators on the curren
 ## Admin Account Privileges
 
 - By default, all admin accounts will remain the same as the rest of the committee.
-- Each admin will recieve a local account on each machine that will be in the root group. This allows you to log on if [LDAP](services/ldap) goes down.
+- Each admin will recieve a local account on each machine that will be in the root group. This allows you to log on if [LDAP](/services/ldap.md) goes down.
 - Accounts should not be placed into any other 'system' or privileged accounts (e.g. pgSQL, mail, news, etc.) but by all accounts (hah, bad pun!) can be placed into useful groups (e.g. cvs, webgroup, helpdesk etc.)
 
 ## Root account

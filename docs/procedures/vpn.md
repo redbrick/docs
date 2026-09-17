@@ -1,12 +1,13 @@
 ---
-id: vpn
+title: vpn
+created: 2022-09-05T04:00:22
+modified: 2026-09-17T18:01:12
+tags: []
 aliases:
   - Admin VPN
-tags: []
-created: 2022-09-05T04:00:22
-modified: 2026-09-03T21:17:25
-title: Admin VPN
+id: vpn
 ---
+
 # Admin VPN
 
 The admin VPN is set up to allow admins to access the network from outside of DCU, giving them an IP address on the internal network for troubleshooting, testing and integrating.
@@ -15,10 +16,11 @@ If you just want to create a new client configuration, go here: [adding a new cl
 
 ## Setup
 
-We use a `WireGuard` VPN managed by [mordor](hardware/network/mordor). 
+We use a `WireGuard` VPN managed by [mordor](/hardware/network/mordor.md). 
+
 ## Adding a New Client
 
-To add a new client simply select the Aperture VPN and click add client on the [mordor](hardware/network/mordor) webui.
+To add a new client simply select the Aperture VPN and click add client on the [mordor](/hardware/network/mordor.md) webui.
 
 ## Revoking a Client
 
@@ -26,7 +28,7 @@ To revoke a client just select it and click remove.
 
 ## Connecting to the VPN
 
-To connect to the VPN, you will need to download the client configuration file or scan the qr code from [mordor](hardware/network/mordor) and load it onto `WireGuard`.
+To connect to the VPN, you will need to download the client configuration file or scan the qr code from [mordor](/hardware/network/mordor.md) and load it onto `WireGuard`.
 
 If you use `NetworkManager` on your machine and have `WireGuard` installed you can import the client file to `NetworkManager` with:
 

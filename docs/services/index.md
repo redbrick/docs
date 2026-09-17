@@ -1,7 +1,7 @@
 ---
 title: index
 created: 2021-06-29T04:44:29
-modified: 2026-09-03T13:52:45
+modified: 2026-09-17T18:04:48
 tags: []
 aliases:
   - Preface
@@ -10,19 +10,23 @@ id: index
 
 # Preface
 
-Here you will find a list of all the services Redbrick runs, along with some configs and some important information surrounding them.
+Here you will find a list of all the services Redbrick runs, along with some configs and some important information surrounding them. These pages are mostly technical documentation and notes for admins. For a list of services intended for use by our members see [exposed](exposed.md).
 
 - [api](api.md)
-- [bastion-vm](bastion-vm.md)
 - [bind](bind.md)
-- [md](md.md)
 - [consul](consul.md)
-- [gitea](gitea.md)
+- [forgejo](forgejo.md)
+- [gate](gate.md)
 - [irc](irc.md)
+- [ldap](ldap.md)
+- [md](md.md)
 - [nfs](nfs.md)
 - [nomad](nomad.md)
+- [paste](paste.md)
+- [servers](servers.md)
+- [socs](socs.md)
 - [traefik](traefik.md)
-- [znapzend](znapzend.md)
+- [user-vms](user-vms.md)
 
 ## Adding More Services
 
