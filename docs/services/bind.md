@@ -1,22 +1,22 @@
 ---
-id: bind
-aliases:
-  - Bind9 - `distro`, `ylmcc`, `wizzdom`
+title: bind
+created: 2021-06-29T04:44:29
+modified: 2026-09-17T18:23:58
 tags:
   - services
   - dns
+aliases:
+  - Bind9 - `distro`, `ylmcc`, `wizzdom`
 author:
   - distro
   - ylmcc
   - wizzdom
-created: 2021-06-29T04:44:29
-modified: 2024-04-03T17:52:43
-title: Bind (DNS)
+id: bind
 ---
 
 # Bind9 - `distro`, `ylmcc`, `wizzdom`
 
-`bind9` is our DNS provider. Currently it runs on [`paphos`](../hardware/paphos.md), but this **will** change in the near future.
+`bind9` is our DNS provider. Currently it runs on [habibi](../hardware/infrastructure/habibi.md), but this **will** change in the near future.
 
 ## Configuration
 

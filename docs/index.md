@@ -19,7 +19,7 @@ This is mostly intended for admins, future admins, webmasters, and everybody els
 ## Quick Links
 
 - [Redbrick Website](https://redbrick.dcu.ie)
-- [SSH help](services/servers.md#Logging in)
+- [SSH help](services/servers.md)
 - [Aperture - Our production cluster](hardware/aperture/about.md)
 
 ## Webgroup

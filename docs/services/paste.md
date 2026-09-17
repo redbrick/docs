@@ -1,16 +1,16 @@
 ---
-id: paste
-aliases:
-  - Pastebin - `wizzdom`
+title: paste
+created: 2024-03-13T06:04:42
+modified: 2026-09-17T18:25:04
 tags:
   - aperture
   - nomad
   - docker
+aliases:
+  - Pastebin - `wizzdom`
 author:
   - wizzdom
-created: 2024-03-13T06:04:42
-modified: 2024-04-02T00:12:41
-title: Pastebin
+id: paste
 ---
 
 # Pastebin - `wizzdom`
@@ -25,7 +25,7 @@ All sensitive variables are stored in the [`consul`](consul.md) KV store.
 
 The main points are as follows:
 
-- configure URL shortener ([`shlink`](shlink.md))
+- configure URL shortener (shlink)
 
 ```php title="conf.php"
 urlshortener = "https://s.rb.dcu.ie/rest/v1/short-urls/shorten?apiKey={{ key "privatebin/shlink/api" }}&format=txt&longUrl="

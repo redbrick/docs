@@ -1,14 +1,14 @@
 ---
-id: api
-aliases:
-  - Redbrick Administrative Web API
+title: api
+created: 2021-08-13T23:28:49
+modified: 2026-09-17T18:22:43
 tags:
   - services
   - api
   - ldap
-created: 2021-08-13T23:28:49
-modified: 2026-09-03T10:01:49
-title: Admin API
+aliases:
+  - Redbrick Administrative Web API
+id: api
 ---
 
 # Redbrick Administrative Web API
@@ -17,7 +17,7 @@ The source code for the API can be found [here](https://github.com/redbrick/api/
 
 The Redbrick web API serves as an easy interface to carry out administrator tasks *(mainly LDAP related)*, and for use in automation. This saves time instead of accessing machines, and formulating and executing manual LDAP queries or scripts.
 
-The API is hosted on [`aperture`](hardware/aperture/index.md) in a docker container deployed with [`nomad`](nomad.md), the job is deployed automatically by github workflows and to trigger redeployment the action needs to be re-run. It is written in Python with [FastAPI](https://fastapi.tiangolo.com/). This container is then served to the public using [`traefik`](traefik.md).
+The API is hosted on [`aperture`](../hardware/aperture/index.md) in a docker container deployed with [`nomad`](nomad.md), the job is deployed automatically by github workflows and to trigger redeployment the action needs to be re-run. It is written in Python with [FastAPI](https://fastapi.tiangolo.com/). This container is then served to the public using [`traefik`](traefik.md).
 
 ## Nomad Job File
 
@@ -67,7 +67,7 @@ resources {
 
 All endpoints, as well as the parameters and responses for them are documented at [https://api.redbrick.dcu.ie/docs](https://api.redbrick.dcu.ie/docs).
 
-Most endpoints require [HTTP basic auth](https://docs.python-requests.org/en/master/user/authentication/#basic-authentication) to use them. There is a default admin account with the username `root` and a password that is stored in the `root` folder in [vaultwarden](./vaultwarden.md). This user has permissions for every endpoint, and so should not be used in any service that requires access to the API.
+Most endpoints require [HTTP basic auth](https://docs.python-requests.org/en/master/user/authentication/#basic-authentication) to use them. There is a default admin account with the username `root` and a password that is stored in the `root` folder in the committee vaultwarden. This user has permissions for every endpoint, and so should not be used in any service that requires access to the API.
 
 Instead, you should create an account with the specific permissions you need for that service. You can do this by going onto the allocation for the API on [nomad](./nomad.md) and execing into the allocation with a shell. You can then run `python -m app account -h` to see a list of commands for account creation and management.
 
@@ -92,7 +92,6 @@ Example:
 ```
 
 Valid permissions include `admin:getuser` for the admin get user endpoints, `admin:updateuser` for any endpoints that modify user LDAP data, `admin:registeruser` for creating new LDAP users and `admin:deleteuser` for deleting LDAP users. Any of the commands that take permissions as an input support comma seperated lists of permissions for bulk operations.
-
 
 ## Important Notes and Caveats
 
