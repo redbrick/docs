@@ -17,7 +17,7 @@ The source code for the API can be found [here](https://github.com/redbrick/api/
 
 The Redbrick web API serves as an easy interface to carry out administrator tasks *(mainly LDAP related)*, and for use in automation. This saves time instead of accessing machines, and formulating and executing manual LDAP queries or scripts.
 
-The API is hosted on [`aperture`](../hardware/aperture/index.md) in a docker container deployed with [`nomad`](nomad.md), the job is deployed automatically by github workflows and to trigger redeployment the action needs to be re-run. It is written in Python with [FastAPI](https://fastapi.tiangolo.com/). This container is then served to the public using [`traefik`](traefik.md).
+The API is hosted on [`aperture`](hardware/aperture/index.md) in a docker container deployed with [`nomad`](nomad.md), the job is deployed automatically by github workflows and to trigger redeployment the action needs to be re-run. It is written in Python with [FastAPI](https://fastapi.tiangolo.com/). This container is then served to the public using [`traefik`](traefik.md).
 
 ## Nomad Job File
 

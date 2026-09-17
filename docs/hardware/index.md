@@ -4,7 +4,7 @@ aliases:
   - Hardware
 tags: []
 created: 2023-12-04T22:35:50
-modified: 2026-09-03T21:17:25
+modified: 2026-09-17T16:57:25
 title: Hardware
 ---
 
@@ -20,6 +20,11 @@ Here is a list of current hardware in Redbrick's suite of servers, switches and 
 - [**`Glados`**](aperture/glados)
 - [**`Wheatley`**](aperture/wheatley)
 - [**`Chell`**](aperture/chell)
+
+## [Sewer](sewer/index)
+- [**`Donatello`**](sewer/donatello)
+- [**`Raphael`**](sewer/raphael)
+- [**`Michelangelo`**](sewer/michelangelo)
 
 ## [Storage](storage/index)
 - [**`Mirage`**](storage/mirage)
