@@ -2288,7 +2288,7 @@
   <span class="md-ellipsis">
     
   
-    Admin API
+    api
   
 
     
@@ -2316,7 +2316,7 @@
   <span class="md-ellipsis">
     
   
-    Bind (DNS)
+    bind
   
 
     
@@ -2400,7 +2400,7 @@
   <span class="md-ellipsis">
     
   
-    Forgejo
+    forgejo
   
 
     
@@ -2596,7 +2596,7 @@
   <span class="md-ellipsis">
     
   
-    Pastebin
+    paste
   
 
     
@@ -2968,14 +2968,14 @@
 <h2 id="authenticationpasswords">Authentication/Passwords<a class="headerlink" href="#authenticationpasswords" title="Permanent link">¶</a></h2>
 <h3 id="onboarding-new-admins">Onboarding New Admins<a class="headerlink" href="#onboarding-new-admins" title="Permanent link">¶</a></h3>
 <p>New admins should have a local account created on each box with an ssh key loaded onto them.</p>
-<p>They should also be given a config file to access the <a href="../vpn/">admin VPN</a> on <a href="/hardware/network/mordor.md">mordor</a></p>
+<p>They should also be given a config file to access the <a href="../vpn/">admin VPN</a> on <a href="../../hardware/network/mordor/">mordor</a></p>
 <h2 id="minecraft-servers">Minecraft Servers<a class="headerlink" href="#minecraft-servers" title="Permanent link">¶</a></h2>
-<p>The Redbrick Minecraft server's are dockerized applications running on <a href="/hardware/aperture/index.md">Aperture</a> on a server-per-container basis, using the tools on this <a href="https://github.com/itzg/docker-minecraft-server">GitHub Repo</a> .</p>
+<p>The Redbrick Minecraft servers are dockerized applications running on <a href="../../hardware/aperture/">Aperture</a> on a server-per-container basis, using the tools on this <a href="https://github.com/itzg/docker-minecraft-server">GitHub Repo</a> .</p>
 <p>The repo is very well documented so have a look at the <a href="https://docker-minecraft-server.readthedocs.io/en/latest/">docs</a> but here's the basics:</p>
 <p>The configuration for these minecraft servers is almost entirely managed through environment variables. The exception to this is individual configs for mods or plugins that are installed on the server. To edit those you need to modify the config files directly.</p>
-<p>We use <a href="/services/gate.md">Gate</a> as our minecraft proxy. This lets us host multiple minecraft servers with just one exposed port.</p>
-<p><a href="/services/gate.md">Gate</a> is configured to automatically work for any nomad job that has the prefix <code>minecraft-</code> in it's name.</p>
-<p>To execute commands on one of our minecraft servers you need to go onto <a href="/services/nomad.md">nomad</a> and exec into one of the allocations. Once you have a shell open, you can run <code>rcon-cli</code> and you will be able to execute commands on the serverl.</p>
+<p>We use <a href="../../services/gate/">Gate</a> as our Minecraft proxy. This lets us host multiple Minecraft servers with just one exposed port.</p>
+<p><a href="../../services/gate/">Gate</a> is configured to automatically work for any nomad job that has the prefix <code>minecraft-</code> in it's name.</p>
+<p>To execute commands on one of our Minecraft servers you need to go onto <a href="../../services/nomad/">nomad</a> and exec into one of the allocations. Once you have a shell open, you can run <code>rcon-cli</code> and you will be able to execute commands on the serverl.</p>
 
 
 
@@ -2996,7 +2996,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 17, 2026 17:07:31 UTC"><span class="timeago" datetime="2026-09-17T17:07:31+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 17, 2026 17:07:31 UTC">2026-09-17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="September 17, 2026 17:26:18 UTC"><span class="timeago" datetime="2026-09-17T17:26:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="September 17, 2026 17:26:18 UTC">2026-09-17</span>
   </span>
 
     
